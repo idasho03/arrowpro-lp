@@ -1,0 +1,162 @@
+/* =============================================================================
+   ARROW pro - Base Styles
+   基礎設定（Reset + Variables + Typography）
+   ============================================================================= */
+
+/* =============================================================================
+   Reset & Normalize
+   ============================================================================= */
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+/* Box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Hidden utility */
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+/* Link reset */
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  font-family: "Noto Sans JP", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--charade);
+  margin: 0;
+  padding: 0;
+}
+
+/* Focus styles */
+a:focus,
+button:focus,
+[role="button"]:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Semantic elements reset */
+main,
+nav,
+section {
+  display: block;
+}
+
+/* =============================================================================
+   CSS Variables (Design Tokens)
+   ============================================================================= */
+
+:root {
+  /* Colors */
+  --black: #000000;
+  --cabaret: #e43f6f;
+  --cararra: #f1eee3;
+  --cerulean: #00AFCC;
+  --cerulean-2: #00AFCC1a;
+  --cerulean-3: #00AFCC26;
+  --charade: #1f2937;
+  --lochmara: #00AFCC;
+  --mischka: #d1d5db;
+  --pewter-blue: #94a3b8;
+  --polar: #e5f7fa;
+  --santas-gray: #9ca3af;
+  --white: #ffffff;
+  --white-2: #ffffff33;
+
+  /* Font Sizes */
+  --font-size-s: 14px;
+  --font-size-m: 16px;
+  --font-size-l: 20px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 27px;
+  --font-size-xxxl: 32px;
+  --font-size-xxxxl: 35.1px;
+
+  /* Font Families */
+  --font-family-noto_sans_javanese: "Noto Sans Javanese", Helvetica;
+  --font-family-noto_sans_jp: "Noto Sans JP", Helvetica;
+  --font-family-poppins: "Poppins", Helvetica;
+  --font-family-roboto: "Roboto", Helvetica;
+  --font-family-roboto_condensed: "Roboto Condensed", Helvetica;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+
+  /* Breakpoints (for reference in media queries) */
+  --breakpoint-mobile: 767px;
+  --breakpoint-tablet: 1023px;
+  --breakpoint-desktop-sm: 1439px;
+  --breakpoint-desktop-lg: 1440px;
+}
+
+/* =============================================================================
+   Typography
+   ============================================================================= */
+
+/* Font Import - Google Fonts API v2 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto+Condensed:wght@700&family=Noto+Sans+Javanese:wght@400;700&family=Roboto:wght@900&family=Poppins:wght@700&display=swap");
+
+/* Base typography styles */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Remove old typography utility classes - styles moved to BEM components */

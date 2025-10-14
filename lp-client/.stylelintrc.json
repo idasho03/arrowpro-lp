@@ -1,0 +1,45 @@
+{
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "rules": {
+    "indentation": 2,
+    "string-quotes": "single",
+    "no-duplicate-selectors": true,
+    "color-hex-case": "lower",
+    "color-hex-length": "long",
+    "selector-combinator-space-after": "always",
+    "selector-attribute-quotes": "always",
+    "selector-attribute-operator-space-before": "never",
+    "selector-attribute-operator-space-after": "never",
+    "selector-attribute-brackets-space-inside": "never",
+    "declaration-block-trailing-semicolon": "always",
+    "declaration-colon-space-before": "never",
+    "declaration-colon-space-after": "always",
+    "number-leading-zero": "always",
+    "function-url-quotes": "always",
+    "font-weight-notation": "numeric",
+    "comment-whitespace-inside": "always",
+    "at-rule-no-vendor-prefix": true,
+    "media-feature-name-no-vendor-prefix": true,
+    "property-no-vendor-prefix": true,
+    "selector-no-vendor-prefix": true,
+    "value-no-vendor-prefix": true,
+    "max-nesting-depth": 3,
+    "selector-max-compound-selectors": 4,
+    "selector-max-specificity": "0,4,0",
+    "declaration-no-important": true,
+    "selector-class-pattern": "^[a-z][a-zA-Z0-9_-]*$",
+    "custom-property-pattern": "^[a-z][a-zA-Z0-9-]*$",
+    "alpha-value-notation": "number",
+    "color-function-notation": "legacy",
+    "selector-not-notation": "simple",
+    "import-notation": "string"
+  },
+  "ignoreFiles": [
+    "css/old/**",
+    "css/mobile.css",
+    "node_modules/**"
+  ]
+}
+

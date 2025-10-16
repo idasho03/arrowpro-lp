@@ -185,17 +185,9 @@
     <noscript><link rel="stylesheet" href="/sub-contents/lp-client/css/main.css"></noscript>
   </head>
   <body style="margin: 0; background: #ffffff">
-    <!-- Critical CSS（完全FOUC防止） -->
+    <!-- 最小限のFOUC防止 -->
     <style>
-      /* 即座に適用される基本スタイル */
-      body{font-family:'Noto Sans JP',sans-serif;margin:0;background:#fff;opacity:0;transition:opacity 0.1s ease-in}
-      .header{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;box-shadow:0 4px 4px rgba(0,0,0,0.25)}
-      .hero{background:linear-gradient(135deg,#007ACC 0%,#0066aa 100%);color:#fff;padding-top:80px}
-      .hero__title{font-size:2.5rem;font-weight:bold;line-height:1.2;margin-bottom:1rem}
-      .hero__subtitle{font-size:1.2rem;margin-bottom:2rem;opacity:0.9}
-      .hero__cta-button{display:inline-block;background:#fff;color:#007ACC;padding:16px 32px;border-radius:40px;text-decoration:none;font-weight:bold;font-size:1.1rem}
-      
-      /* 読み込み完了後の表示制御 */
+      body{opacity:0;transition:opacity 0.1s ease-in}
       .loaded{opacity:1!important}
     </style>
     <input type="hidden" id="anPageName" name="page" value="mobile" />

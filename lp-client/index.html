@@ -5,8 +5,8 @@
     <title>ARROW pro - 企業からプロフェッショナルに"白羽の矢"を。</title>
     <meta name="description" content="フリーコンサルタントに特化した、企業が個人と直接繋がるプラットフォーム。大手コンサル出身者多数、仲介手数料ゼロ。" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/favicon.png" />
     <meta name="keywords" content="フリーコンサルタント,コンサルティング,人材マッチング,業務委託,プロフェッショナル,仲介手数料無料,直接契約" />
     <meta name="author" content="Swallo" />
     <meta name="robots" content="index, follow" />
@@ -31,8 +31,8 @@
     <!-- パフォーマンス最適化 -->
     <link rel="preconnect" href="https://arrowpro.jp" />
     <link rel="dns-prefetch" href="https://www.figma.com" />
-    <!-- CSS preloadは環境検出スクリプト後に処理 -->
-    <!-- JavaScript preloadは動的読み込みのため削除 -->
+    <link rel="preload" href="css/main.css" as="style" />
+    <link rel="preload" href="js/custom.js" as="script" />
     
     <!-- 構造化データ（JSON-LD） -->
     <script type="application/ld+json">
@@ -43,7 +43,7 @@
           "@type": "Organization",
           "name": "ARROW pro",
           "url": "https://arrowpro.jp",
-          "logo": "https://arrowpro.jp/sub-contents/lp-client/img/path1-7-0.svg",
+          "logo": "https://arrowpro.jp/img/path1-7-0.svg",
           "description": "フリーコンサルタントに特化した、企業が個人と直接繋がるプラットフォーム",
           "sameAs": []
         },
@@ -94,108 +94,15 @@
     }
     </script>
     
-    <!-- 環境検出スクリプト（ローカル開発環境対応） -->
-    <script>
-    // 環境を自動検出
-    const isLocal = window.location.hostname === 'localhost' || 
-                    window.location.hostname === '127.0.0.1' ||
-                    window.location.protocol === 'file:';
-    
-    // ベースパスを設定
-    const basePath = isLocal ? '' : '/sub-contents/lp-client';
-    
-    // デバッグ情報をコンソールに出力（開発時のみ）
-    // console.log('Environment Detection:', {
-    //   hostname: window.location.hostname,
-    //   protocol: window.location.protocol,
-    //   isLocal: isLocal,
-    //   basePath: basePath
-    // });
-    
-    // DOM読み込み完了後にパスを一括修正
-    document.addEventListener('DOMContentLoaded', function() {
-      // CSSリンクのパス修正
-      const cssLinks = document.querySelectorAll('link[href*="/sub-contents/lp-client"]');
-      cssLinks.forEach((link, index) => {
-        if (isLocal) {
-          // ローカル環境では相対パスに変換
-          const relativePath = link.href.replace(/.*\/sub-contents\/lp-client\//, '');
-          link.href = relativePath;
-        } else {
-          link.href = link.href.replace('/sub-contents/lp-client', basePath);
-        }
-      });
-      
-      // JavaScriptファイルの動的読み込み
-      const jsPath = isLocal ? 'js/custom.js' : '/sub-contents/lp-client/js/custom.js';
-      
-      const script = document.createElement('script');
-      script.src = jsPath;
-      script.onload = function() {
-        // JavaScript読み込み成功後に初期化関数を実行
-        setTimeout(function() {
-          // custom.jsの関数を強制的に実行
-          if (typeof initFaqAccordion === 'function') {
-            try {
-              initFaqAccordion();
-            } catch (error) {
-              console.error('initFaqAccordion execution failed:', error);
-            }
-          }
-          
-          if (typeof initHamburgerMenu === 'function') {
-            try {
-              initHamburgerMenu();
-            } catch (error) {
-              console.error('initHamburgerMenu execution failed:', error);
-            }
-          }
-          
-      // 完全読み込み完了後に表示制御
-      document.body.classList.remove('loading-fouc');
-      document.body.classList.add('loaded');
-      
-      // デバッグ用：読み込み完了をログ出力
-      console.log('Page fully loaded - FOUC prevention complete');
-        }, 100);
-      };
-      script.onerror = function(e) {
-        console.error('JavaScript failed to load:', jsPath);
-      };
-      
-      document.head.appendChild(script);
-      
-      // 画像ファイルのパス修正
-      const images = document.querySelectorAll('img[src*="/sub-contents/lp-client"]');
-      images.forEach((img, index) => {
-        if (isLocal) {
-          // ローカル環境では相対パスに変換
-          const relativePath = img.src.replace(/.*\/sub-contents\/lp-client\//, '');
-          img.src = relativePath;
-        } else {
-          img.src = img.src.replace('/sub-contents/lp-client', basePath);
-        }
-      });
-    });
-    
-    </script>
-    
-    <!-- CSS preload for faster loading -->
-    <link rel="preload" href="/sub-contents/lp-client/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet';window.cssLoaded=true;">
-    <noscript><link rel="stylesheet" href="/sub-contents/lp-client/css/main.css"></noscript>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
   </head>
   <body style="margin: 0; background: #ffffff">
-    <!-- 最小限のFOUC防止 -->
-    <style>
-      body{opacity:0;transition:opacity 0.1s ease-in}
-      .loaded{opacity:1!important}
-    </style>
     <input type="hidden" id="anPageName" name="page" value="mobile" />
     
     <!-- Global Header -->
     <header id="global-header" class="header">
       <div class="header__logo">
-        <img class="header__logo-icon" src="/sub-contents/lp-client/img/path1-7-0-1.svg" alt="ARROW pro ロゴ" />
+        <img class="header__logo-icon" src="img/path1-7-0-1.svg" alt="ARROW pro ロゴ" />
         <div class="header__logo-text">ARROW pro</div>
               </div>
       
@@ -269,43 +176,45 @@
                   <span class="hero__feature-text">
                     大手<br />コンサル<br />出身者多数
                   </span>
+                </div>
               </div>
-            </div>
-              
+
               <div class="hero__feature">
                 <div class="hero__feature-badge">
                   <div class="hero__feature-icon"></div>
                   <span class="hero__feature-text">
                     仲介手数料ゼロ・<br />直契約OK
-                </span>
+                  </span>
+                </div>
               </div>
-            </div>
-              
+
               <div class="hero__feature">
-                <div class="hero__feature-badge">
-                  <div class="hero__feature-icon"></div>
-                  <span class="hero__feature-text">
-                    登録者を<br />検索できる
-                </span>
+                  <div class="hero__feature-badge">
+                    <div class="hero__feature-icon"></div>
+                    <span class="hero__feature-text">
+                      登録者を<br />検索できる
+                    </span>
+                  </div>
               </div>
             </div>
-                  </div>
-                          
+
             <!-- CTA Button -->
             <div class="hero__cta-wrapper">
-              <a 
-                href="https://arrowpro.jp/client/register" 
+              <a
+                href="https://arrowpro.jp/client/register"
                 class="hero__cta-button"
               >
                 いますぐ無料で使ってみる
               </a>
             </div>
           </div>
-          
+
           <!-- Hero Visual -->
           <div class="hero__visual">
-            <img class="hero__image" src="/sub-contents/lp-client/img/demo-c-right.png" alt="ARROW pro デモ画面" />
+            <img class="hero__image" src="img/demo-c-right.png" alt="ARROW pro デモ画面" />
           </div>
+
+        </div>
       </section>
 
       <!-- Problems Section -->
@@ -393,10 +302,10 @@
                 </div>
         <div class="benefits-section__features">
           <article class="feature-card">
-            <img class="feature-card__badge-image" src="/sub-contents/lp-client/img/feature-1-2.png" alt="特徴1" loading="lazy" />
+            <img class="feature-card__badge-image" src="img/feature-1-2.png" alt="特徴1" loading="lazy" />
             <div class="feature-card__content">
               <div class="feature-card__visual">
-                <img class="feature-card__illustration" src="/sub-contents/lp-client/img/illust-01.png" alt="イラスト1" loading="lazy" />
+                <img class="feature-card__illustration" src="img/illust-01.png" alt="イラスト1" loading="lazy" />
                 <div class="feature-card__text-wrapper">
                   <div class="feature-card__description">
                     <div class="feature-card__heading">
@@ -415,16 +324,16 @@
                   </div>
                 </div>
               </div>
-              <img class="feature-card__screenshot" src="/sub-contents/lp-client/img/profile.png" alt="プロフィール画面" loading="lazy" />
+              <img class="feature-card__screenshot" src="img/profile.png" alt="プロフィール画面" loading="lazy" />
             </div>
           </article>
 
           <article class="feature-card feature-card--reverse">
-            <img class="feature-card__badge-image" src="/sub-contents/lp-client/img/frame-14151.png" alt="特徴2" loading="lazy" />
+            <img class="feature-card__badge-image" src="img/frame-14151.png" alt="特徴2" loading="lazy" />
             <div class="feature-card__content">
-              <img class="feature-card__screenshot feature-card__screenshot--left" src="/sub-contents/lp-client/img/case.png" alt="案件画面" loading="lazy" />
+              <img class="feature-card__screenshot feature-card__screenshot--left" src="img/case.png" alt="案件画面" loading="lazy" />
               <div class="feature-card__visual">
-                <img class="feature-card__illustration" src="/sub-contents/lp-client/img/illust-02@2x.png" alt="イラスト2" loading="lazy" />
+                <img class="feature-card__illustration" src="img/illust-02@2x.png" alt="イラスト2" loading="lazy" />
                 <div class="feature-card__text-wrapper">
                   <div class="feature-card__description">
                     <div class="feature-card__heading">
@@ -448,10 +357,10 @@
           </article>
 
           <article class="feature-card">
-            <img class="feature-card__badge-image" src="/sub-contents/lp-client/img/feature-3-1.png" alt="特徴3" loading="lazy" />
+            <img class="feature-card__badge-image" src="img/feature-3-1.png" alt="特徴3" loading="lazy" />
             <div class="feature-card__content">
               <div class="feature-card__visual">
-                <img class="feature-card__illustration" src="/sub-contents/lp-client/img/illust-03.png" alt="イラスト3" loading="lazy" />
+                <img class="feature-card__illustration" src="img/illust-03.png" alt="イラスト3" loading="lazy" />
                 <div class="feature-card__text-wrapper">
                   <div class="feature-card__description">
                     <div class="feature-card__heading">
@@ -472,7 +381,7 @@
                   </div>
                 </div>
               </div>
-              <img class="feature-card__screenshot" src="/sub-contents/lp-client/img/chat.png" alt="チャット画面" loading="lazy" />
+              <img class="feature-card__screenshot" src="img/chat.png" alt="チャット画面" loading="lazy" />
             </div>
           </article>
         </div>
@@ -490,7 +399,7 @@
             <div class="theme-category__card">
               <div class="theme-category__header">
                 <div class="theme-category__title">経営戦略・事業戦略</div>
-                <img class="theme-category__icon" src="/sub-contents/lp-client/img/strategy.svg" alt="経営戦略アイコン" loading="lazy" />
+                <img class="theme-category__icon" src="img/strategy.svg" alt="経営戦略アイコン" loading="lazy" />
               </div>
               <div class="theme-category__tags">
               <article class="theme-tag">
@@ -562,7 +471,7 @@
             <div class="theme-category__card">
               <div class="theme-category__header">
                 <div class="theme-category__title">営業・マーケティング・<br />オペレーション</div>
-                <img class="theme-category__icon" src="/sub-contents/lp-client/img/strategy-1.svg" alt="営業・マーケティング・オペレーションアイコン" loading="lazy" />
+                <img class="theme-category__icon" src="img/strategy-1.svg" alt="営業・マーケティング・オペレーションアイコン" loading="lazy" />
               </div>
               <div class="theme-category__tags">
               <article class="theme-tag">
@@ -619,7 +528,7 @@
             <div class="theme-category__card">
               <div class="theme-category__header">
                 <div class="theme-category__title">人事・財務・リスク</div>
-                <img class="theme-category__icon" src="/sub-contents/lp-client/img/group-14165@2x.png" alt="人事・財務・リスクアイコン" loading="lazy" />
+                <img class="theme-category__icon" src="img/group-14165@2x.png" alt="人事・財務・リスクアイコン" loading="lazy" />
               </div>
               <div class="theme-category__tags">
               <article class="theme-tag">
@@ -669,7 +578,7 @@
                 <div class="theme-category__icon-wrapper">
                   <div class="theme-category__icon-inner">
                     <div class="theme-category__icon-content">
-                      <img class="theme-category__icon-svg" src="/sub-contents/lp-client/img/vector-1.svg" alt="デジタル・ITアイコン" loading="lazy" />
+                      <img class="theme-category__icon-svg" src="img/vector-1.svg" alt="デジタル・ITアイコン" loading="lazy" />
                     </div>
                   </div>
                 </div>
@@ -732,7 +641,7 @@
                 <div class="theme-category__icon-wrapper">
                   <div class="theme-category__icon-inner">
                     <div class="theme-category__icon-content">
-                      <img class="theme-category__icon-svg" src="/sub-contents/lp-client/img/vector-2.svg" alt="新領域・先新テーマアイコン" loading="lazy" />
+                      <img class="theme-category__icon-svg" src="img/vector-2.svg" alt="新領域・先新テーマアイコン" loading="lazy" />
                     </div>
                   </div>
                 </div>
@@ -779,7 +688,7 @@
               </div>
               <div class="flow-step__content">
                 <div class="flow-step__icon">
-                  <img class="flow-step__icon-svg" src="/sub-contents/lp-client/img/vector-3.svg" alt="アカウント登録アイコン" loading="lazy" />
+                  <img class="flow-step__icon-svg" src="img/vector-3.svg" alt="アカウント登録アイコン" loading="lazy" />
                 </div>
                 <div class="flow-step__text">
                   <div class="flow-step__title">アカウント登録</div>
@@ -797,7 +706,7 @@
               </div>
               <div class="flow-step__content">
                 <div class="flow-step__icon">
-                  <img class="flow-step__icon-svg" src="/sub-contents/lp-client/img/vector-4.svg" alt="案件登録アイコン" loading="lazy" />
+                  <img class="flow-step__icon-svg" src="img/vector-4.svg" alt="案件登録アイコン" loading="lazy" />
                 </div>
                 <div class="flow-step__text">
                   <div class="flow-step__title">案件登録</div>
@@ -830,8 +739,8 @@
                 <div class="flow-step__methods">
                   <div class="flow-step__method">
                     <div class="flow-step__method-icon">
-                      <img class="flow-step__method-icon-svg" src="/sub-contents/lp-client/img/vector-5.svg" alt="スカウトアイコン1" loading="lazy" />
-                      <img class="flow-step__method-icon-svg" src="/sub-contents/lp-client/img/vector-6.svg" alt="スカウトアイコン2" loading="lazy" />
+                      <img class="flow-step__method-icon-svg" src="img/vector-5.svg" alt="スカウトアイコン1" loading="lazy" />
+                      <img class="flow-step__method-icon-svg" src="img/vector-6.svg" alt="スカウトアイコン2" loading="lazy" />
                     </div>
                     <div class="flow-step__method-content">
                       <div class="flow-step__method-title">スカウト送信</div>
@@ -842,7 +751,7 @@
                   </div>
                   <div class="flow-step__method">
                     <div class="flow-step__method-icon">
-                      <img class="flow-step__method-icon-svg" src="/sub-contents/lp-client/img/vector-7.svg" alt="応募アイコン" loading="lazy" />
+                      <img class="flow-step__method-icon-svg" src="img/vector-7.svg" alt="応募アイコン" loading="lazy" />
                     </div>
                     <div class="flow-step__method-content">
                       <div class="flow-step__method-title">応募</div>
@@ -874,7 +783,7 @@
               </div>
               <div class="flow-step__content">
                 <div class="flow-step__icon">
-                  <img class="flow-step__icon-svg" src="/sub-contents/lp-client/img/arcticons-chat.svg" alt="チャットアイコン" loading="lazy" />
+                  <img class="flow-step__icon-svg" src="img/arcticons-chat.svg" alt="チャットアイコン" loading="lazy" />
                 </div>
                 <div class="flow-step__text">
                   <div class="flow-step__title">プロフェッショナルとやりとり</div>
@@ -904,7 +813,7 @@
               </div>
               <div class="flow-step__content">
                 <div class="flow-step__icon">
-                  <img class="flow-step__icon-svg" src="/sub-contents/lp-client/img/vector-8.svg" alt="契約アイコン" loading="lazy" />
+                  <img class="flow-step__icon-svg" src="img/vector-8.svg" alt="契約アイコン" loading="lazy" />
                 </div>
                 <div class="flow-step__text">
                   <div class="flow-step__title">直接契約・稼働</div>
@@ -1035,7 +944,7 @@
       <footer class="footer">
         <div class="footer__grid">
           <div class="footer__logo">
-            <img class="footer__logo-icon" src="/sub-contents/lp-client/img/path1-7-0.svg" alt="ARROW pro ロゴ" loading="lazy" />
+            <img class="footer__logo-icon" src="img/path1-7-0.svg" alt="ARROW pro ロゴ" loading="lazy" />
             <div class="footer__logo-text">ARROW pro</div>
         </div>
           <div class="footer__nav-group">
@@ -1045,7 +954,7 @@
                 <a href="https://arrowpro.jp/professional">
                   <div class="footer__nav-link">
                     個人・フリーコンサルタントの方
-      </div>
+                  </div>
                 </a>
                 <a href="https://arrowpro.jp">
                   <div class="footer__nav-link">企業の方</div>
@@ -1059,7 +968,7 @@
                   <a href="https://arrowpro.jp/contact/client" target="_blank">
                     <div class="footer__nav-link">お問い合わせ</div>
                   </a>
-                  <img class="footer__external-icon" src="/sub-contents/lp-client/img/icon.svg" alt="外部リンク" loading="lazy" />
+                  <img class="footer__external-icon" src="img/icon.svg" alt="外部リンク" loading="lazy" />
                 </div>
                 <a href="https://arrowpro.jp/company" target="_blank">
                   <div class="footer__nav-link">運営会社</div>
@@ -1072,8 +981,8 @@
                 </a>
               </div>
             </div>
-        </div>
           </div>
+        </div>
         <div class="footer__bottom">
           <p class="footer__copyright">
             © 2025 Swallo. All Rights Reserved.
@@ -1082,6 +991,7 @@
       </footer>
     </main>
 
-    <!-- カスタムJavaScriptは環境検出スクリプト内で動的読み込み -->
+    <!-- カスタムJavaScript -->
+    <script src="js/custom.js" defer></script>
   </body>
 </html>

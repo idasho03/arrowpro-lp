@@ -31,7 +31,7 @@
     <!-- パフォーマンス最適化 -->
     <link rel="preconnect" href="https://arrowpro.jp" />
     <link rel="dns-prefetch" href="https://www.figma.com" />
-    <!-- CSS preloadは環境検出スクリプト後に処理 -->
+    <link rel="preload" href="/sub-contents/lp-client/css/main.css" as="style" />
     <!-- JavaScript preloadは動的読み込みのため削除 -->
     
     <!-- 構造化データ（JSON-LD） -->
@@ -173,9 +173,7 @@
     
     </script>
     
-    <!-- CSS preload for faster loading -->
-    <link rel="preload" href="/sub-contents/lp-client/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/sub-contents/lp-client/css/main.css"></noscript>
+    <link rel="stylesheet" type="text/css" href="/sub-contents/lp-client/css/main.css" />
   </head>
   <body style="margin: 0; background: #ffffff">
     <input type="hidden" id="anPageName" name="page" value="mobile" />

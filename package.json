@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "build": "parcel build"
+  },
+  "targets": {
+    "lp-client": {
+      "source": "lp-client/index.html",
+      "distDir": "./static-output/lp-client",
+      "publicUrl": "./",
+      "sourceMap": false
+    },
+    "lp-profesional": {
+      "source": "lp-professional/index.html",
+      "distDir": "./static-output/lp-professional",
+      "publicUrl": "./",
+      "sourceMap": false
+    }
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.16.0",
+    "@parcel/transformer-jsonld": "^2.16.0",
+    "parcel": "^2.0.0"
+  }
+}

@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://arrowpro.jp" />
     <link rel="dns-prefetch" href="https://www.figma.com" />
     <link rel="preload" href="/sub-contents/lp-client/css/main.css" as="style" />
-    <!-- JavaScript preloadは動的読み込みのため削除 -->
+    <link rel="preload" href="/sub-contents/lp-client/js/custom.js" as="script" />
     
     <!-- 構造化データ（JSON-LD） -->
     <script type="application/ld+json">
@@ -92,85 +92,6 @@
         }
       ]
     }
-    </script>
-    
-    <!-- 環境検出スクリプト（ローカル開発環境対応） -->
-    <script>
-    // 環境を自動検出
-    const isLocal = window.location.hostname === 'localhost' || 
-                    window.location.hostname === '127.0.0.1' ||
-                    window.location.protocol === 'file:';
-    
-    // ベースパスを設定
-    const basePath = isLocal ? '' : '/sub-contents/lp-client';
-    
-    // デバッグ情報をコンソールに出力（開発時のみ）
-    // console.log('Environment Detection:', {
-    //   hostname: window.location.hostname,
-    //   protocol: window.location.protocol,
-    //   isLocal: isLocal,
-    //   basePath: basePath
-    // });
-    
-    // DOM読み込み完了後にパスを一括修正
-    document.addEventListener('DOMContentLoaded', function() {
-      // CSSリンクのパス修正
-      const cssLinks = document.querySelectorAll('link[href*="/sub-contents/lp-client"]');
-      cssLinks.forEach((link, index) => {
-        if (isLocal) {
-          // ローカル環境では相対パスに変換
-          const relativePath = link.href.replace(/.*\/sub-contents\/lp-client\//, '');
-          link.href = relativePath;
-        } else {
-          link.href = link.href.replace('/sub-contents/lp-client', basePath);
-        }
-      });
-      
-      // JavaScriptファイルの動的読み込み
-      const jsPath = isLocal ? 'js/custom.js' : '/sub-contents/lp-client/js/custom.js';
-      
-      const script = document.createElement('script');
-      script.src = jsPath;
-      script.onload = function() {
-        // JavaScript読み込み成功後に初期化関数を実行
-        setTimeout(function() {
-          // custom.jsの関数を強制的に実行
-          if (typeof initFaqAccordion === 'function') {
-            try {
-              initFaqAccordion();
-            } catch (error) {
-              console.error('initFaqAccordion execution failed:', error);
-            }
-          }
-          
-          if (typeof initHamburgerMenu === 'function') {
-            try {
-              initHamburgerMenu();
-            } catch (error) {
-              console.error('initHamburgerMenu execution failed:', error);
-            }
-          }
-        }, 100);
-      };
-      script.onerror = function(e) {
-        console.error('JavaScript failed to load:', jsPath);
-      };
-      
-      document.head.appendChild(script);
-      
-      // 画像ファイルのパス修正
-      const images = document.querySelectorAll('img[src*="/sub-contents/lp-client"]');
-      images.forEach((img, index) => {
-        if (isLocal) {
-          // ローカル環境では相対パスに変換
-          const relativePath = img.src.replace(/.*\/sub-contents\/lp-client\//, '');
-          img.src = relativePath;
-        } else {
-          img.src = img.src.replace('/sub-contents/lp-client', basePath);
-        }
-      });
-    });
-    
     </script>
     
     <link rel="stylesheet" type="text/css" href="/sub-contents/lp-client/css/main.css" />
@@ -1033,7 +954,7 @@
                     個人・フリーコンサルタントの方
       </div>
                 </a>
-                <a href="https://arrowpro.jp">
+                <a href="https://arrowpro.jp>
                   <div class="footer__nav-link">企業の方</div>
                 </a>
               </div>
@@ -1068,6 +989,7 @@
       </footer>
     </main>
 
-    <!-- カスタムJavaScriptは環境検出スクリプト内で動的読み込み -->
+    <!-- カスタムJavaScript -->
+    <script src="/sub-contents/lp-client/js/custom.js" defer></script>
   </body>
 </html>

@@ -6,7 +6,7 @@
     "lp-client": {
       "source": "lp-client/index.html",
       "distDir": "./static-output/lp-client",
-      "publicUrl": "./",
+      "publicUrl": "/arrowpro-sub-contents/static-output/lp-client/",
       "sourceMap": false
     },
     "lp-profesional": {

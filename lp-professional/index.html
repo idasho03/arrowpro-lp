@@ -1,65 +1,936 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARROW pro - ランディングページ_仮ページ</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">ARROW pro</h1>
-            <nav>
-                <a href="#features" class="nav-link">特徴</a>
-                <a href="#contact" class="nav-link">お問い合わせ</a>
-            </nav>
-        </div>
+  <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WKN2CPSR');</script>
+    <!-- End Google Tag Manager -->
+    
+    <meta charset="utf-8" />
+    <title>ARROW pro - クライアントから直接、"白羽の矢"が立つ。</title>
+    <meta name="description" content="フリーランスコンサルタントに特化した、企業と個人が直接繋がるマッチングプラットフォーム。完全無料、顧客と直接契約可能、全案件公開。" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="img/07-common/favicon.png" />
+    <link rel="apple-touch-icon" href="img/07-common/favicon.png" />
+    <meta name="keywords" content="フリーランスコンサルタント,コンサルティング,案件獲得,業務委託,プロフェッショナル,直接契約,マッチング" />
+    <meta name="author" content="Swallo" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- OGP (Open Graph Protocol) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ARROW pro - クライアントから直接、白羽の矢が立つ。" />
+    <meta property="og:description" content="フリーランスコンサルタントに特化した、企業と個人が直接繋がるマッチングプラットフォーム" />
+    <meta property="og:url" content="https://arrowpro.jp/professional" />
+    <meta property="og:site_name" content="ARROW pro" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:image" content="https://arrowpro.jp/img/01-hero/demo-c-right.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ARROW pro - クライアントから直接、白羽の矢が立つ。" />
+    <meta name="twitter:description" content="フリーランスコンサルタントに特化した、企業と個人が直接繋がるマッチングプラットフォーム" />
+    <meta name="twitter:image" content="https://arrowpro.jp/img/01-hero/demo-c-right.png" />
+    
+    <!-- パフォーマンス最適化 -->
+    <link rel="preconnect" href="https://arrowpro.jp" />
+    <link rel="preload" href="css/main.css" as="style" />
+    <link rel="preload" href="js/custom.js" as="script" />
+    
+    <!-- 構造化データ（JSON-LD） -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "ARROW pro",
+          "url": "https://arrowpro.jp",
+          "logo": "https://arrowpro.jp/img/06-footer/logo-arrow-pro.svg",
+          "description": "フリーコンサルタントに特化した、企業と個人が直接繋がるマッチングプラットフォーム",
+          "sameAs": ["https://arrowpro.jp"]
+        },
+        {
+          "@type": "WebSite",
+          "name": "ARROW pro",
+          "url": "https://arrowpro.jp/professional",
+          "description": "クライアントから直接、白羽の矢が立つ。完全無料、顧客と直接契約可能、全案件公開。"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "費用は発生しますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "いいえ、完全無料です。プロフェッショナルはご登録から応募、企業とのマッチングまで、全て無料でご利用いただけます。ご契約時も企業と二者間の直接契約となりますので、仲介手数料を頂くこともございません。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "どんな人が登録できますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "コンサルティング経験をお持ちの方であれば、個人事業主・法人問わず、1名での案件参画をご所望される方であればどなたでも登録可能です。現在は、大手ファーム（いわゆる\"総合・戦略コンサル\"）に在籍経験のある方を中心にご登録いただいています。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "匿名で利用できますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "はい、匿名で安心してご利用いただけます。企業があなたのプロフィールを検索・閲覧する際に、氏名や連絡先といった個人を特定できる情報は一切公開されません。企業と直接メッセージのやり取りを行う際に、ご自身の判断で情報を開示していただく仕組みです。"
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKN2CPSR"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Global Header -->
+    <header id="global-header" class="header">
+      <div class="header__logo">
+        <img class="header__logo-icon" src="img/06-footer/logo-arrow-pro.svg" alt="ARROW pro ロゴ" />
+        <div class="header__logo-text">ARROW pro</div>
+      </div>
+      
+      <!-- Hamburger Menu Button (Mobile only) -->
+      <button class="header__hamburger" aria-label="メニュー" aria-expanded="false">
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+      </button>
+      
+      <!-- Desktop Navigation Menu -->
+      <nav class="header__nav header__nav--desktop">
+        <a href="https://arrowpro.jp" class="header__nav-link">
+          <div class="header__nav-link-text">
+            人材をお探しの<br />企業の方はこちら
+          </div>
+        </a>
+        <a href="https://arrowpro.jp/professional/register" class="header__button header__button--register">
+          <div class="header__button-text">新規登録</div>
+        </a>
+        <a href="https://arrowpro.jp/login" class="header__button header__button--login">
+          <div class="header__button-text">ログイン</div>
+        </a>
+      </nav>
+      
+      <!-- Mobile Navigation Menu -->
+      <nav class="header__nav header__nav--mobile">
+        <a href="https://arrowpro.jp" class="header__nav-link">
+          <div class="header__nav-link-text">
+            企業の方はこちら
+          </div>
+        </a>
+        <a href="https://arrowpro.jp/professional/register" class="header__button header__button--register">
+          <div class="header__button-text">新規登録</div>
+        </a>
+        <a href="https://arrowpro.jp/login" class="header__button header__button--login">
+          <div class="header__button-text">ログイン</div>
+        </a>
+      </nav>
     </header>
 
+    <!-- Main Content -->
     <main>
-        <section class="hero">
-            <div class="container">
-                <h2 class="hero-title">ダミー_プロフェッショナルと企業をつなぐ</h2>
-                <p class="hero-text">ダミー_専門スキルを持つプロフェッショナルと、その専門性を必要とする企業をマッチング</p>
-                <button class="cta-button" onclick="handleCTAClick()">ダミー_今すぐ始める</button>
-            </div>
-        </section>
-
-        <section id="features" class="features">
-            <div class="container">
-                <h3 class="section-title">ダミー_サービスの特徴</h3>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <h4>ダミー_スキルマッチング</h4>
-                        <p>企業の要件に合わせた最適なプロフェッショナルを検索</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4>スカウト機能</h4>
-                        <p>企業から直接プロフェッショナルへアプローチ可能</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4>メッセージ機能</h4>
-                        <p>1対1のチャットで条件交渉やコミュニケーション</p>
-                    </div>
+      <!-- Hero Section -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <!-- Main Headline -->
+        <div class="hero__title-wrapper animate-on-scroll">
+          <h1 id="hero-heading" class="hero__title">
+            クライアントから直接、"白羽の矢"が立つ。
+          </h1>
+        </div>
+        
+        <div class="hero__container">
+          <!-- Hero Content -->
+          <div class="hero__content">
+            <!-- Subtitle -->
+            <p class="hero__subtitle animate-on-scroll animate-delay-200">
+              フリーランスコンサルタントに特化した、<br />
+              個人と企業が直接繋がるプラットフォーム
+            </p>
+            
+            <!-- Key Features -->
+            <div class="hero__features">
+              <div class="hero__feature animate-on-scroll animate-delay-300">
+                <div class="hero__feature-badge">
+                  <div class="hero__feature-icon"></div>
+                  <span class="hero__feature-text">
+                    完全無料
+                  </span>
                 </div>
-            </div>
-        </section>
+              </div>
 
-        <section id="contact" class="contact">
-            <div class="container">
-                <h3 class="section-title">お問い合わせ</h3>
-                <p>サービスに関するご質問はこちらからお気軽にどうぞ</p>
+              <div class="hero__feature animate-on-scroll animate-delay-400">
+                <div class="hero__feature-badge">
+                  <div class="hero__feature-icon"></div>
+                  <span class="hero__feature-text">
+                    顧客と<br />直接契約<br />可能
+                  </span>
+                </div>
+              </div>
+
+              <div class="hero__feature animate-on-scroll animate-delay-500">
+                <div class="hero__feature-badge">
+                  <div class="hero__feature-icon"></div>
+                  <span class="hero__feature-text">
+                    全案件<br />公開
+                  </span>
+                </div>
+              </div>
             </div>
-        </section>
+
+            <!-- CTA Button -->
+            <div class="hero__cta-wrapper animate-on-scroll animate-delay-600">
+              <a
+                href="https://arrowpro.jp/professional/register"
+                class="hero__cta-button animate-pulse"
+              >
+                いますぐ無料で使ってみる
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Visual -->
+          <div class="hero__visual animate-on-scroll animate-delay-300">
+            <img class="hero__image animate-scale-in" src="img/01-hero/demo-c-right.png" alt="ARROW pro デモ画面" loading="eager" />
+          </div>
+
+        </div>
+      </section>
+
+
+      
+
+      <!-- Problems Section -->
+      <section class="problems-section" aria-labelledby="problems-heading">
+        <div class="problems-section__container">
+          <div class="problems-section__header animate-on-scroll">
+            <span class="section__label">PROBLEMS</span>
+            <h2 id="problems-heading" class="problems-section__title">こんなお悩みありませんか？</h2>
+          </div>
+        <div class="problems-section__comparison-cards">
+          <div class="problems-section__comparison-card animate-on-scroll animate-delay-200">
+            <div class="problems-section__comparison-card-content">
+              <div class="problems-section__comparison-card-label">理想の顧客や案件に出会えない…</div>
+              <h3 class="problems-section__comparison-card-title">"狭く受け身な営業ネットワーク"</h3>
+              <div class="problems-section__comparison-card-image">
+                <img src="img/02-problems/p_problem_1.svg" alt="P課題①" loading="lazy" />
+              </div>
+              <div class="problems-section__comparison-card-text">
+                <ul class="text-span">
+                  <li>自身の適性や興味、志向する働き方と合致する顧客や案件が見つからない</li>
+                  <li>案件紹介エージェントを活用しても、自らの希望とのミスマッチが多い</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="problems-section__comparison-card animate-on-scroll animate-delay-300">
+            <div class="problems-section__comparison-card-content">
+              <div class="problems-section__comparison-card-label">顧客と直接繋がりづらい…</div>
+              <h3 class="problems-section__comparison-card-title">"多重下請け・中抜き構造"</h3>
+              <div class="problems-section__comparison-card-image">
+                <img src="img/02-problems/p_problem_2.svg" alt="P課題②" loading="lazy" />
+              </div>
+              <div class="problems-section__comparison-card-text">
+                <ul class="text-span">
+                  <li>仲介業者を介することで継続的にマージンが発生し、自身の報酬が削られる</li>
+                  <li>顧客とのやり取りに追加のリードタイムも生じ、機会損失のリスク</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="problems-section__comparison-card animate-on-scroll animate-delay-400">
+            <div class="problems-section__comparison-card-content">
+              <div class="problems-section__comparison-card-label">収入やキャリアが見通しづらい…</div>
+              <h3 class="problems-section__comparison-card-title">"工数と経歴の切り売り"</h3>
+              <div class="problems-section__comparison-card-image">
+                <img src="img/02-problems/p_problem_3.svg" alt="P課題③" loading="lazy" />
+              </div>
+              <div class="problems-section__comparison-card-text">
+                <ul class="text-span">
+                  <li>単発案件ばかりで収入が不安定</li>
+                  <li>経歴の延長線上の案件ばかりで、新しい挑戦の機会が限られる</li>
+                  <li>個人の実績やブランドが積み上がらない</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <!-- Benefits Section -->
+      <section class="benefits-section" aria-labelledby="benefits-heading">
+        <div class="benefits-section__header animate-on-scroll">
+          <div class="benefits-section__label">FEATURE</div>
+          <h2 id="benefits-heading" class="benefits-section__title">サービスの特徴</h2>
+        </div>
+        <div class="benefits-section__features">
+          <article class="feature-card animate-on-scroll animate-delay-200">
+            <div class="feature-card__header">
+              <img class="feature-card__badge-image" src="img/03-features/feature-badge-1.png" alt="特徴1" loading="lazy" />
+              <img class="feature-card__illustration" src="img/03-features/feature-scout-icon.svg" alt="スカウト機能" loading="lazy" />
+            </div>
+            <div class="feature-card__content">
+              <div class="feature-card__visual">
+                <div class="feature-card__text-wrapper">
+                  <div class="feature-card__description">
+                    <div class="feature-card__heading">
+                      企業から案件参画スカウトが直接届く！
+                    </div>
+                    <div class="feature-card__body">
+                      <span>
+                        <span class="feature-card__body-text">
+                          プロフィールを登録しておくだけで、あなたの経験やスキルを見た企業から
+                        </span>
+                        <span class="feature-card__body-text--bold">
+                          ダイレクトにアプローチ
+                        </span>
+                        <span class="feature-card__body-text">
+                          を受けられます。
+                        </span>
+                        <span class="feature-card__body-text--bold">
+                          稼働実績・評価*が積み上がるほど企業の信頼が高まり
+                        </span>
+                        <span class="feature-card__body-text">
+                          、参画機会がますます広がります。
+                        </span>
+                        <span class="feature-card__body-text--small">
+                          *評価機能は今後のアップデートで実装予定
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img class="feature-card__screenshot" src="img/03-features/feature-profile-screenshot.png" alt="プロフィール画面" loading="lazy" />
+            </div>
+          </article>
+
+          <article class="feature-card feature-card--reverse animate-on-scroll animate-delay-400">
+            <div class="feature-card__header">
+              <img class="feature-card__badge-image" src="img/03-features/feature-badge-2.png" alt="特徴2" loading="lazy" />
+              <img class="feature-card__illustration" src="img/03-features/feature-apply-icon.svg" alt="応募機能" loading="lazy" />
+            </div>
+            <div class="feature-card__content">
+              <img class="feature-card__screenshot feature-card__screenshot--left" src="img/03-features/feature-case-screenshot.png" alt="案件画面" loading="lazy" />
+              <div class="feature-card__visual">
+                <div class="feature-card__text-wrapper">
+                  <div class="feature-card__description">
+                    <div class="feature-card__heading">
+                      募集案件を検索し、自ら応募もできる！
+                    </div>
+                    <div class="feature-card__body">
+                      <span>
+                        <span class="feature-card__body-text">
+                          プラットフォーム上の公開案件の中から、
+                        </span>
+                        <span class="feature-card__body-text--bold">
+                          ご自身の関心がある案件に自ら応募
+                        </span>
+                        <span class="feature-card__body-text">
+                          ができます。募集企業に対して、
+                        </span>
+                        <span class="feature-card__body-text--bold">
+                          能動的に意欲やアピールポイントを伝えられます
+                        </span>
+                        <span class="feature-card__body-text">
+                          。
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature-card animate-on-scroll animate-delay-600">
+            <div class="feature-card__header">
+              <img class="feature-card__badge-image" src="img/03-features/feature-badge-3.png" alt="特徴3" loading="lazy" />
+              <img class="feature-card__illustration" src="img/03-features/feature-direct-icon.svg" alt="直接契約機能" loading="lazy" />
+            </div>
+            <div class="feature-card__content">
+              <div class="feature-card__visual">
+                <div class="feature-card__text-wrapper">
+                  <div class="feature-card__description">
+                    <div class="feature-card__heading">
+                      初回コンタクトから契約まで、<br />完全無料で企業と直接やり取りできる！
+                    </div>
+                    <div class="feature-card__body">
+                      <span>
+                        <span class="feature-card__body-text">
+                          マッチした企業と
+                        </span>
+                        <span class="feature-card__body-text--bold">
+                          直接契約できるため、仲介手数料がかからず報酬を最大化
+                        </span>
+                        <span class="feature-card__body-text">
+                          できます。<br />報酬面以外でも
+                        </span>
+                        <span class="feature-card__body-text--bold">
+                          第三者の介入なく直接対話できることで面談や手続きも迅速に
+                        </span>
+                        <span class="feature-card__body-text">
+                          進められます。
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img class="feature-card__screenshot" src="img/03-features/feature-chat-screenshot.png" alt="チャット画面" loading="lazy" />
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Theme Section -->
+      <section class="theme-section" aria-labelledby="theme-heading">
+        <div class="theme-section__header animate-on-scroll">
+          <div class="theme-section__label">THEME</div>
+          <h2 id="theme-heading" class="theme-section__title">豊富なプロジェクトテーマ</h2>
+        </div>
+        <div class="theme-section__categories">
+          <!-- Strategy Category -->
+          <div class="theme-category animate-on-scroll animate-delay-200">
+            <div class="theme-category__card">
+              <div class="theme-category__header">
+                <div class="theme-category__title">経営戦略・事業戦略</div>
+                <img class="theme-category__icon" src="img/04-themes/theme-strategy-icon.svg" alt="経営戦略アイコン" loading="lazy" />
+              </div>
+              <div class="theme-category__tags">
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">経営計画・中期計画策定</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">事業成長戦略</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">新規事業立案</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">M&amp;A・PMI</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">BDD</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">事業投資支援</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">事業再生</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">アライアンス・業務提携</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">事業再編・カーブアウト</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">グローバル展開戦略</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">ブランディング</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">R&amp;D・知的財産</div>
+                </div>
+              </article>
+              </div>
+            </div>
+          </div>
+
+          <!-- Marketing & Operations Category -->
+          <div class="theme-category animate-on-scroll animate-delay-300">
+            <div class="theme-category__card">
+              <div class="theme-category__header">
+                <div class="theme-category__title">営業・マーケティング・<br />オペレーション</div>
+                <img class="theme-category__icon" src="img/04-themes/theme-operation-icon.svg" alt="営業・マーケティング・オペレーションアイコン" loading="lazy" />
+              </div>
+              <div class="theme-category__tags">
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">営業戦略</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">マーケティング戦略</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">プロモーション／チャネル戦略</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">顧客体験設計（CX）</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">業務プロセス可視化・改善</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">コスト削減</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">調達</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">サプライチェーン・ロジスティクス</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">生産管理・品質管理</div>
+                </div>
+              </article>
+              </div>
+            </div>
+          </div>
+
+          <!-- HR & Finance Category -->
+          <div class="theme-category animate-on-scroll animate-delay-400">
+            <div class="theme-category__card">
+              <div class="theme-category__header">
+                <div class="theme-category__title">人事・財務・リスク</div>
+                <img class="theme-category__icon" src="img/04-themes/theme-finance-icon.svg" alt="人事・財務・リスクアイコン" loading="lazy" />
+              </div>
+              <div class="theme-category__tags">
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">人事制度設計</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">組織設計・再編</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">働き方改革・労務管理</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">KPI設計・管理会計</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">資本政策</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">広報・IR</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">リスク・ガバナンス</div>
+                </div>
+              </article>
+              </div>
+            </div>
+          </div>
+
+          <!-- Digital & IT Category -->
+          <div class="theme-category animate-on-scroll animate-delay-500">
+            <div class="theme-category__card">
+              <div class="theme-category__header">
+                <div class="theme-category__title">デジタル・IT</div>
+                <img class="theme-category__icon" src="img/04-themes/theme-digital-icon.svg" alt="デジタル・ITアイコン" loading="lazy" />
+              </div>
+              <div class="theme-category__tags">
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">DX戦略・IT中期計画策定</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">SAP・ERP</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">SFA・CRM</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">業務システム開発</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">IT基盤設計／インフラ整備</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">データ活用支援</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">AI・生成AI</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">サイバーセキュリティ</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">RPA</div>
+                </div>
+              </article>
+              </div>
+            </div>
+          </div>
+
+          <!-- New Areas Category -->
+          <div class="theme-category animate-on-scroll animate-delay-600">
+            <div class="theme-category__card">
+              <div class="theme-category__header">
+                <div class="theme-category__title">新領域・先新テーマ</div>
+                <img class="theme-category__icon" src="img/04-themes/theme-innovation-icon.svg" alt="新領域・先新テーマアイコン" loading="lazy" />
+              </div>
+              <div class="theme-category__tags">
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">ESG・サステナビリティ経営</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">カーボンニュートラル対応</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">オープンイノベーション</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">官民連携・地方創生</div>
+                </div>
+              </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Flow Section -->
+      <section class="flow-section" aria-labelledby="flow-heading">
+        <div class="flow-section__header animate-on-scroll">
+          <div class="flow-section__label">FLOW</div>
+          <h2 id="flow-heading" class="flow-section__title">ご利用の流れ</h2>
+        </div>
+        <div class="flow-section__steps">
+          <!-- Step 1 -->
+          <div class="flow-step animate-on-scroll animate-delay-200">
+            <div class="flow-step__card">
+              <div class="flow-step__number-circle">
+                <div class="flow-step__number">1</div>
+              </div>
+              <div class="flow-step__content">
+                <div class="flow-step__icon">
+                  <img class="flow-step__icon-svg" src="img/05-flow/flow-profile-icon.svg" alt="アカウント登録アイコン" loading="lazy" />
+                </div>
+                <div class="flow-step__text">
+                  <div class="flow-step__title">プロフィール登録</div>
+                  <div class="flow-step__description">画面に沿って、ご経験やスキルを入力いただきます</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Start Notice Bubble -->
+          <div class="flow-start-notice animate-on-scroll animate-delay-300">
+            <div class="flow-start-notice__line"></div>
+            <div class="flow-start-notice__bubble">
+              <div class="flow-start-notice__arrow"></div>
+              <div class="flow-start-notice__content">
+                <div class="flow-start-notice__text">ご利用スタート</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flow-step animate-on-scroll animate-delay-350">
+            <div class="flow-step__card">
+              <div class="flow-step__number-circle">
+                <div class="flow-step__number">2</div>
+              </div>
+              <div class="flow-step__content flow-step__content--wide">
+                <div class="flow-step__title">案件を見つける</div>
+                <div class="flow-step__methods">
+                  <div class="flow-step__method">
+                    <div class="flow-step__method-icon">
+                      <img class="flow-step__method-icon-svg" src="img/05-flow/vector-7.svg" alt="スカウト通知アイコン" loading="lazy" />
+                    </div>
+                    <div class="flow-step__method-content">
+                      <div class="flow-step__method-title">スカウト通知</div>
+                      <div class="flow-step__method-description">企業からの案件参画スカウトが届きます</div>
+                    </div>
+                  </div>
+                  <div class="flow-step__method">
+                    <div class="flow-step__method-icon">
+                      <img class="flow-step__method-icon-svg" src="img/05-flow/flow-apply-icon.svg" alt="応募アイコン" loading="lazy" />
+                    </div>
+                    <div class="flow-step__method-content">
+                      <div class="flow-step__method-title">応募</div>
+                      <div class="flow-step__method-description">気になる案件を検索し応募できます</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Initial Matching Notice Bubble -->
+          <div class="flow-start-notice animate-on-scroll animate-delay-450">
+            <div class="flow-start-notice__line"></div>
+            <div class="flow-start-notice__bubble">
+              <div class="flow-start-notice__arrow"></div>
+              <div class="flow-start-notice__content">
+                <div class="flow-start-notice__text">初期マッチング</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flow-step animate-on-scroll animate-delay-500">
+            <div class="flow-step__card">
+              <div class="flow-step__number-circle">
+                <div class="flow-step__number">3</div>
+              </div>
+              <div class="flow-step__content">
+                <div class="flow-step__icon">
+                  <img class="flow-step__icon-svg" src="img/05-flow/flow-chat-icon.svg" alt="チャットアイコン" loading="lazy" />
+                </div>
+                <div class="flow-step__text">
+                  <div class="flow-step__title">企業とやりとり</div>
+                  <div class="flow-step__description">企業と直接メッセージで面談調整や条件すり合わせを行います</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Agreement Notice Bubble -->
+          <div class="flow-start-notice animate-on-scroll animate-delay-550">
+            <div class="flow-start-notice__line"></div>
+            <div class="flow-start-notice__bubble">
+              <div class="flow-start-notice__arrow"></div>
+              <div class="flow-start-notice__content">
+                <div class="flow-start-notice__text">条件合意</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flow-step animate-on-scroll animate-delay-600">
+            <div class="flow-step__card">
+              <div class="flow-step__number-circle">
+                <div class="flow-step__number">4</div>
+              </div>
+              <div class="flow-step__content">
+                <div class="flow-step__icon">
+                  <img class="flow-step__icon-svg" src="img/05-flow/flow-contract-icon.svg" alt="直接契約・稼働アイコン" loading="lazy" />
+                </div>
+                <div class="flow-step__text">
+                  <div class="flow-step__title">直接契約・稼働</div>
+                  <div class="flow-step__description">双方の合意後、直接契約締結。稼働をスタートいただきます</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section" aria-labelledby="faq-heading">
+        <div class="faq-section__header animate-on-scroll">
+          <div class="faq-section__label">FAQ</div>
+          <h2 id="faq-heading" class="faq-section__title">よくある質問</h2>
+        </div>
+        <div class="faq-section__list">
+          <!-- FAQ Item 1 -->
+          <div class="faq-item animate-on-scroll animate-delay-200">
+            <div class="faq-item__wrapper">
+              <div class="faq-item__question" role="button" aria-expanded="false" aria-controls="faq-answer-1" tabindex="0">
+                <div class="faq-item__q-icon">Q</div>
+                <div class="faq-item__q-text" id="faq-question-1">費用は発生しますか？</div>
+                <div class="faq-item__arrow">▼</div>
+              </div>
+              <div class="faq-item__answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1">
+                <div class="faq-item__a-icon">A</div>
+                <div class="faq-item__a-text">
+                  いいえ、<span class="faq-item__a-text--bold">完全無料</span>です。プロフェッショナルは<span class="faq-item__a-text--bold">ご登録から応募、企業とのマッチングまで、全て無料</span>でご利用いただけます。<br />
+                  ご契約時も企業と二者間の直接契約となりますので、<span class="faq-item__a-text--bold">仲介手数料を頂くこともございません</span>。
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-item animate-on-scroll animate-delay-300">
+            <div class="faq-item__wrapper">
+              <div class="faq-item__question" role="button" aria-expanded="false" aria-controls="faq-answer-2" tabindex="0">
+                <div class="faq-item__q-icon">Q</div>
+                <div class="faq-item__q-text" id="faq-question-2">どんな人が登録できますか？</div>
+                <div class="faq-item__arrow">▼</div>
+              </div>
+              <div class="faq-item__answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2">
+                <div class="faq-item__a-icon">A</div>
+                <div class="faq-item__a-text">
+                  コンサルティング経験をお持ちの方であれば、<span class="faq-item__a-text--bold">個人事業主・法人問わず、1名での案件参画をご所望される方</span>であればどなたでも登録可能です。現在は、大手ファーム（いわゆる“総合・戦略コンサル”）に在籍経験のある方を中心にご登録いただいています。<br /><br />
+                  <small>※企業に在籍中の方もご登録可能ですが、所属企業の就業規則（副業・競業規定など）を必ずご確認の上、ご自身の責任においてご利用ください</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-item animate-on-scroll animate-delay-400">
+            <div class="faq-item__wrapper">
+              <div class="faq-item__question" role="button" aria-expanded="false" aria-controls="faq-answer-3" tabindex="0">
+                <div class="faq-item__q-icon">Q</div>
+                <div class="faq-item__q-text" id="faq-question-3">匿名で利用できますか？</div>
+                <div class="faq-item__arrow">▼</div>
+              </div>
+              <div class="faq-item__answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3">
+                <div class="faq-item__a-icon">A</div>
+                <div class="faq-item__a-text">
+                  はい、<span class="faq-item__a-text--bold">匿名で安心してご利用いただけます</span>。企業があなたのプロフィールを検索・閲覧する際に、氏名や連絡先といった個人を特定できる情報は一切公開されません。<br />
+                  <span class="faq-item__a-text--bold">企業と直接メッセージのやり取りを行う際に、ご自身の判断で情報を開示</span>していただく仕組みです。
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section" aria-label="コールトゥアクション">
+        <div class="cta-section__content">
+          <div class="cta-section__text animate-on-scroll">「人材紹介」ではなく、攻めのプロフェッショナル獲得へ。</div>
+          <a href="https://arrowpro.jp/professional/register" class="cta-section__button animate-on-scroll animate-delay-200 animate-pulse">今すぐ始める</a>
+        </div>
+      </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 ARROW pro. All rights reserved.</p>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer__grid">
+          <div class="footer__logo">
+            <img class="footer__logo-icon" src="img/06-footer/logo-arrow-pro.svg" alt="ARROW pro ロゴ" loading="lazy" />
+            <div class="footer__logo-text">ARROW pro</div>
+          </div>
+          <div class="footer__nav-group">
+            <div class="footer__nav-section">
+              <div class="footer__nav-title">ユーザー別</div>
+              <div class="footer__nav-links">
+                <a href="https://arrowpro.jp/professional">
+                  <div class="footer__nav-link">
+                    個人・フリーコンサルタントの方
+                  </div>
+                </a>
+                <a href="https://arrowpro.jp">
+                  <div class="footer__nav-link">企業の方</div>
+                </a>
+              </div>
+            </div>
+            <div class="footer__nav-section">
+              <div class="footer__nav-title">サポート</div>
+              <div class="footer__nav-links">
+                <a href="https://arrowpro.jp/contact/professional">
+                  <div class="footer__nav-link">お問い合わせ</div>
+                </a>
+                <a href="https://arrowpro.jp/company">
+                  <div class="footer__nav-link">運営会社</div>
+                </a>
+                <a href="https://arrowpro.jp/terms">
+                  <div class="footer__nav-link">利用規約</div>
+                </a>
+                <a href="https://arrowpro.jp/privacy">
+                  <div class="footer__nav-link">プライバシーポリシー</div>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            © 2025 Swallo. All Rights Reserved.
+          </p>
+        </div>
+      </footer>
 
-    <script src="js/script.js"></script>
-</body>
+    <!-- JavaScript -->
+    <script src="js/custom.js"></script>
+  </body>
 </html>

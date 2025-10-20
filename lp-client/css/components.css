@@ -228,6 +228,36 @@
   animation: bounce 1s infinite;
 }
 
+/* FAQアコーディオンアニメーション */
+.faq-item__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.faq-item.active .faq-item__answer {
+  max-height: 500px; /* 十分な高さを設定 */
+  transition: max-height 0.3s ease-in, padding 0.3s ease-in;
+}
+
+.faq-item__arrow {
+  transition: transform 0.3s ease-out;
+}
+
+.faq-item.active .faq-item__arrow {
+  transform: rotate(180deg);
+}
+
+/* FAQ質問のホバー効果 */
+.faq-item__question {
+  transition: background-color 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.faq-item__question:hover {
+  background-color: rgba(0, 175, 204, 0.05);
+  transform: translateY(-1px);
+}
+
 /* =============================================================================
    Section Headers (共通セクション見出し)
    ============================================================================= */
@@ -1257,17 +1287,7 @@
   position: relative;
 }
 
-.flow-step:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  left: -25px;
-  top: 25px;
-  width: 3px;
-  height: calc(100% + 48px);
-  background: linear-gradient(to bottom, #007ACC, #0066aa);
-  border-radius: 2px;
-  z-index: 1;
-}
+/* 縦棒を削除 */
 
 .flow-step__card {
   background: #ffffff;
@@ -1417,17 +1437,7 @@
   width: 100%;
 }
 
-.flow-start-notice:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  left: -25px;
-  top: 50%;
-  width: 3px;
-  height: calc(50% + 16px);
-  background: linear-gradient(to bottom, #007ACC, #0066aa);
-  border-radius: 2px;
-  z-index: 1;
-}
+/* 通知バブルの縦棒を削除 */
 
 .flow-start-notice__bubble {
   border-radius: 32px;
@@ -1503,17 +1513,13 @@
     font-size: 19px;
   }
 
-  .flow-step:not(:last-child)::after {
-    left: -25px;
-  }
+  /* レスポンシブ版の縦棒を削除 */
 
   .flow-start-notice {
     padding: 16px 0;
   }
 
-  .flow-start-notice:not(:last-child)::after {
-    left: -25px;
-  }
+  /* レスポンシブ版の通知バブル縦棒を削除 */
 
   .flow-start-notice__bubble {
     margin-left: 0;
@@ -1559,16 +1565,9 @@
     gap: 12px;
   }
 
-  .flow-step:not(:last-child)::after {
-    left: -22px;
-    top: 22px;
-    height: calc(100% + 36px);
-  }
+  /* モバイル版の縦棒を削除 */
 
-  .flow-start-notice:not(:last-child)::after {
-    left: -22px;
-    height: calc(50% + 12px);
-  }
+  /* モバイル版の通知バブル縦棒を削除 */
 
   .flow-step__icon {
     width: 60px;

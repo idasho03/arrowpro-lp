@@ -232,12 +232,9 @@ function initScrollAnimations() {
         else if (classList.contains('animate-delay-700')) delay = 700;
         else if (classList.contains('animate-delay-800')) delay = 800;
         
-        console.log('アニメーション要素を検出:', entry.target.className, '遅延:', delay + 'ms');
-        
         // 遅延後にアニメーションを実行
         setTimeout(function() {
           entry.target.classList.add('animate-visible');
-          console.log('アニメーション実行:', entry.target.className);
         }, delay);
         
         // 一度表示されたら監視を停止
@@ -248,7 +245,6 @@ function initScrollAnimations() {
 
   // アニメーション対象要素を監視
   const animateElements = document.querySelectorAll('.animate-on-scroll');
-  console.log('アニメーション対象要素数:', animateElements.length);
   animateElements.forEach(function(element) {
     observer.observe(element);
   });

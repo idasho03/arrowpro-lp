@@ -219,12 +219,25 @@ function initScrollAnimations() {
   const observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
-        entry.target.classList.add('animate-visible');
+        // 遅延クラスを確認して適切な遅延を設定
+        let delay = 0;
+        const classList = entry.target.classList;
         
-        // 遅延アニメーションの処理
-        const delay = entry.target.dataset.animationDelay || 0;
+        if (classList.contains('animate-delay-100')) delay = 100;
+        else if (classList.contains('animate-delay-200')) delay = 200;
+        else if (classList.contains('animate-delay-300')) delay = 300;
+        else if (classList.contains('animate-delay-400')) delay = 400;
+        else if (classList.contains('animate-delay-500')) delay = 500;
+        else if (classList.contains('animate-delay-600')) delay = 600;
+        else if (classList.contains('animate-delay-700')) delay = 700;
+        else if (classList.contains('animate-delay-800')) delay = 800;
+        
+        console.log('アニメーション要素を検出:', entry.target.className, '遅延:', delay + 'ms');
+        
+        // 遅延後にアニメーションを実行
         setTimeout(function() {
-          entry.target.style.animationPlayState = 'running';
+          entry.target.classList.add('animate-visible');
+          console.log('アニメーション実行:', entry.target.className);
         }, delay);
         
         // 一度表示されたら監視を停止
@@ -235,6 +248,7 @@ function initScrollAnimations() {
 
   // アニメーション対象要素を監視
   const animateElements = document.querySelectorAll('.animate-on-scroll');
+  console.log('アニメーション対象要素数:', animateElements.length);
   animateElements.forEach(function(element) {
     observer.observe(element);
   });

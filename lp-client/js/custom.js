@@ -8,14 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
   try {
     initHamburgerMenu();
   } catch (error) {
-    console.log('ハンバーガーメニューの初期化をスキップしました:', error);
   }
   
   // 基本的なFAQアコーディオンの初期化のみ
   try {
     initFaqAccordion();
   } catch (error) {
-    console.log('FAQアコーディオンの初期化をスキップしました:', error);
   }
   
   // アニメーションの初期化
@@ -23,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollAnimations();
     initTextAnimations();
   } catch (error) {
-    console.log('アニメーションの初期化をスキップしました:', error);
   }
   
   // 画像の遅延読み込み設定（一時的に無効化）
@@ -40,28 +37,21 @@ function initHamburgerMenu() {
   const hamburger = document.querySelector('.header__hamburger');
   const ctaMenu = document.querySelector('.header__nav--mobile');
   
-  console.log('Hamburger element:', hamburger);
-  console.log('Mobile menu element:', ctaMenu);
   
   if (!hamburger || !ctaMenu) {
-    console.log('ハンバーガーメニューまたはモバイルメニューが見つかりません');
     return;
   }
   
-  console.log('ハンバーガーメニューの初期化が完了しました');
   
   // ハンバーガーメニューのクリックイベント
   hamburger.addEventListener('click', function() {
-    console.log('ハンバーガーメニューがクリックされました');
     const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-    console.log('現在の状態:', isExpanded ? '開いている' : '閉じている');
     
     // aria-expanded の切り替え
     hamburger.setAttribute('aria-expanded', !isExpanded);
     
     // メニューの表示/非表示
     ctaMenu.classList.toggle('active');
-    console.log('メニューの新しい状態:', ctaMenu.classList.contains('active') ? '開く' : '閉じる');
     
     // ボディのスクロールを制御（メニューが開いている時はスクロール無効）
     if (!isExpanded) {
@@ -158,7 +148,6 @@ function initFaqAccordion() {
       }
     });
     } catch (error) {
-      console.log('FAQアコーディオン初期化エラー:', error);
     }
   });
   
@@ -173,7 +162,6 @@ function initFaqAccordion() {
       }
     });
   } catch (error) {
-    console.log('FAQの初期化エラー:', error);
   }
 }
 

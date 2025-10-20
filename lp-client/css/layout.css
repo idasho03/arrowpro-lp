@@ -75,6 +75,7 @@ main[role="main"] {
   height: 33px;
   position: relative;
   overflow: visible;
+  filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(188deg) brightness(118%) contrast(119%);
 }
 
 .header__logo-text {
@@ -193,7 +194,7 @@ header.header .header__button--login:hover {
 .header__button-text {
   color: #ffffff;
   text-align: center;
-  font-family: "NotoSansJp-Medium", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
@@ -210,7 +211,7 @@ header.header .header__button--login .header__button-text {
 .header__nav-link-text {
   color: #00AFCC;
   text-align: center;
-  font-family: "NotoSansJp-Medium", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
@@ -287,6 +288,7 @@ header.header .header__button--login .header__button-text {
   .header__logo-icon {
     width: 24px;
     height: 26px;
+    filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(188deg) brightness(118%) contrast(119%);
   }
 
   .header__logo-text {
@@ -360,6 +362,7 @@ header.header .header__button--login .header__button-text {
   .header__logo-icon {
     width: 28px;
     height: 30px;
+    filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(188deg) brightness(118%) contrast(119%);
   }
 
   .header__logo-text {
@@ -484,7 +487,7 @@ header.header .header__button--login .header__button-text {
 
 .footer__nav-title {
   color: #ffffff;
-  font-family: "NotoSansJp-Normal", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   font-weight: 400;
 }
@@ -496,8 +499,8 @@ header.header .header__button--login .header__button-text {
 }
 
 .footer__nav-link {
-  color: #9ca3af;
-  font-family: "NotoSansJp-Normal", sans-serif;
+  color: #ffffff;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
@@ -535,8 +538,8 @@ header.header .header__button--login .header__button-text {
 }
 
 .footer__legal-link {
-  color: #9ca3af;
-  font-family: "NotoSansJp-Normal", sans-serif;
+  color: #ffffff;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
@@ -547,8 +550,8 @@ header.header .header__button--login .header__button-text {
 }
 
 .footer__copyright {
-  color: #6b7280;
-  font-family: "NotoSansJp-Normal", sans-serif;
+  color: #ffffff;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
   font-weight: 400;
   margin: 0;

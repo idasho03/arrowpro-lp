@@ -78,7 +78,7 @@ section {
 
 :root {
   /* Colors */
-  --black: #000000;
+  --black: #1f2937;
   --cabaret: #e43f6f;
   --cararra: #f1eee3;
   --cerulean: #00AFCC;
@@ -89,7 +89,7 @@ section {
   --mischka: #d1d5db;
   --pewter-blue: #94a3b8;
   --polar: #e5f7fa;
-  --santas-gray: #9ca3af;
+  --santas-gray: #1f2937;
   --white: #ffffff;
   --white-2: #ffffff33;
 
@@ -103,7 +103,7 @@ section {
   --font-size-xxxxl: 35.1px;
 
   /* Font Families */
-  --font-family-noto_sans_javanese: "Noto Sans Javanese", Helvetica;
+  --font-family-noto_sans_javanese: "Noto Sans JP", Helvetica;
   --font-family-noto_sans_jp: "Noto Sans JP", Helvetica;
   --font-family-poppins: "Poppins", Helvetica;
   --font-family-roboto: "Roboto", Helvetica;

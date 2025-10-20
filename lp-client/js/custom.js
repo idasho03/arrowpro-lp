@@ -18,6 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('FAQアコーディオンの初期化をスキップしました:', error);
   }
   
+  // アニメーションの初期化
+  try {
+    initScrollAnimations();
+    initTextAnimations();
+  } catch (error) {
+    console.log('アニメーションの初期化をスキップしました:', error);
+  }
+  
   // 画像の遅延読み込み設定（一時的に無効化）
   // setupLazyLoading();
   
@@ -196,6 +204,139 @@ function setupLazyLoading() {
   //     img.setAttribute('loading', 'lazy');
   //   }
   // });
+}
+
+/**
+ * スクロール連動アニメーションの初期化
+ */
+function initScrollAnimations() {
+  // Intersection Observer の設定
+  const observerOptions = {
+    threshold: 0.1, // 要素の10%が表示されたら発火
+    rootMargin: '0px 0px -50px 0px' // 下から50px手前で発火
+  };
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-visible');
+        
+        // 遅延アニメーションの処理
+        const delay = entry.target.dataset.animationDelay || 0;
+        setTimeout(function() {
+          entry.target.style.animationPlayState = 'running';
+        }, delay);
+        
+        // 一度表示されたら監視を停止
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // アニメーション対象要素を監視
+  const animateElements = document.querySelectorAll('.animate-on-scroll');
+  animateElements.forEach(function(element) {
+    observer.observe(element);
+  });
+}
+
+/**
+ * 文字アニメーションの初期化
+ */
+function initTextAnimations() {
+  // タイプライター効果の初期化
+  initTypewriterEffect();
+  
+  // 文字の一文字ずつ出現アニメーション
+  initLetterAnimations();
+}
+
+/**
+ * タイプライター効果の初期化
+ */
+function initTypewriterEffect() {
+  const typewriterElements = document.querySelectorAll('.typewriter');
+  
+  typewriterElements.forEach(function(element) {
+    const text = element.textContent;
+    element.textContent = '';
+    element.style.borderRight = '2px solid #00AFCC';
+    
+    let i = 0;
+    const typeInterval = setInterval(function() {
+      if (i < text.length) {
+        element.textContent += text.charAt(i);
+        i++;
+      } else {
+        clearInterval(typeInterval);
+        // タイプライター完了後、カーソルを点滅させる
+        element.style.borderRight = 'none';
+      }
+    }, 100); // 100ms間隔で文字を表示
+  });
+}
+
+/**
+ * 文字の一文字ずつ出現アニメーション
+ */
+function initLetterAnimations() {
+  const letterElements = document.querySelectorAll('.animate-letters');
+  
+  letterElements.forEach(function(element) {
+    const text = element.textContent;
+    element.innerHTML = '';
+    
+    // 各文字をspanで囲む
+    for (let i = 0; i < text.length; i++) {
+      const span = document.createElement('span');
+      span.className = 'letter';
+      span.textContent = text[i];
+      span.style.animationDelay = (i * 0.1) + 's';
+      element.appendChild(span);
+    }
+  });
+}
+
+/**
+ * 図形の描画アニメーション（SVG用）
+ */
+function initShapeAnimations() {
+  const svgElements = document.querySelectorAll('.animate-draw');
+  
+  svgElements.forEach(function(element) {
+    const paths = element.querySelectorAll('path, circle, rect, line');
+    
+    paths.forEach(function(path, index) {
+      const length = path.getTotalLength();
+      path.style.strokeDasharray = length;
+      path.style.strokeDashoffset = length;
+      path.style.animationDelay = (index * 0.2) + 's';
+    });
+  });
+}
+
+/**
+ * カスタムアニメーション関数
+ */
+function animateElement(element, animationType, duration = 600, delay = 0) {
+  return new Promise(function(resolve) {
+    setTimeout(function() {
+      element.classList.add(animationType);
+      
+      setTimeout(function() {
+        resolve();
+      }, duration);
+    }, delay);
+  });
+}
+
+/**
+ * 段階的アニメーション（複数要素を順番に表示）
+ */
+function animateElementsSequentially(elements, animationType, staggerDelay = 200) {
+  elements.forEach(function(element, index) {
+    animateElement(element, animationType, 600, index * staggerDelay);
+  });
 }
 
 /**

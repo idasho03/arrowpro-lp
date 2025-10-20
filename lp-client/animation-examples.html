@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アニメーション例 - ARROW pro</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        body {
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .example-section {
+            margin: 60px 0;
+            padding: 40px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            background: #f9f9f9;
+        }
+        .example-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .example-description {
+            margin-bottom: 30px;
+            color: #666;
+        }
+        .demo-element {
+            padding: 20px;
+            margin: 10px 0;
+            background: #00AFCC;
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .demo-text {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .demo-shape {
+            width: 100px;
+            height: 100px;
+            background: #d63384;
+            margin: 20px auto;
+            border-radius: 50%;
+        }
+        .demo-svg {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            display: block;
+        }
+        .code-example {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        .code-example pre {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>文字・図形の出現アニメーション例</h1>
+    
+    <!-- 基本的なスクロールアニメーション -->
+    <div class="example-section">
+        <h2 class="example-title">1. 基本的なスクロールアニメーション</h2>
+        <p class="example-description">要素が画面に入った時にフェードイン + スライドアップします。</p>
+        
+        <div class="demo-element animate-on-scroll">
+            <div class="demo-text">スクロールして表示される要素</div>
+        </div>
+        
+        <div class="code-example">
+            <pre>&lt;div class="animate-on-scroll"&gt;
+    スクロールして表示される要素
+&lt;/div&gt;</pre>
+        </div>
+    </div>
+
+    <!-- 方向別アニメーション -->
+    <div class="example-section">
+        <h2 class="example-title">2. 方向別アニメーション</h2>
+        <p class="example-description">様々な方向から要素が出現します。</p>
+        
+        <div class="demo-element animate-fade-in-up">
+            <div class="demo-text">下から上へ (fade-in-up)</div>
+        </div>
+        
+        <div class="demo-element animate-fade-in-down">
+            <div class="demo-text">上から下へ (fade-in-down)</div>
+        </div>
+        
+        <div class="demo-element animate-fade-in-left">
+            <div class="demo-text">左から右へ (fade-in-left)</div>
+        </div>
+        
+        <div class="demo-element animate-fade-in-right">
+            <div class="demo-text">右から左へ (fade-in-right)</div>
+        </div>
+        
+        <div class="code-example">
+            <pre>&lt;div class="animate-fade-in-up"&gt;下から上へ&lt;/div&gt;
+&lt;div class="animate-fade-in-down"&gt;上から下へ&lt;/div&gt;
+&lt;div class="animate-fade-in-left"&gt;左から右へ&lt;/div&gt;
+&lt;div class="animate-fade-in-right"&gt;右から左へ&lt;/div&gt;</pre>
+        </div>
+    </div>
+
+    <!-- スケール・回転アニメーション -->
+    <div class="example-section">
+        <h2 class="example-title">3. スケール・回転アニメーション</h2>
+        <p class="example-description">要素が拡大・回転しながら出現します。</p>
+        
+        <div class="demo-element animate-scale-in">
+            <div class="demo-text">スケールアニメーション</div>
+        </div>
+        
+        <div class="demo-element animate-rotate-in">
+            <div class="demo-text">回転アニメーション</div>
+        </div>
+        
+        <div class="code-example">
+            <pre>&lt;div class="animate-scale-in"&gt;スケールアニメーション&lt;/div&gt;
+&lt;div class="animate-rotate-in"&gt;回転アニメーション&lt;/div&gt;</pre>
+        </div>
+    </div>
+
+    <!-- 遅延アニメーション -->
+    <div class="example-section">
+        <h2 class="example-title">4. 遅延アニメーション（段階的出現）</h2>
+        <p class="example-description">要素が順番に出現します。</p>
+        
+        <div class="demo-element animate-fade-in-up animate-delay-100">
+            <div class="demo-text">1番目 (0.1s遅延)</div>
+        </div>
+        
+        <div class="demo-element animate-fade-in-up animate-delay-200">
+            <div class="demo-text">2番目 (0.2s遅延)</div>
+        </div>
+        
+        <div class="demo-element animate-fade-in-up animate-delay-300">
+            <div class="demo-text">3番目 (0.3s遅延)</div>
+        </div>
+        
+        <div class="code-example">
+            <pre>&lt;div class="animate-fade-in-up animate-delay-100"&gt;1番目&lt;/div&gt;
+&lt;div class="animate-fade-in-up animate-delay-200"&gt;2番目&lt;/div&gt;
+&lt;div class="animate-fade-in-up animate-delay-300"&gt;3番目&lt;/div&gt;</pre>
+        </div>
+    </div>
+
+    <!-- 文字アニメーション -->
+    <div class="example-section">
+        <h2 class="example-title">5. 文字アニメーション</h2>
+        <p class="example-description">文字が一文字ずつ出現します。</p>
+        
+        <div class="demo-element">
+            <div class="demo-text animate-letters">一文字ずつ出現</div>
+        </div>
+        
+        <div class="demo-element">
+            <div class="demo-text typewriter">タイプライター効果</div>
+        </div>
+        
+        <div class="code-example">
+            <pre>&lt;div class="animate-letters"&gt;一文字ずつ出現&lt;/div&gt;
+&lt;div class="typewriter"&gt;タイプライター効果&lt;/div&gt;</pre>
+        </div>
+    </div>
+
+    <!-- 図形アニメーション -->
+    <div class="example-section">
+        <h2 class="example-title">6. 図形アニメーション</h2>
+        <p class="example-description">図形が様々な方法で出現します。</p>
+        
+        <div class="demo-element">
+            <div class="demo-shape animate-scale-in"></div>
+            <div class="demo-text">円形のスケールアニメーション</div>
+        </div>
+        
+        <div class="demo-element">
+            <div class="demo-shape animate-bounce"></div>
+            <div class="demo-text">バウンスアニメーション</div>
+        </div>
+        
+        <div class="demo-element">
+            <div class="demo-shape animate-pulse"></div>
+            <div class="demo-text">パルスアニメーション</div>
+        </div>
+        
+        <div class="code-example">
+            <pre>&lt;div class="demo-shape animate-scale-in"&gt;&lt;/div&gt;
+&lt;div class="demo-shape animate-bounce"&gt;&lt;/div&gt;
+&lt;div class="demo-shape animate-pulse"&gt;&lt;/div&gt;</pre>
+        </div>
+    </div>
+
+    <!-- SVG描画アニメーション -->
+    <div class="example-section">
+        <h2 class="example-title">7. SVG描画アニメーション</h2>
+        <p class="example-description">SVGのパスが描画されるように出現します。</p>
+        
+        <div class="demo-element">
+            <svg class="demo-svg animate-draw" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="80" fill="none" stroke="#00AFCC" stroke-width="4"/>
+                <path d="M50 100 L90 140 L150 60" fill="none" stroke="#d63384" stroke-width="4"/>
+            </svg>
+            <div class="demo-text">SVG描画アニメーション</div>
+        </div>
+        
+        <div class="code-example">
+            <pre>&lt;svg class="animate-draw" viewBox="0 0 200 200"&gt;
+    &lt;circle cx="100" cy="100" r="80" fill="none" stroke="#00AFCC" stroke-width="4"/&gt;
+    &lt;path d="M50 100 L90 140 L150 60" fill="none" stroke="#d63384" stroke-width="4"/&gt;
+&lt;/svg&gt;</pre>
+        </div>
+    </div>
+
+    <!-- 使用方法の説明 -->
+    <div class="example-section">
+        <h2 class="example-title">使用方法</h2>
+        <div class="example-description">
+            <h3>1. 基本的な使い方</h3>
+            <p>HTML要素にクラスを追加するだけでアニメーションが適用されます。</p>
+            
+            <h3>2. スクロール連動アニメーション</h3>
+            <p><code>animate-on-scroll</code> クラスを使用すると、要素が画面に入った時に自動的にアニメーションが実行されます。</p>
+            
+            <h3>3. 即座に実行されるアニメーション</h3>
+            <p><code>animate-fade-in-up</code> などのクラスを使用すると、ページ読み込み時に即座にアニメーションが実行されます。</p>
+            
+            <h3>4. カスタマイズ</h3>
+            <p>CSSファイルでアニメーションの速度、遅延、イージングを調整できます。</p>
+            
+            <h3>5. JavaScript API</h3>
+            <p>JavaScriptから動的にアニメーションを制御することも可能です：</p>
+            <div class="code-example">
+                <pre>// 要素をアニメーション
+animateElement(element, 'animate-fade-in-up', 600, 200);
+
+// 複数要素を順番にアニメーション
+animateElementsSequentially(elements, 'animate-fade-in-up', 200);</pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- スペーサー -->
+    <div style="height: 100vh;"></div>
+
+    <script src="js/custom.js"></script>
+</body>
+</html>

@@ -4,31 +4,65 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
+  // refパラメータの引き継ぎ
+  try {
+    initRefParameter();
+  } catch (error) {
+  }
+
   // ハンバーガーメニューの初期化
   try {
     initHamburgerMenu();
   } catch (error) {
   }
-  
+
   // 基本的なFAQアコーディオンの初期化のみ
   try {
     initFaqAccordion();
   } catch (error) {
   }
-  
+
   // アニメーションの初期化
   try {
     initScrollAnimations();
     initTextAnimations();
   } catch (error) {
   }
-  
+
   // 画像の遅延読み込み設定（一時的に無効化）
   // setupLazyLoading();
-  
+
   // セマンティックHTML改善（一時的に無効化）
   // improveSemantics();
 });
+
+/**
+ * クエリパラメータを新規登録リンクに引き継ぐ
+ */
+function initRefParameter() {
+  const currentQuery = window.location.search;
+  console.log('Current Query professional:', currentQuery);
+
+  if (!currentQuery) {
+    return; // クエリパラメータがない場合は何もしない
+  }
+
+  // 新規登録リンクを全て取得
+  const registerLinks = document.querySelectorAll('a[href*="/professional/register"]');
+
+  registerLinks.forEach(function(link) {
+    try {
+      const url = new URL(link.href);
+      // 現在のクエリパラメータを全てマージ
+      new URLSearchParams(currentQuery).forEach(function(value, key) {
+        url.searchParams.set(key, value);
+      });
+      link.href = url.toString();
+    } catch (error) {
+      // URL解析エラーは無視
+    }
+  });
+}
 
 /**
  * ハンバーガーメニューの初期化

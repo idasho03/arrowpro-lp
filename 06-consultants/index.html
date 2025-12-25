@@ -13,8 +13,8 @@
     <title>ARROW pro - 企業からプロフェッショナルに"白羽の矢"を。</title>
     <meta name="description" content="フリーコンサルタントに特化した、企業が個人と直接繋がるプラットフォーム。大手コンサル出身者多数、仲介手数料ゼロ。" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="img/09-common/favicon.png" />
-    <link rel="apple-touch-icon" href="img/09-common/favicon.png" />
+    <link rel="icon" type="image/png" href="img/07-common/favicon.png" />
+    <link rel="apple-touch-icon" href="img/07-common/favicon.png" />
     <meta name="keywords" content="フリーコンサルタント,コンサルティング,人材マッチング,業務委託,プロフェッショナル,仲介手数料無料,直接契約" />
     <meta name="author" content="Swallo" />
     <meta name="robots" content="index, follow" />
@@ -50,7 +50,7 @@
           "@type": "Organization",
           "name": "ARROW pro",
           "url": "https://arrowpro.jp",
-          "logo": "https://arrowpro.jp/img/08-footer/path1-7-0.svg",
+          "logo": "https://arrowpro.jp/img/06-footer/path1-7-0.svg",
           "description": "フリーコンサルタントに特化した、企業が個人と直接繋がるプラットフォーム",
           "sameAs": ["https://arrowpro.jp"]
         },
@@ -65,26 +65,26 @@
           "mainEntity": [
             {
               "@type": "Question",
+              "name": "サービスの利用料金は？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "案件の募集やプロ人材検索は無料でお試しいただけます。候補者とのやり取りは別途サービス利用のご契約が必要となりますので、お問合せください。プロフェッショナルにご発注いただく際の仲介手数料は一切かかりません。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "どんなプロフェッショナルが登録していますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "フリーランスを中心に、大手コンサルファーム（いわゆる総合・戦略コンサル）に在籍経験のある方を中心にご登録いただいています。"
+              }
+            },
+            {
+              "@type": "Question",
               "name": "プロフェッショナルとの契約体系は？",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "企業様とプロフェッショナルの二者間で、本サービス外で業務委託契約を締結いただきます。"
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "プロフェッショナルと契約に入ってもらうことはできますか？",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "基本的には二者間での契約をお願いしております。当社経由でのご契約を希望される場合は当社までご相談ください。"
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "正社員として採用オファーすることはできますか？",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "まずは業務委託での開始を前提とした機能を提供しており、弊社としてあっせん・仲介などは行っておりません。業務委託の延長として雇用契約に移行いただくことは双方合意のもとご自由に行っていただけます。"
               }
             },
             {
@@ -114,7 +114,7 @@
     <!-- Global Header -->
     <header id="global-header" class="header">
       <div class="header__logo">
-        <img class="header__logo-icon" src="img/09-common/path1-7-0.svg" alt="ARROW pro ロゴ" />
+        <img class="header__logo-icon" src="img/07-common/path1-7-0.svg" alt="ARROW pro ロゴ" />
         <div class="header__logo-text">ARROW pro</div>
               </div>
       
@@ -141,9 +141,6 @@
             コンサルタントの方はこちら
                 </div>
               </a>
-        <a href="#" class="header__button header__button--request">
-          <div class="header__button-text">資料請求</div>
-            </a>
         <a href="https://arrowpro.jp/client/register" class="header__button header__button--register">
           <div class="header__button-text">新規登録</div>
             </a>
@@ -154,11 +151,6 @@
       
       <!-- Mobile Navigation Menu -->
       <nav class="header__nav header__nav--mobile">
-        <a href="#benefits" class="header__nav-link">特徴</a>
-        <a href="#consultants" class="header__nav-link">コンサルタント</a>
-        <a href="#flow" class="header__nav-link">利用の流れ</a>
-        <a href="#pricing" class="header__nav-link">料金</a>
-        <a href="#faq" class="header__nav-link">FAQ</a>
         <a href="https://arrowpro.jp/professional" class="header__nav-link">
           <div class="header__nav-link-text">
             案件をお探しの
@@ -166,9 +158,6 @@
             コンサルタントの方はこちら
                 </div>
               </a>
-        <a href="#" class="header__button header__button--request">
-          <div class="header__button-text">資料請求</div>
-            </a>
         <a href="https://arrowpro.jp/client/register" class="header__button header__button--register">
           <div class="header__button-text">新規登録</div>
             </a>
@@ -242,7 +231,7 @@
               </a>
               <a
                 href="https://arrowpro.jp/contact/client"
-                class="hero__cta-button hero__cta-button--secondary hero__cta-button--download animate-pulse"
+                class="hero__cta-button hero__cta-button--secondary hero__cta-button--download"
                 id="download-cta-button"
               >
                 <svg class="hero__cta-button-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -276,7 +265,9 @@
             <div class="problems-section__column-problems">
               <div class="problems-section__problem-item animate-on-scroll animate-delay-300">
                 <div class="problems-section__problem-icon">
-                  <img src="img/02-problems/member.svg" alt="メンバーアイコン" width="60" height="60" />
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="20" fill="#e5e7eb" stroke="#9ca3af" stroke-width="2"/>
+                  </svg>
                 </div>
                 <div class="problems-section__problem-content">
                   <div class="problems-section__problem-title">リソース不足による機会損失</div>
@@ -287,7 +278,9 @@
               </div>
               <div class="problems-section__problem-item animate-on-scroll animate-delay-400">
                 <div class="problems-section__problem-icon">
-                  <img src="img/02-problems/search.svg" alt="検索アイコン" width="60" height="60" />
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="20" fill="#e5e7eb" stroke="#9ca3af" stroke-width="2"/>
+                  </svg>
                 </div>
                 <div class="problems-section__problem-content">
                   <div class="problems-section__problem-title">即戦力人材の採用難</div>
@@ -298,7 +291,9 @@
               </div>
               <div class="problems-section__problem-item animate-on-scroll animate-delay-500">
                 <div class="problems-section__problem-icon">
-                  <img src="img/02-problems/profit.svg" alt="利益アイコン" width="60" height="60" />
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="20" fill="#e5e7eb" stroke="#9ca3af" stroke-width="2"/>
+                  </svg>
                 </div>
                 <div class="problems-section__problem-content">
                   <div class="problems-section__problem-title">人件費の収支圧迫リスク</div>
@@ -318,7 +313,9 @@
             <div class="problems-section__column-problems">
               <div class="problems-section__problem-item animate-on-scroll animate-delay-300">
                 <div class="problems-section__problem-icon">
-                  <img src="img/02-problems/star.svg" alt="スターアイコン" width="60" height="60" />
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="20" fill="#e5e7eb" stroke="#9ca3af" stroke-width="2"/>
+                  </svg>
                 </div>
                 <div class="problems-section__problem-content">
                   <div class="problems-section__problem-title">特定スキルを有する人員の不足</div>
@@ -329,7 +326,9 @@
               </div>
               <div class="problems-section__problem-item animate-on-scroll animate-delay-400">
                 <div class="problems-section__problem-icon">
-                  <img src="img/02-problems/money.svg" alt="お金アイコン" width="60" height="60" />
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="20" fill="#e5e7eb" stroke="#9ca3af" stroke-width="2"/>
+                  </svg>
                 </div>
                 <div class="problems-section__problem-content">
                   <div class="problems-section__problem-title">高額なコンサルティング費用</div>
@@ -340,7 +339,9 @@
               </div>
               <div class="problems-section__problem-item animate-on-scroll animate-delay-500">
                 <div class="problems-section__problem-icon">
-                  <img src="img/02-problems/network.svg" alt="ネットワークアイコン" width="60" height="60" />
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="20" fill="#e5e7eb" stroke="#9ca3af" stroke-width="2"/>
+                  </svg>
                 </div>
                 <div class="problems-section__problem-content">
                   <div class="problems-section__problem-title">優秀な「個」との接点がない</div>
@@ -352,7 +353,7 @@
             </div>
           </div>
         </div>
-        <div class="problems-section__description animate-on-scroll animate-delay-500">とはいえ、よくある人材紹介サービスでは…</div>
+        <div class="problems-section__description animate-on-scroll animate-delay-500">とはいえ、よくあるフリーランス紹介サービスでは…</div>
         <div class="problems-section__comparison-cards">
           <div class="problems-section__comparison-card animate-on-scroll animate-delay-600">
             <div class="problems-section__comparison-card-content">
@@ -372,22 +373,6 @@
           </div>
           <div class="problems-section__comparison-card animate-on-scroll animate-delay-700">
             <div class="problems-section__comparison-card-content">
-              <h3 class="problems-section__comparison-card-title">冗長なプロセスが<br />ビジネスの足かせに</h3>
-              <div class="problems-section__comparison-card-image">
-                <img src="img/02-problems/c_problem_3.svg" alt="C課題③" loading="lazy" />
-              </div>
-              <div class="problems-section__comparison-card-text">
-                <ul class="text-span">
-                  <li>エージェントを介した候補者とのコミュニケーションは常に間接的</li>
-                </ul>
-                <ul class="text-span2">
-                  <li>日程調整や条件交渉、契約手続きに時間がかかりすぎる</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="problems-section__comparison-card animate-on-scroll animate-delay-800">
-            <div class="problems-section__comparison-card-content">
               <h3 class="problems-section__comparison-card-title">契約のたび発生する<br />高額な仲介コスト</h3>
               <div class="problems-section__comparison-card-image">
                 <img src="img/02-problems/c_problem_2.svg" alt="C課題②" loading="lazy" />
@@ -402,6 +387,22 @@
               </div>
             </div>
           </div>
+          <div class="problems-section__comparison-card animate-on-scroll animate-delay-800">
+            <div class="problems-section__comparison-card-content">
+              <h3 class="problems-section__comparison-card-title">冗長なプロセスが<br />ビジネスの足かせに</h3>
+              <div class="problems-section__comparison-card-image">
+                <img src="img/02-problems/c_problem_3.svg" alt="C課題③" loading="lazy" />
+              </div>
+              <div class="problems-section__comparison-card-text">
+                <ul class="text-span">
+                  <li>エージェントを介した候補者とのコミュニケーションは常に間接的</li>
+                </ul>
+                <ul class="text-span2">
+                  <li>日程調整や条件交渉、契約手続きに時間がかかりすぎる</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -411,82 +412,106 @@
           <div class="benefits-section__label">FEATURE</div>
           <h2 id="benefits-heading" class="benefits-section__title">即戦力コンサルタントに特化したマッチングプラットフォーム</h2>
           <p class="benefits-section__description">
-            ARROW proは、昨今市場が急速に拡大している「コンサルタント」という職種に特化した、フリーランスと企業のダイレクトマッチングプラットフォームです。<br>登録者は著名コンサルティング会社出身のフリーランス、法人代表を中心に構成されています。高い専門性とタフな経験に裏打ちされた即戦力人材が、貴社の経営課題を支援します。
+            ARROW proは、昨今市場が急速に拡大している「コンサルタント」という職種に特化した、フリーランスと企業の直接型マッチングプラットフォームです。登録者は著名コンサルティング会社出身のフリーランス、法人代表を中心に構成されています。高い専門性とタフな経験に裏打ちされた即戦力人材が、貴社の経営課題を支援します。
           </p>
                 </div>
         <div class="benefits-section__features">
           <article class="feature-card animate-on-scroll animate-delay-200">
             <div class="feature-card__header">
-              <div class="feature-card__badge">FEATURE <span class="feature-card__badge-number"> 01</span></div>
+              <div class="feature-card__badge">FEATURE 01</div>
+              <img class="feature-card__illustration" src="img/03-features/feat_scout.svg" alt="スカウト機能" loading="lazy" />
             </div>
             <div class="feature-card__content">
               <div class="feature-card__visual">
                 <div class="feature-card__text-wrapper">
                   <div class="feature-card__description">
                     <div class="feature-card__heading">
-                      ハイクラスコンサルタントに特化したデータベースから直接検索
+                      ハイクラスコンサルタントに特化した登録者層
                     </div>
                     <div class="feature-card__body">
                       <span>
                         <span class="feature-card__body-text">
-                          大手コンサル出身者を中心としたプロフェッショナルデータベースから、スキルや経歴、評価などで自由に検索できます。
+                          大手コンサル出身者を中心としたプロフェッショナルデータベースから、スキルや経歴、評価などで自由に検索できます。解像度の高い目利きが可能です。
                         </span>
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
-              <img class="feature-card__screenshot" src="img/03-benefits/search+profile.webp" alt="検索・プロフィール画面" loading="lazy" />
+              <img class="feature-card__screenshot" src="img/03-features/profile.png" alt="プロフィール画面" loading="lazy" />
             </div>
           </article>
 
           <article class="feature-card animate-on-scroll animate-delay-400">
             <div class="feature-card__header">
-              <div class="feature-card__badge">FEATURE <span class="feature-card__badge-number"> 02</span></div>
+              <div class="feature-card__badge">FEATURE 02</div>
+              <img class="feature-card__illustration" src="img/03-features/feat_apply.svg" alt="応募機能" loading="lazy" />
             </div>
             <div class="feature-card__content">
               <div class="feature-card__visual">
                 <div class="feature-card__text-wrapper">
                   <div class="feature-card__description">
                     <div class="feature-card__heading">
-                      プロジェクト単位で最短即日のスピーディーな参画
+                      プロジェクトベースの業務委託で、最短即日のスピーディーな参画
                     </div>
                     <div class="feature-card__body">
                       <span>
                         <span class="feature-card__body-text">
-                          プロフェッショナルへのコンタクトから契約まで、第三者の介入なく直接対話できるため、面談や手続きも迅速に進められます。
+                          プロフェッショナルへのコンタクトから契約まで、第三者の介入なく直接対話できます。面談や手続きも迅速に進められます。
                         </span>
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
-              <img class="feature-card__screenshot" src="img/03-benefits/chat.webp" alt="チャット画面" loading="lazy" />
+              <img class="feature-card__screenshot" src="img/03-features/chat.png" alt="チャット画面" loading="lazy" />
             </div>
           </article>
 
           <article class="feature-card animate-on-scroll animate-delay-600">
             <div class="feature-card__header">
-              <div class="feature-card__badge">FEATURE <span class="feature-card__badge-number"> 03</span></div>
+              <div class="feature-card__badge">FEATURE 03</div>
+              <img class="feature-card__illustration" src="img/03-features/feat_direct.svg" alt="直接契約機能" loading="lazy" />
             </div>
             <div class="feature-card__content">
               <div class="feature-card__visual">
                 <div class="feature-card__text-wrapper">
                   <div class="feature-card__description">
                     <div class="feature-card__heading">
-                      仲介手数料なしで直接マッチングし放題
+                      仲介手数料なしで直接マッチング
                     </div>
                     <div class="feature-card__body">
                       <span>
                         <span class="feature-card__body-text">
-                          プロフェッショナルと直接契約できるため仲介手数料がかからず、コストを抑えられます。案件掲載は無料で、月額利用料のみで無制限にご利用いただけます。
+                          プロフェッショナルと直接契約できるため仲介手数料がかからず、コストを抑えられます。案件掲載は無料で、月額利用料も低価格からスタートできます。
                         </span>
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
-              <img class="feature-card__screenshot" src="img/03-benefits/cost.svg" alt="コスト比較" loading="lazy" />
+              <svg class="feature-card__screenshot" width="100%" height="300" viewBox="0 0 600 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="600" height="300" fill="#f8f9fa"/>
+                <text x="300" y="30" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="18" font-weight="700" fill="#1f2937">コスト比較</text>
+                <!-- 一般的な仲介サービス -->
+                <rect x="100" y="80" width="150" height="150" fill="#ff6b6b" rx="4"/>
+                <text x="175" y="250" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#1f2937">一般的な</text>
+                <text x="175" y="270" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#1f2937">仲介サービス</text>
+                <text x="175" y="220" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="700" fill="#ffffff">800万円</text>
+                <!-- ARROW pro -->
+                <rect x="350" y="200" width="150" height="30" fill="#00AFCC" rx="4"/>
+                <text x="425" y="250" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#1f2937">ARROW pro</text>
+                <text x="425" y="220" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="700" fill="#ffffff">130万円</text>
+                <!-- 矢印 -->
+                <path d="M260 155 L340 155" stroke="#00AFCC" stroke-width="3" marker-end="url(#arrowhead)"/>
+                <defs>
+                  <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                    <polygon points="0 0, 10 3, 0 6" fill="#00AFCC"/>
+                  </marker>
+                </defs>
+                <!-- 節約額 -->
+                <text x="300" y="140" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="14" font-weight="700" fill="#00AFCC">670万円節約</text>
+              </svg>
             </div>
           </article>
         </div>
@@ -496,20 +521,23 @@
       <section id="main-features" class="main-features-section" aria-labelledby="main-features-heading">
         <div class="main-features-section__header animate-on-scroll">
           <div class="main-features-section__label">FUNCTIONS</div>
-          <h2 id="main-features-heading" class="main-features-section__title">企業とコンサルタントを直接つなぐ機能</h2>
+          <h2 id="main-features-heading" class="main-features-section__title">主な機能</h2>
         </div>
         <div class="main-features-section__features">
           <!-- 案件掲載 -->
           <article class="feature-card animate-on-scroll animate-delay-200">
             <div class="feature-card__content">
-              <img class="feature-card__screenshot" src="img/04-main-features/case.webp" alt="案件掲載画面" loading="lazy" style="width: 100%; height: 200px; object-fit: cover;" />
+              <svg width="100%" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="200" fill="#f3f4f6"/>
+                <circle cx="100" cy="100" r="50" fill="#e5e7eb" stroke="#9ca3af" stroke-width="2"/>
+              </svg>
               <div class="feature-card__visual">
                 <div class="feature-card__text-wrapper">
                   <div class="feature-card__description">
                     <div class="feature-card__heading">案件掲載</div>
                     <div class="feature-card__body">
                       <span class="feature-card__body-text">
-                        案件概要や条件を入力するだけでリアルタイム公開できます
+                        プロジェクト概要や人材要件などをwebに登録いただきます
                       </span>
                     </div>
                   </div>
@@ -521,14 +549,21 @@
           <!-- 検索 -->
           <article class="feature-card animate-on-scroll animate-delay-300">
             <div class="feature-card__content">
-              <img class="feature-card__screenshot" src="img/04-main-features/search.webp" alt="検索画面" loading="lazy" style="width: 100%; height: 200px; object-fit: cover;" />
+              <svg width="100%" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="200" fill="#f3f4f6"/>
+                <!-- Heroicons search icon -->
+                <g transform="translate(50, 50) scale(2)">
+                  <circle cx="8" cy="8" r="6" stroke="#00AFCC" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="m14 14-3.5-3.5" stroke="#00AFCC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+              </svg>
               <div class="feature-card__visual">
                 <div class="feature-card__text-wrapper">
                   <div class="feature-card__description">
                     <div class="feature-card__heading">検索</div>
                     <div class="feature-card__body">
                       <span class="feature-card__body-text">
-                        スキルや経歴、稼働条件などでプロフェッショナルを検索できます
+                        スキルや経歴、評価などでプロフェッショナルを検索できます
                       </span>
                     </div>
                   </div>
@@ -540,14 +575,17 @@
           <!-- プロフィール閲覧 -->
           <article class="feature-card animate-on-scroll animate-delay-400">
             <div class="feature-card__content">
-              <img class="feature-card__screenshot" src="img/04-main-features/profile.webp" alt="プロフィール画面" loading="lazy" style="width: 100%; height: 200px; object-fit: cover;" />
+              <svg width="100%" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="200" fill="#f3f4f6"/>
+                <circle cx="100" cy="100" r="50" fill="#e5e7eb" stroke="#9ca3af" stroke-width="2"/>
+              </svg>
               <div class="feature-card__visual">
                 <div class="feature-card__text-wrapper">
                   <div class="feature-card__description">
                     <div class="feature-card__heading">プロフィール閲覧</div>
                     <div class="feature-card__body">
                       <span class="feature-card__body-text">
-                        気になるプロフェッショナルの経歴や希望条件の詳細を自由に閲覧できます
+                        詳細なプロフィールや経歴、スキルを確認できます
                       </span>
                     </div>
                   </div>
@@ -559,14 +597,17 @@
           <!-- メッセージ -->
           <article class="feature-card animate-on-scroll animate-delay-500">
             <div class="feature-card__content">
-              <img class="feature-card__screenshot" src="img/04-main-features/chat.webp" alt="メッセージ画面" loading="lazy" style="width: 100%; height: 200px; object-fit: cover;" />
+              <svg width="100%" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="200" fill="#f3f4f6"/>
+                <circle cx="100" cy="100" r="50" fill="#e5e7eb" stroke="#9ca3af" stroke-width="2"/>
+              </svg>
               <div class="feature-card__visual">
                 <div class="feature-card__text-wrapper">
                   <div class="feature-card__description">
                     <div class="feature-card__heading">メッセージ</div>
                     <div class="feature-card__body">
                       <span class="feature-card__body-text">
-                        プロフェッショナルとの間でチャット形式でリアルタイムなコミュニケーションが可能です
+                        プロフェッショナルと直接メッセージでやり取りできます
                       </span>
                     </div>
                   </div>
@@ -581,26 +622,26 @@
       <section id="usecase" class="usecase-section" aria-labelledby="usecase-heading">
         <div class="usecase-section__header animate-on-scroll">
           <div class="usecase-section__label">USECASE</div>
-          <h2 id="usecase-heading" class="usecase-section__title">特定プロジェクト参画から自社の課題解決まで、<br>多様なニーズにご利用いただけます</h2>
+          <h2 id="usecase-heading" class="usecase-section__title">特定プロジェクト参画から自社の課題解決まで、多様なニーズにご利用いただけます</h2>
         </div>
         <div class="usecase-section__cases animate-on-scroll animate-delay-200">
           <div class="usecase-card animate-on-scroll animate-delay-300">
             <div class="usecase-card__icon">
-              <img src="img/05-usecase/project.webp" alt="プロジェクト体制の追加リソース" class="usecase-card__image" loading="lazy" />
+              <img src="img/09-usecase/project.webp" alt="プロジェクト体制の追加リソース" class="usecase-card__image" loading="lazy" />
             </div>
             <h3 class="usecase-card__title">プロジェクト体制の追加リソース</h3>
             <p class="usecase-card__description">PMO、戦略立案、業務改善など、特定のスキルセットを持つハイクラス人材を必要な期間だけアサイン</p>
           </div>
           <div class="usecase-card animate-on-scroll animate-delay-400">
             <div class="usecase-card__icon">
-              <img src="img/05-usecase/advisor.png" alt="自社ビジネス課題へのアドバイザー・実務者" class="usecase-card__image" loading="lazy" />
+              <img src="img/09-usecase/advisor.png" alt="自社ビジネス課題へのアドバイザー・実務者" class="usecase-card__image" loading="lazy" />
             </div>
-            <h3 class="usecase-card__title">自社ビジネス課題解決の<br>アドバイザー・実務者</h3>
+            <h3 class="usecase-card__title">自社ビジネス課題へのアドバイザー・実務者</h3>
             <p class="usecase-card__description">新規事業、M&A、DXなど、社内に知見がない領域の相談相手や推進役としてスポット活用</p>
           </div>
           <div class="usecase-card animate-on-scroll animate-delay-500">
             <div class="usecase-card__icon">
-              <img src="img/05-usecase/fit.webp" alt="本格採用前の相互理解" class="usecase-card__image" loading="lazy" />
+              <img src="img/09-usecase/fit.webp" alt="本格採用前の相互理解" class="usecase-card__image" loading="lazy" />
             </div>
             <h3 class="usecase-card__title">本格採用前の相互理解</h3>
             <p class="usecase-card__description">まずは業務委託として稼働してもらい、カルチャーフィットやスキルを確認してから正社員登用へ</p>
@@ -704,7 +745,7 @@
           </div>
           </div>
           <div class="consultants-section__group">
-            <h3 class="consultants-section__themes-title">プロジェクトテーマ例</h3>
+            <h3 class="consultants-section__themes-title">豊富なプロジェクトテーマ</h3>
             <div class="consultants-section__themes">
             <div class="theme-section__categories">
               <!-- Strategy Category -->
@@ -712,7 +753,7 @@
                 <div class="theme-category__card">
                   <div class="theme-category__header">
                     <div class="theme-category__title">経営戦略・事業戦略</div>
-                    <img class="theme-category__icon" src="img/06-consultants/strategy.svg" alt="経営戦略アイコン" loading="lazy" />
+                    <img class="theme-category__icon" src="img/04-themes/strategy.svg" alt="経営戦略アイコン" loading="lazy" />
                   </div>
                   <div class="theme-category__tags">
                   <article class="theme-tag">
@@ -784,7 +825,7 @@
                 <div class="theme-category__card">
                   <div class="theme-category__header">
                     <div class="theme-category__title">オペレーション</div>
-                    <img class="theme-category__icon" src="img/06-consultants/operation.svg" alt="営業・マーケティング・オペレーションアイコン" loading="lazy" />
+                    <img class="theme-category__icon" src="img/04-themes/operation.svg" alt="営業・マーケティング・オペレーションアイコン" loading="lazy" />
                   </div>
                   <div class="theme-category__tags">
                   <article class="theme-tag">
@@ -841,7 +882,7 @@
                 <div class="theme-category__card">
                   <div class="theme-category__header">
                     <div class="theme-category__title">人事・財務・リスク</div>
-                    <img class="theme-category__icon" src="img/06-consultants/finance.svg" alt="人事・財務・リスクアイコン" loading="lazy" />
+                    <img class="theme-category__icon" src="img/04-themes/finance.svg" alt="人事・財務・リスクアイコン" loading="lazy" />
                   </div>
                   <div class="theme-category__tags">
                   <article class="theme-tag">
@@ -856,22 +897,12 @@
                   </article>
                   <article class="theme-tag">
                     <div class="theme-tag__wrapper">
-                      <div class="theme-tag__text">働き方改革</div>
+                      <div class="theme-tag__text">働き方改革・労務管理</div>
                     </div>
                   </article>
                   <article class="theme-tag">
                     <div class="theme-tag__wrapper">
-                      <div class="theme-tag__text">労務管理</div>
-                    </div>
-                  </article>
-                  <article class="theme-tag">
-                    <div class="theme-tag__wrapper">
-                      <div class="theme-tag__text">KPI設計</div>
-                    </div>
-                  </article>
-                  <article class="theme-tag">
-                    <div class="theme-tag__wrapper">
-                      <div class="theme-tag__text">管理会計</div>
+                      <div class="theme-tag__text">KPI設計・管理会計</div>
                     </div>
                   </article>
                   <article class="theme-tag">
@@ -898,7 +929,7 @@
                 <div class="theme-category__card">
                   <div class="theme-category__header">
                     <div class="theme-category__title">デジタル・IT</div>
-                    <img class="theme-category__icon" src="img/06-consultants/digital.svg" alt="デジタル・ITアイコン" loading="lazy" />
+                    <img class="theme-category__icon" src="img/04-themes/digital.svg" alt="デジタル・ITアイコン" loading="lazy" />
                   </div>
                   <div class="theme-category__tags">
                   <article class="theme-tag">
@@ -923,12 +954,7 @@
                   </article>
                   <article class="theme-tag">
                     <div class="theme-tag__wrapper">
-                      <div class="theme-tag__text">IT基盤設計</div>
-                    </div>
-                  </article>
-                  <article class="theme-tag">
-                    <div class="theme-tag__wrapper">
-                      <div class="theme-tag__text">インフラ整備</div>
+                      <div class="theme-tag__text">IT基盤設計／インフラ整備</div>
                     </div>
                   </article>
                   <article class="theme-tag">
@@ -960,7 +986,7 @@
                 <div class="theme-category__card">
                   <div class="theme-category__header">
                     <div class="theme-category__title">新領域・先新テーマ</div>
-                    <img class="theme-category__icon" src="img/06-consultants/inovation.svg" alt="新領域・先新テーマアイコン" loading="lazy" />
+                    <img class="theme-category__icon" src="img/04-themes/inovation.svg" alt="新領域・先新テーマアイコン" loading="lazy" />
                   </div>
                   <div class="theme-category__tags">
                   <article class="theme-tag">
@@ -994,11 +1020,11 @@
             <div class="consultants-section__examples">
             <div class="consultants-profiles">
               <div class="consultant-profile">
-                <div class="consultant-profile__image"></div>
+                <img src="https://i.pravatar.cc/120?img=1" alt="プロフィール画像" class="consultant-profile__image" loading="lazy" />
                 <div class="consultant-profile__info">
                   <p class="consultant-profile__text">
                     外資系総合コンサルティング会社、戦略コンサルティング会社を経て独立<br />
-                    製造・金融業等のクライアントに対する事業成長戦略、事業ポートフォリオ整理、オペレーション改革等の策定に従事<br />
+                    製造・金融・情報通信業等のクライアントに対する事業成長戦略、事業ポートフォリオ整理、オペレーション改革、営業戦略等の策定に従事<br />
                     国立大学卒業
                   </p>
                   <div class="consultant-profile__tags-group">
@@ -1037,7 +1063,7 @@
                 </div>
               </div>
               <div class="consultant-profile">
-                <div class="consultant-profile__image"></div>
+                <img src="https://i.pravatar.cc/120?img=2" alt="プロフィール画像" class="consultant-profile__image" loading="lazy" />
                 <div class="consultant-profile__info">
                   <p class="consultant-profile__text">
                     日系大手製造業、日系戦略コンサルティング会社を経て独立<br />
@@ -1079,7 +1105,7 @@
                 </div>
               </div>
               <div class="consultant-profile">
-                <div class="consultant-profile__image"></div>
+                <img src="https://i.pravatar.cc/120?img=3" alt="プロフィール画像" class="consultant-profile__image" loading="lazy" />
                 <div class="consultant-profile__info">
                   <p class="consultant-profile__text">
                     外資系戦略コンサルティング会社、日系大手企業を経て独立<br />
@@ -1137,17 +1163,16 @@
           <!-- Step 1 -->
           <div class="flow-step animate-on-scroll animate-delay-200">
             <div class="flow-step__card">
-              <img class="flow-step__free-badge" src="img/07-flow/free.svg" alt="無料" />
               <div class="flow-step__number-circle">
-                <div class="flow-step__number">01</div>
+                <div class="flow-step__number">1</div>
               </div>
               <div class="flow-step__content">
-                <svg class="flow-step__icon" width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <image href="img/07-flow/acount_register.svg" width="64" height="64" alt="アカウント登録アイコン" />
-                </svg>
+                <div class="flow-step__icon">
+                  <img class="flow-step__icon-svg" src="img/05-flow/vector-3.svg" alt="アカウント登録アイコン" loading="lazy" />
+                </div>
                 <div class="flow-step__text">
                   <div class="flow-step__title">アカウント登録</div>
-                  <div class="flow-step__description">3分で無料登録後、すぐにご利用いただけます</div>
+                  <div class="flow-step__description">案件募集までは無料でお試し可能です</div>
                 </div>
               </div>
             </div>
@@ -1163,14 +1188,13 @@
           <!-- Step 2 -->
           <div class="flow-step animate-on-scroll animate-delay-300">
             <div class="flow-step__card">
-              <img class="flow-step__free-badge" src="img/07-flow/free.svg" alt="無料" />
               <div class="flow-step__number-circle">
-                <div class="flow-step__number">02</div>
+                <div class="flow-step__number">2</div>
               </div>
               <div class="flow-step__content">
-                <svg class="flow-step__icon" width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <image href="img/07-flow/case_register.svg" width="64" height="64" alt="案件登録アイコン" />
-                </svg>
+                <div class="flow-step__icon">
+                  <img class="flow-step__icon-svg" src="img/05-flow/vector-4.svg" alt="案件登録アイコン" loading="lazy" />
+                </div>
                 <div class="flow-step__text">
                   <div class="flow-step__title">案件登録</div>
                   <div class="flow-step__description">
@@ -1189,40 +1213,45 @@
           </div>
 
           <!-- Flow Action Cards -->
-          <div class="flow-step animate-on-scroll animate-delay-400">
+          <div class="flow-step animate-on-scroll animate-delay-350">
             <div class="flow-step__card">
-              <img class="flow-step__free-badge" src="img/07-flow/free.svg" alt="無料" />
               <div class="flow-step__number-circle">
-                <div class="flow-step__number">03</div>
+                <div class="flow-step__number">3</div>
               </div>
               <div class="flow-step__content flow-step__content--wide">
                 <div class="flow-step__header-group">
-                  <svg class="flow-step__icon" width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                    <image href="img/07-flow/search-flow.svg" width="64" height="64" alt="検索アイコン" />
-                  </svg>
+                  <div class="flow-step__icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="16" fill="#e5e7eb" stroke="#9ca3af" stroke-width="2"/>
+                    </svg>
+                  </div>
                   <div class="flow-step__text">
                     <div class="flow-step__title">プロフェッショナルを探す</div>
                     <div class="flow-step__description">
-                      人材データベースからの検索や応募メッセージから、プロフェッショナルのプロフィールを閲覧できます
+                      プロジェクト概要や人材要件などをwebに登録いただきます
                     </div>
                   </div>
                 </div>
                 <div class="flow-step__methods">
                   <div class="flow-step__method">
-                    <svg class="flow-step__method-icon" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                      <image href="img/07-flow/search_pro.svg" width="48" height="48" alt="検索アイコン" />
-                    </svg>
+                    <div class="flow-step__method-icon">
+                      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="14" cy="14" r="10" fill="#e5e7eb" stroke="#9ca3af" stroke-width="2"/>
+                      </svg>
+                    </div>
                     <div class="flow-step__method-content">
-                      <div class="flow-step__method-title">プロフェッショナルを<br />検索・閲覧する</div>
+                      <div class="flow-step__method-title">プロフェッショナルを検索・閲覧する</div>
                     </div>
                   </div>
                   <div class="flow-step__method-divider">または</div>
                   <div class="flow-step__method">
-                    <svg class="flow-step__method-icon" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                      <image href="img/07-flow/apply.svg" width="48" height="48" alt="応募アイコン" />
-                    </svg>
+                    <div class="flow-step__method-icon">
+                      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="14" cy="14" r="10" fill="#e5e7eb" stroke="#9ca3af" stroke-width="2"/>
+                      </svg>
+                    </div>
                     <div class="flow-step__method-content">
-                      <div class="flow-step__method-title">プロフェッショナルからの<br>応募を受け取る</div>
+                      <div class="flow-step__method-title">プロフェッショナルからの<span class="flow-action-card__emphasis">応募</span>を受け取る</div>
                     </div>
                   </div>
                 </div>
@@ -1238,38 +1267,37 @@
           </div>
           
           <!-- Step 4 -->
-          <div class="flow-step animate-on-scroll animate-delay-500">
+          <div class="flow-step animate-on-scroll animate-delay-400">
             <div class="flow-step__card">
               <div class="flow-step__number-circle">
-                <div class="flow-step__number">04</div>
+                <div class="flow-step__number">4</div>
               </div>
               <div class="flow-step__content flow-step__content--wide">
                 <div class="flow-step__header-group">
-                  <svg class="flow-step__icon" width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                    <image href="img/07-flow/chat.svg" width="64" height="64" alt="チャットアイコン" />
-                  </svg>
+                  <div class="flow-step__icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="16" fill="#e5e7eb" stroke="#9ca3af" stroke-width="2"/>
+                    </svg>
+                  </div>
                   <div class="flow-step__text">
                     <div class="flow-step__title">プロフェッショナルとやりとりする</div>
                     <div class="flow-step__description">
-                      チャットで自由にコミュニケーションできます<br>オンライン面談の実施も制限なく可能です
-
+                      プロジェクト概要や人材要件などをwebに登録いただきます
                     </div>
                   </div>
                 </div>
                 <div class="flow-step__methods">
                   <div class="flow-step__method">
-                    <svg class="flow-step__method-icon" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                      <image href="img/07-flow/scout.svg" width="48" height="48" alt="スカウトアイコン" />
-                    </svg>
+                    <div class="flow-step__method-icon">
+                      <img class="flow-step__method-icon-svg" src="img/05-flow/vector-7.svg" alt="スカウトアイコン" loading="lazy" />
+                    </div>
                     <div class="flow-step__method-content">
                       <div class="flow-step__method-title">スカウト送信</div>
                     </div>
                   </div>
                   <div class="flow-step__method-divider">または</div>
                   <div class="flow-step__method">
-                    <svg class="flow-step__method-icon" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                      <image href="img/07-flow/reply.svg" width="48" height="48" alt="応募アイコン" />
-                    </svg>
+                    <img class="flow-step__method-icon-svg" src="img/05-flow/ri_hand.svg" alt="応募アイコン" loading="lazy" />
                     <div class="flow-step__method-content">
                       <div class="flow-step__method-title">応募の閲覧・返信</div>
                     </div>
@@ -1287,19 +1315,19 @@
           </div>
 
           <!-- Step 5 -->
-          <div class="flow-step animate-on-scroll animate-delay-600">
+          <div class="flow-step animate-on-scroll animate-delay-650">
             <div class="flow-step__card">
               <div class="flow-step__number-circle">
-                <div class="flow-step__number">05</div>
+                <div class="flow-step__number">5</div>
               </div>
               <div class="flow-step__content">
-                <svg class="flow-step__icon" width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <image href="img/07-flow/shakehand.svg" width="64" height="64" alt="契約アイコン" />
-                </svg>
+                <div class="flow-step__icon">
+                  <img class="flow-step__icon-svg" src="img/05-flow/vector-8.svg" alt="契約アイコン" loading="lazy" />
+                </div>
                 <div class="flow-step__text">
-                  <div class="flow-step__title">直接契約・成約報告</div>
+                  <div class="flow-step__title">直接契約・稼働</div>
                   <div class="flow-step__description">
-                    双方の合意後、本サービス上で成約を報告いただきます
+                    双方の合意後、直接契約締結。稼働をスタートいただきます
                   </div>
                 </div>
               </div>
@@ -1314,7 +1342,7 @@
         <div class="pricing-section__header animate-on-scroll">
           <div class="pricing-section__label">PRICING</div>
           <h2 id="pricing-heading" class="pricing-section__title">料金プラン</h2>
-          <p class="pricing-section__description">ご利用ニーズに応じてプランをお選びいただけます</p>
+          <p class="pricing-section__description">ご利用ニーズに応じて2つの有料プランからお選びいただけます</p>
         </div>
         <div class="pricing-section__plans animate-on-scroll animate-delay-200">
           <!-- Free Plan -->
@@ -1359,7 +1387,7 @@
           <div class="pricing-plan pricing-plan--light">
             <div class="pricing-plan__header">
               <div class="pricing-plan__name">ライトプラン</div>
-              <div class="pricing-plan__badge">先着企業様限定</div>
+              <div class="pricing-plan__badge">先着企業限定</div>
             </div>
             <div class="pricing-plan__features">
               <div class="pricing-plan__feature-group">
@@ -1389,7 +1417,7 @@
                 </div>
                 <div class="pricing-plan__feature-item">
                   <span class="pricing-plan__feature-label">プロフェッショナルとのやりとり</span>
-                  <span class="pricing-plan__feature-value pricing-plan__feature-value--highlight">人数上限あり</span>
+                  <span class="pricing-plan__feature-value pricing-plan__feature-value--highlight">可</span>
                 </div>
               </div>
             </div>
@@ -1431,26 +1459,12 @@
                 </div>
                 <div class="pricing-plan__feature-item">
                   <span class="pricing-plan__feature-label">プロフェッショナルとのやりとり</span>
-                  <span class="pricing-plan__feature-value pricing-plan__feature-value--highlight">無制限</span>
+                  <span class="pricing-plan__feature-value pricing-plan__feature-value--highlight">可</span>
                 </div>
               </div>
             </div>
             <div class="pricing-plan__cta">
               <a href="https://arrowpro.jp/contact/client" class="pricing-plan__button pricing-plan__button--secondary">もっと詳しく</a>
-            </div>
-          </div>
-
-          <!-- Spot Plan -->
-          <div class="pricing-plan pricing-plan--spot">
-            <div class="pricing-plan__header">
-              <div class="pricing-plan__name">スポットプラン</div>
-            </div>
-            <div class="pricing-plan__spot-content">
-              <p class="pricing-plan__spot-description">月額利用料でなく、ご成約の都度、手数料をいただくプランです。</p>
-              <p class="pricing-plan__spot-note">詳しくはお問い合わせください。</p>
-            </div>
-            <div class="pricing-plan__cta">
-              <a href="https://arrowpro.jp/contact/client" class="pricing-plan__button pricing-plan__button--secondary">お問い合わせ</a>
             </div>
           </div>
         </div>
@@ -1468,13 +1482,25 @@
             <div class="faq-item__wrapper">
               <div class="faq-item__question">
                 <div class="faq-item__q-icon">Q</div>
-                <div class="faq-item__q-text">プロフェッショナルとの契約体系は？</div>
+                <div class="faq-item__q-text">サービスの利用料金は？</div>
                 <div class="faq-item__arrow">▼</div>
               </div>
               <div class="faq-item__answer">
                 <div class="faq-item__a-icon">A</div>
-                <div class="faq-item__a-text--simple">
-                  企業様とプロフェッショナルの二者間で、本サービス外で業務委託契約を締結いただきます。
+                <div class="faq-item__a-text">
+                  <span>
+                    <span class="faq-item__a-text--bold">
+                      案件の募集やプロ人材検索は無料でお試しいただけます
+                    </span>
+                    <span class="faq-item__a-text--normal">
+                      。候補者とのやり取りは別途サービス利用のご契約が必要となりますので、お問合せください。
+                      <br />
+                    </span>
+                    <span class="faq-item__a-text--bold">
+                      プロフェッショナルにご発注いただく際の仲介手数料は一切かかりません
+                    </span>
+                    <span class="faq-item__a-text--normal">。</span>
+                  </span>
                 </div>
               </div>
             </div>
@@ -1485,13 +1511,21 @@
             <div class="faq-item__wrapper">
               <div class="faq-item__question">
                 <div class="faq-item__q-icon">Q</div>
-                <div class="faq-item__q-text">プロフェッショナルと契約に入ってもらうことはできますか？</div>
+                <div class="faq-item__q-text">どんなプロフェッショナルが登録していますか？</div>
                 <div class="faq-item__arrow">▼</div>
               </div>
               <div class="faq-item__answer">
                 <div class="faq-item__a-icon">A</div>
-                <div class="faq-item__a-text--simple">
-                  基本的には二者間での契約をお願いしております。当社経由でのご契約を希望される場合は当社までご相談ください。
+                <div class="faq-item__a-text">
+                  <span>
+                    <span class="faq-item__a-text--normal">フリーランスを中心に、</span>
+                    <span class="faq-item__a-text--bold">
+                      大手コンサルファーム（いわゆる"総合・戦略コンサル"）
+                    </span>
+                    <span class="faq-item__a-text--normal">
+                      に在籍経験のある方を中心にご登録いただいています。
+                    </span>
+                  </span>
                 </div>
               </div>
             </div>
@@ -1502,13 +1536,13 @@
             <div class="faq-item__wrapper">
               <div class="faq-item__question">
                 <div class="faq-item__q-icon">Q</div>
-                <div class="faq-item__q-text">正社員として採用オファーすることはできますか？</div>
+                <div class="faq-item__q-text">プロフェッショナルとの契約体系は？</div>
                 <div class="faq-item__arrow">▼</div>
               </div>
               <div class="faq-item__answer">
                 <div class="faq-item__a-icon">A</div>
                 <div class="faq-item__a-text--simple">
-                  まずは業務委託での開始を前提とした機能を提供しており、弊社としてあっせん・仲介などは行っておりません。業務委託の延長として雇用契約に移行いただくことは双方合意のもとご自由に行っていただけます。
+                  企業様とプロフェッショナルの二者間で、本サービス外で業務委託契約を締結いただきます。
                 </div>
               </div>
             </div>
@@ -1545,7 +1579,7 @@
       <footer class="footer">
         <div class="footer__grid">
           <div class="footer__logo">
-            <img class="footer__logo-icon" src="img/08-footer/path1-7-0.svg" alt="ARROW pro ロゴ" loading="lazy" />
+            <img class="footer__logo-icon" src="img/06-footer/path1-7-0.svg" alt="ARROW pro ロゴ" loading="lazy" />
             <div class="footer__logo-text">ARROW pro</div>
         </div>
           <div class="footer__nav-group">
@@ -1594,14 +1628,14 @@
       <div class="fixed-cta-bar__container">
         <div class="fixed-cta-bar__buttons">
           <a href="https://arrowpro.jp/client/register" class="fixed-cta-bar__button fixed-cta-bar__button--primary fixed-cta-bar__button--register" id="fixed-register-cta-button">
-            今すぐ無料で掲載・検索
             <svg class="fixed-cta-bar__button-icon" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 4L14 10L8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <path d="M10 2C5.58 2 2 5.58 2 10C2 14.42 5.58 18 10 18C14.42 18 18 14.42 18 10C18 5.58 14.42 2 10 2ZM8 14L4 10L5.41 8.59L8 11.17L14.59 4.58L16 6L8 14Z" fill="currentColor"/>
             </svg>
+            今すぐ無料で掲載・検索
           </a>
           <a href="https://arrowpro.jp/contact/client" class="fixed-cta-bar__button fixed-cta-bar__button--secondary fixed-cta-bar__button--download" id="fixed-download-cta-button">
             <svg class="fixed-cta-bar__button-icon" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 8L10 16L18 8H13V4H7V8H2ZM2 17V19H18V17H2Z" fill="currentColor"/>
+              <path d="M10 2L3 9H7V16H13V9H17L10 2ZM2 17V19H18V17H2Z" fill="currentColor"/>
             </svg>
             資料ダウンロード
           </a>

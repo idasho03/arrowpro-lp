@@ -96,14 +96,13 @@ main[role="main"] {
 .header__nav {
   display: flex;
   flex-direction: row;
-  gap: 18px;
+  gap: 12px;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  flex-shrink: 1;
   flex-grow: 0;
   flex-basis: auto;
-  width: auto;
-  max-width: none;
+  min-width: 0;
   position: relative;
   margin-left: auto;
   padding: 0; /* CTAセクションのpaddingを上書き防止 */
@@ -126,42 +125,61 @@ main[role="main"] {
 /* 共通ボタンスタイル */
 .header__button {
   border-radius: 6px;
-  padding: 8px 24px;
+  padding: 8px 16px;
   display: flex;
   flex-direction: row;
   gap: 10px;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  flex-shrink: 1;
   flex-grow: 0;
   flex-basis: auto;
-  width: auto;
-  max-width: none;
+  min-width: 0;
   position: relative;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition: all 0.2s ease;
   border: 1px solid;
+  white-space: nowrap;
 }
 
 /* ナビゲーションリンク */
 .header__nav-link {
   border-radius: 6px;
-  padding: 8px 24px;
+  padding: 8px 16px;
   display: flex;
   flex-direction: row;
   gap: 10px;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  flex-shrink: 1;
   flex-grow: 0;
   flex-basis: auto;
-  width: auto;
-  max-width: none;
+  min-width: 0;
   position: relative;
   background: transparent;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+  color: #1f2937;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.header__nav-link:hover {
+  color: #00AFCC;
+}
+
+.header__nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  margin-right: 12px;
+  flex-wrap: nowrap;
 }
 
 /* 新規登録ボタン（固有スタイル） */
@@ -173,6 +191,19 @@ main[role="main"] {
 header.header .header__button--register:hover {
   background: #E67E1F;
   border-color: #E67E1F;
+  transform: translateY(-1px);
+  box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* 資料請求ボタン（固有スタイル） */
+.header__button--request {
+  background: #00AFCC;
+  border-color: #00AFCC;
+}
+
+header.header .header__button--request:hover {
+  background: #0088aa;
+  border-color: #0088aa;
   transform: translateY(-1px);
   box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.3);
 }
@@ -253,10 +284,9 @@ header.header .header__button--login .header__button-text {
   width: 24px;
   height: 3px;
   background: #00AFCC;
-  margin: 3px 0;
+  margin: 3px auto;
   transition: 0.3s;
   position: relative;
-  left: 4px;
 }
 
 /* ハンバーガーメニューが開いた時のアニメーション（×マーク） */
@@ -341,12 +371,21 @@ header.header .header__button--login .header__button-text {
     text-align: left;
   }
 
+  .header__button--request,
   .header__button--register,
   .header__button--login {
     width: 100%;
     justify-content: center;
     padding: 12px 16px;
     margin: 0;
+  }
+  
+  .header__button--request {
+    margin-top: 8px;
+  }
+  
+  .header__button--register {
+    margin-top: 12px;
   }
   
   .header__button--login {
@@ -359,6 +398,10 @@ header.header .header__button--login .header__button-text {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    padding: 8px 16px;
+  }
+
   .header__logo-icon {
     width: 28px;
     height: 30px;
@@ -369,16 +412,38 @@ header.header .header__button--login .header__button-text {
     font-size: 28px;
   }
 
+  .header__nav {
+    gap: 8px;
+  }
+
+  .header__nav-links {
+    gap: 4px;
+    margin-right: 8px;
+  }
+
+  .header__nav-link {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
   .header__nav-link-text {
-    font-size: 14px;
+    font-size: 12px;
+  }
+
+  .header__button--request {
+    padding: 6px 12px;
   }
 
   .header__button--register {
-    padding: 7px 16px;
+    padding: 6px 12px;
   }
 
   .header__button--login {
-    padding: 7px 16px;
+    padding: 6px 12px;
+  }
+
+  .header__button-text {
+    font-size: 14px;
   }
 }
 

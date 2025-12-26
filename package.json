@@ -14,6 +14,18 @@
       "distDir": "./static-output/lp-professional",
       "publicUrl": "/arrowpro-sub-contents/static-output/lp-professional/",
       "sourceMap": false
+    },
+    "request": {
+      "source": "request/index.html",
+      "distDir": "./static-output/request",
+      "publicUrl": "/arrowpro-sub-contents/static-output/request/",
+      "sourceMap": false
+    },
+    "request-completed": {
+      "source": "request/completed/index.html",
+      "distDir": "./static-output/request/completed",
+      "publicUrl": "/arrowpro-sub-contents/static-output/request/completed/",
+      "sourceMap": false
     }
   },
   "devDependencies": {

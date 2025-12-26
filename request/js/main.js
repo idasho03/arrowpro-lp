@@ -6,6 +6,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
     const refParam = urlParams.get('ref') || 'Untracked';
 
+    // ブロック対象のメールドメインリストを取得
+    let blockedEmailDomains = [];
+    fetch('/api/not-free-email')
+        .then(response => response.json())
+        .then(data => {
+            blockedEmailDomains = data.blockedDomains || [];
+        })
+        .catch(error => {
+            console.error('ブロックドメインリスト取得エラー:', error);
+        });
+
     // 電話番号入力を半角数字のみに制限
     const phoneInput = document.getElementById('phone');
     phoneInput.addEventListener('input', function(e) {
@@ -57,6 +68,13 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             errors.email = '有効なメールアドレスを入力してください';
             isValid = false;
+        } else {
+            // フリーメールチェック
+            const emailDomain = email.split('@')[1]?.toLowerCase();
+            if (emailDomain && blockedEmailDomains.includes(emailDomain)) {
+                errors.email = '法人のメールアドレスをご入力ください';
+                isValid = false;
+            }
         }
 
         if (!phone) {

@@ -564,6 +564,10 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
   .hero__title {
     font-size: 40px;
   }
+
+  .hero__title-break {
+    display: block;
+  }
   
   .hero__cta-button {
     font-size: 18px;
@@ -625,9 +629,6 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
     font-size: 20px;
   }
 
-  .hero__subtitle-break {
-    display: block;
-  }
 
   .hero__title-break {
     display: block;
@@ -665,7 +666,7 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
    ============================================================================= */
 
 .problems-section {
-  padding: 80px 120px;
+  padding: 80px 100px;
   background: #f5f5f5;
   display: flex;
   flex-direction: column;
@@ -1109,7 +1110,7 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
    ============================================================================= */
 
 .benefits-section {
-  padding: 96px 120px;
+  padding: 96px 100px;
   background: #f8fbff;
   display: flex;
   flex-direction: column;
@@ -1462,6 +1463,10 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
     padding: 80px 40px;
   }
 
+  .benefits-section__title-break {
+    display: block;
+  }
+
   .benefits-section__features .feature-card__content {
     flex-direction: column;
     gap: 12px;
@@ -1567,7 +1572,7 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
    ============================================================================= */
 
 .service-overview-section {
-  padding: 96px 120px;
+  padding: 96px 100px;
   background: #ffffff;
   display: flex;
   flex-direction: column;
@@ -1790,7 +1795,7 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
    ============================================================================= */
 
 .usecase-section {
-  padding: 96px 120px;
+  padding: 96px 100px;
   background: #f8f9fa;
   display: flex;
   flex-direction: column;
@@ -1832,6 +1837,7 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
 
 .usecase-card__icon {
   width: 100%;
+  max-width: 450px;
   height: auto;
   aspect-ratio: 16 / 9;
   display: flex;
@@ -1840,6 +1846,7 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
   flex-shrink: 0;
   border-radius: 8px;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .usecase-card__image {
@@ -1873,6 +1880,10 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
     padding: 80px 40px;
   }
 
+  .usecase-section__title-break {
+    display: block;
+  }
+
   .usecase-section__cases {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -1896,6 +1907,10 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
 
   .usecase-card {
     padding: 32px 0;
+  }
+
+  .usecase-card__icon {
+    max-width: 100%;
   }
 }
 
@@ -2222,7 +2237,43 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
   }
 
   .consultants-profiles {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 16px;
+    gap: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .consultants-profiles::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .consultants-profiles::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 2px;
+  }
+
+  .consultants-profiles::-webkit-scrollbar-thumb {
+    background: #00AFCC;
+    border-radius: 2px;
+  }
+
+  .consultant-profile {
+    flex-direction: column;
+    min-width: 280px;
+    max-width: 280px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
   }
 }
 
@@ -2320,7 +2371,7 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
    ============================================================================= */
 
 .theme-section {
-  padding: 96px 120px;
+  padding: 96px 100px;
   background: #f8f9fa;
   display: flex;
   flex-direction: column;
@@ -2444,9 +2495,41 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
     padding: 80px 40px;
   }
 
-  .theme-category {
-    flex: 1 1 auto;
+  .consultants-section__themes .theme-section__categories {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 16px;
+    gap: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+    margin-left: 0;
+    margin-right: 0;
     width: 100%;
+  }
+
+  .theme-section__categories::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .theme-section__categories::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 2px;
+  }
+
+  .theme-section__categories::-webkit-scrollbar-thumb {
+    background: #00AFCC;
+    border-radius: 2px;
+  }
+
+  .theme-category {
+    min-width: 280px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
   }
 
   .theme-category__card {
@@ -2567,7 +2650,7 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
    ============================================================================= */
 
 .flow-section {
-  padding: 96px 120px;
+  padding: 96px 100px;
   background: #ffffff;
   display: flex;
   flex-direction: column;
@@ -2815,6 +2898,38 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
 @media (min-width: 768px) and (max-width: 1023px) {
   .flow-section {
     padding: 80px 40px;
+  }
+
+  .flow-section__steps {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+  }
+
+  .flow-step {
+    width: 100%;
+    padding: 0;
+  }
+
+  .flow-step__card {
+    padding: 12px 16px;
+    max-width: 100%;
+    padding-left: 48px;
+    box-sizing: border-box;
+  }
+
+  .flow-step__number-circle {
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 8px;
+    transform: none;
+  }
+
+  .flow-step__number {
+    font-size: 28px;
+    color: #6b7280;
+    font-family: "Noto Sans JP", sans-serif;
   }
 
   .flow-step__content {
@@ -3431,6 +3546,45 @@ a[href="https://arrowpro.jp/request"].pricing-plan__button--secondary:hover {
   }
 }
 
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .pricing-section {
+    padding: 96px 60px;
+  }
+
+  .pricing-section__plans {
+    gap: 16px;
+  }
+
+  .pricing-plan {
+    padding: 24px 16px;
+  }
+
+  .pricing-plan__header {
+    padding: 16px 12px;
+  }
+
+  .pricing-plan__feature-label {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: 13px;
+  }
+
+  .pricing-plan__feature-value {
+    flex: 0 0 auto;
+    min-width: 0;
+    font-size: 13px;
+  }
+
+  .pricing-plan__feature-value--highlight {
+    font-size: 14px;
+  }
+
+  .pricing-plan__feature-item {
+    gap: 12px;
+    padding: 10px 0;
+  }
+}
+
 @media (max-width: 767px) {
   .pricing-section {
     padding: 48px 16px;
@@ -3978,7 +4132,7 @@ a[href="https://arrowpro.jp/request"].fixed-cta-bar__button--download:hover {
    ============================================================================= */
 
 .faq-section {
-  padding: 96px 120px;
+  padding: 96px 100px;
   background: #f8f9fa;
   display: flex;
   flex-direction: column;
@@ -4214,7 +4368,7 @@ a[href="https://arrowpro.jp/request"].fixed-cta-bar__button--download:hover {
    ============================================================================= */
 
 .cta-section {
-  padding: 60px 120px;
+  padding: 60px 100px;
   background: #00AFCC;
   text-align: center;
   display: flex;

@@ -37,70 +37,6 @@
   transform: translateY(0);
 }
 
-/* フェードイン + スライドアップ */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-/* フェードイン + スライドダウン */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in-down {
-  animation: fadeInDown 0.6s ease-out forwards;
-}
-
-/* フェードイン + スライド左 */
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-fade-in-left {
-  animation: fadeInLeft 0.6s ease-out forwards;
-}
-
-/* フェードイン + スライド右 */
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-fade-in-right {
-  animation: fadeInRight 0.6s ease-out forwards;
-}
-
 /* スケールアニメーション */
 @keyframes scaleIn {
   from {
@@ -245,12 +181,10 @@
 .problems-section__label,
 .benefits-section__label,
 .main-features-section__label,
-.service-overview-section__label,
 .usecase-section__label,
 .consultants-section__label,
 .theme-section__label,
 .pricing-section__label,
-.cost-benefit-section__label,
 .faq-section__label,
 .flow-section__label {
   color: #1f2937;
@@ -267,13 +201,11 @@
 .problems-section__title,
 .benefits-section__title,
 .main-features-section__title,
-.service-overview-section__title,
 .usecase-section__title,
 .consultants-section__title,
 .theme-section__title,
 .flow-section__title,
 .pricing-section__title,
-.cost-benefit-section__title,
 .faq-section__title {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 32px;
@@ -294,9 +226,7 @@
 .pricing-section__title,
 .faq-section__title,
 .usecase-section__title,
-.service-overview-section__title,
-.consultants-section__title,
-.cost-benefit-section__title {
+.consultants-section__title {
   color: #00AFCC;
 }
 
@@ -306,13 +236,11 @@
   .problems-section__title,
   .benefits-section__title,
   .main-features-section__title,
-  .service-overview-section__title,
   .usecase-section__title,
   .consultants-section__title,
   .theme-section__title,
   .flow-section__title,
   .pricing-section__title,
-  .cost-benefit-section__title,
   .faq-section__title {
     font-size: 24px;
   }
@@ -1568,229 +1496,6 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
 }
 
 /* =============================================================================
-   Service Overview Section (BEM記法)
-   ============================================================================= */
-
-.service-overview-section {
-  padding: 96px 100px;
-  background: #ffffff;
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-}
-
-.service-overview-section__header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-
-.service-overview-section__title {
-  color: #00AFCC;
-  line-height: 1.4;
-}
-
-.service-overview-section__content {
-  max-width: 1400px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.service-overview-section__layout {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 48px;
-  align-items: center;
-  margin-bottom: 48px;
-}
-
-.service-overview-section__visual {
-  position: relative;
-}
-
-.service-overview-section__screenshots {
-  display: flex;
-  align-items: flex-end;
-  gap: 24px;
-  position: relative;
-}
-
-.service-overview-section__laptop {
-  flex: 1;
-  position: relative;
-}
-
-.service-overview-section__laptop-frame {
-  background: #f0f0f0;
-  border-radius: 12px 12px 0 0;
-  padding: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-.service-overview-section__laptop-frame::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 20px;
-  background: #e0e0e0;
-  border-radius: 0 0 4px 4px;
-  margin-top: 12px;
-}
-
-.service-overview-section__mobile {
-  width: 180px;
-  position: relative;
-  z-index: 1;
-}
-
-.service-overview-section__mobile-frame {
-  background: #1f2937;
-  border-radius: 24px;
-  padding: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-}
-
-.service-overview-section__mobile-frame::before {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: #4b5563;
-  border-radius: 2px;
-  margin: 0 auto 8px;
-}
-
-.service-overview-section__screenshot-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 4px;
-}
-
-.service-overview-section__image-placeholder {
-  width: 100%;
-  min-height: 300px;
-  background: #f3f4f6;
-  border: 2px dashed #d1d5db;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #9ca3af;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 14px;
-  text-align: center;
-  padding: 20px;
-}
-
-.service-overview-section__mobile .service-overview-section__image-placeholder {
-  min-height: 400px;
-  font-size: 12px;
-}
-
-.service-overview-section__features {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.service-overview-feature {
-  background: #e0f2f8;
-  border-radius: 12px;
-  padding: 24px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.service-overview-feature__icon {
-  width: 60px;
-  height: 60px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.service-overview-feature__text {
-  color: #1f2937;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  margin: 0;
-  line-height: 1.5;
-}
-
-.service-overview-section__description {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.service-overview-section__description-text {
-  color: #4b5563;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.8;
-  margin: 0;
-  text-align: center;
-}
-
-/* Service Overview Section Responsive */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .service-overview-section {
-    padding: 80px 40px;
-  }
-
-  .service-overview-section__layout {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .service-overview-section__screenshots {
-    justify-content: center;
-  }
-
-  .service-overview-section__mobile {
-    width: 150px;
-  }
-}
-
-@media (max-width: 767px) {
-  .service-overview-section {
-    padding: 60px 16px;
-    gap: 32px;
-  }
-
-  .service-overview-section__layout {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .service-overview-section__screenshots {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .service-overview-section__mobile {
-    width: 120px;
-  }
-
-  .service-overview-feature {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .service-overview-section__description-text {
-    font-size: 14px;
-    text-align: left;
-  }
-}
-
-/* =============================================================================
    Use Case Section (BEM記法)
    ============================================================================= */
 
@@ -2127,6 +1832,14 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
+}
+
+.consultant-profile__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .consultant-profile__image::before {
@@ -2137,6 +1850,8 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  position: absolute;
+  z-index: -1;
 }
 
 .consultant-profile__info {
@@ -2156,6 +1871,21 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
   font-size: 14px;
   line-height: 1.6;
   margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.consultant-profile__text li {
+  position: relative;
+  padding-left: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.consultant-profile__text li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #4b5563;
 }
 
 .consultant-profile__tags-group,
@@ -3623,371 +3353,6 @@ a[href="https://arrowpro.jp/request"].pricing-plan__button--secondary:hover {
 
   .pricing-plan__feature-value--price {
     font-size: 28px;
-  }
-}
-
-/* =============================================================================
-   Cost Benefit Section (BEM記法)
-   ============================================================================= */
-
-.cost-benefit-section {
-  padding: 96px 80px;
-  background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.cost-benefit-section__header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.cost-benefit-section__title {
-  color: #00AFCC;
-  margin-bottom: 16px;
-}
-
-.cost-benefit-section__subtitle {
-  color: #1f2937;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0 0 12px 0;
-}
-
-.cost-benefit-section__condition {
-  color: #6b7280;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  margin: 0;
-}
-
-.cost-benefit-section__comparison {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  justify-content: center;
-  max-width: 1400px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.cost-benefit-comparison {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 32px 24px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  border: 2px solid #e5e7eb;
-}
-
-.cost-benefit-comparison--image {
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  flex: 1;
-  max-width: 100%;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-}
-
-.cost-benefit-comparison__image {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 0;
-  object-fit: contain;
-}
-
-.cost-benefit-comparison__placeholder {
-  width: 100%;
-  min-height: 400px;
-  background: #f3f4f6;
-  border: 2px dashed #d1d5db;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #9ca3af;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 16px;
-  text-align: center;
-  padding: 40px;
-  box-sizing: border-box;
-}
-
-.cost-benefit-comparison__header {
-  text-align: center;
-  margin-bottom: 32px;
-  padding-bottom: 24px;
-  border-bottom: 2px solid #f0f0f0;
-}
-
-.cost-benefit-comparison__title {
-  color: #1f2937;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0 0 8px 0;
-}
-
-.cost-benefit-comparison__condition {
-  color: #6b7280;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  margin: 0 0 4px 0;
-}
-
-.cost-benefit-comparison__unit {
-  color: #9ca3af;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  margin: 0;
-}
-
-.cost-benefit-comparison__chart {
-  margin-bottom: 32px;
-}
-
-.cost-benefit-chart {
-  display: flex;
-  gap: 12px;
-  align-items: flex-end;
-  height: 300px;
-  position: relative;
-}
-
-.cost-benefit-chart__y-axis {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  padding-bottom: 30px;
-  min-width: 40px;
-}
-
-.cost-benefit-chart__y-label {
-  color: #6b7280;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  text-align: right;
-}
-
-.cost-benefit-chart__bars {
-  display: flex;
-  gap: 12px;
-  align-items: flex-end;
-  flex: 1;
-  height: 100%;
-  padding-bottom: 30px;
-}
-
-.cost-benefit-month-bar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-  height: 100%;
-  gap: 8px;
-}
-
-.cost-benefit-month-bar__stack {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  justify-content: flex-end;
-  gap: 2px;
-}
-
-.cost-benefit-month-bar__label {
-  color: #4b5563;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  text-align: center;
-  margin-top: 4px;
-}
-
-.cost-benefit-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  border-radius: 4px 4px 0 0;
-  position: relative;
-  box-sizing: border-box;
-  min-height: 20px;
-}
-
-.cost-benefit-bar--fee {
-  background: #dc2626;
-  color: #ffffff;
-}
-
-.cost-benefit-bar--service {
-  background: #06b6d4;
-  color: #ffffff;
-}
-
-.cost-benefit-bar--payment {
-  background: #9ca3af;
-  color: #ffffff;
-}
-
-.cost-benefit-bar__value {
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-}
-
-.cost-benefit-comparison__summary {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding-top: 24px;
-  border-top: 2px solid #f0f0f0;
-}
-
-.cost-benefit-summary-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 0;
-}
-
-.cost-benefit-summary-item__label {
-  color: #4b5563;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.cost-benefit-summary-item__value {
-  color: #1f2937;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.cost-benefit-summary-item--total {
-  background: #f0f8ff;
-  padding: 16px;
-  border-radius: 8px;
-  margin-top: 8px;
-}
-
-.cost-benefit-summary-item--total .cost-benefit-summary-item__label {
-  font-size: 16px;
-  font-weight: 700;
-  color: #1f2937;
-}
-
-.cost-benefit-summary-item--total .cost-benefit-summary-item__value {
-  font-size: 20px;
-  color: #00afcc;
-}
-
-.cost-benefit-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 0;
-  margin-top: 60px;
-}
-
-.cost-benefit-section__result {
-  text-align: center;
-  margin-top: 32px;
-}
-
-.cost-benefit-result {
-  display: inline-block;
-  background: linear-gradient(135deg, #ff8c69 0%, #ffa585 100%);
-  color: #ffffff;
-  padding: 20px 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(255, 140, 105, 0.3);
-}
-
-.cost-benefit-result__text {
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-}
-
-/* Cost Benefit Section Responsive */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .cost-benefit-section {
-    padding: 64px 40px;
-  }
-
-  .cost-benefit-section__comparison {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .cost-benefit-arrow {
-    transform: rotate(90deg);
-    margin: 20px 0;
-  }
-}
-
-@media (max-width: 767px) {
-  .cost-benefit-section {
-    padding: 48px 16px;
-    gap: 32px;
-  }
-
-  .cost-benefit-section__subtitle {
-    font-size: 16px;
-  }
-
-  .cost-benefit-section__condition {
-    font-size: 12px;
-  }
-
-  .cost-benefit-section__comparison {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .cost-benefit-comparison {
-    padding: 24px 16px;
-  }
-
-  .cost-benefit-comparison__title {
-    font-size: 20px;
-  }
-
-  .cost-benefit-arrow {
-    transform: rotate(90deg);
-    margin: 20px 0;
-  }
-
-  .cost-benefit-result {
-    padding: 16px 24px;
-  }
-
-  .cost-benefit-result__text {
-    font-size: 18px;
   }
 }
 

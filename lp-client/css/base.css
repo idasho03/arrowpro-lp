@@ -23,12 +23,6 @@
   visibility: hidden;
 }
 
-/* Link reset */
-.screen a {
-  display: contents;
-  text-decoration: none;
-}
-
 /* Image optimization */
 img {
   max-width: 100%;

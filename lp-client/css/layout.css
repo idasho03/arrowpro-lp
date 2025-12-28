@@ -18,7 +18,7 @@ main[role="main"] {
 /* Main content margin - レスポンシブ対応 */
 @media (min-width: 768px) and (max-width: 1023px) {
   main[role="main"] {
-    margin-top: 50px;
+    margin-top: 56px;
   }
 }
 
@@ -96,14 +96,13 @@ main[role="main"] {
 .header__nav {
   display: flex;
   flex-direction: row;
-  gap: 18px;
+  gap: 12px;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  flex-shrink: 1;
   flex-grow: 0;
   flex-basis: auto;
-  width: auto;
-  max-width: none;
+  min-width: 0;
   position: relative;
   margin-left: auto;
   padding: 0; /* CTAセクションのpaddingを上書き防止 */
@@ -126,48 +125,68 @@ main[role="main"] {
 /* 共通ボタンスタイル */
 .header__button {
   border-radius: 6px;
-  padding: 8px 24px;
+  padding: 8px 16px;
   display: flex;
   flex-direction: row;
   gap: 10px;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  flex-shrink: 1;
   flex-grow: 0;
   flex-basis: auto;
-  width: auto;
-  max-width: none;
+  min-width: 0;
   position: relative;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition: all 0.2s ease;
   border: 1px solid;
+  white-space: nowrap;
 }
 
 /* ナビゲーションリンク */
 .header__nav-link {
   border-radius: 6px;
-  padding: 8px 24px;
+  padding: 8px 16px;
   display: flex;
   flex-direction: row;
   gap: 10px;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  flex-shrink: 1;
   flex-grow: 0;
   flex-basis: auto;
-  width: auto;
-  max-width: none;
+  min-width: 0;
   position: relative;
   background: transparent;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+  color: #1f2937;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.header__nav-link:hover {
+  color: #00AFCC;
+}
+
+.header__nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  margin-right: 12px;
+  flex-wrap: nowrap;
 }
 
 /* 新規登録ボタン（固有スタイル） */
 .header__button--register {
   background: #F28C28;
   border-color: #F28C28;
+  border-radius: 999px;
 }
 
 header.header .header__button--register:hover {
@@ -177,10 +196,24 @@ header.header .header__button--register:hover {
   box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.3);
 }
 
+/* 資料請求ボタン（固有スタイル） */
+.header__button--request {
+  background: #00AFCC;
+  border-color: #00AFCC;
+}
+
+header.header .header__button--request:hover {
+  background: #0088aa;
+  border-color: #0088aa;
+  transform: translateY(-1px);
+  box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
 /* ログインボタン（固有スタイル） */
 .header__button--login {
   background: #ffffff;
   border-color: #00AFCC;
+  border-radius: 999px;
 }
 
 header.header .header__button--login:hover {
@@ -253,10 +286,9 @@ header.header .header__button--login .header__button-text {
   width: 24px;
   height: 3px;
   background: #00AFCC;
-  margin: 3px 0;
+  margin: 3px auto;
   transition: 0.3s;
   position: relative;
-  left: 4px;
 }
 
 /* ハンバーガーメニューが開いた時のアニメーション（×マーク） */
@@ -341,12 +373,21 @@ header.header .header__button--login .header__button-text {
     text-align: left;
   }
 
+  .header__button--request,
   .header__button--register,
   .header__button--login {
     width: 100%;
     justify-content: center;
     padding: 12px 16px;
     margin: 0;
+  }
+  
+  .header__button--request {
+    margin-top: 8px;
+  }
+  
+  .header__button--register {
+    margin-top: 12px;
   }
   
   .header__button--login {
@@ -359,26 +400,93 @@ header.header .header__button--login .header__button-text {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+  header.header {
+    padding: 8px 16px;
+    position: fixed;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
   .header__logo-icon {
-    width: 28px;
-    height: 30px;
+    width: 24px;
+    height: 26px;
     filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(188deg) brightness(118%) contrast(119%);
   }
 
   .header__logo-text {
-    font-size: 28px;
+    font-size: 24px;
+  }
+
+  /* ハンバーガーメニューを表示 */
+  .header__hamburger {
+    display: flex;
+  }
+
+  /* デスクトップメニューを非表示 */
+  header.header .header__nav--desktop {
+    display: none;
+  }
+
+  /* モバイルメニューのスタイル */
+  header.header .header__nav--mobile {
+    display: block;
+    position: fixed;
+    top: 56px;
+    right: -100%;
+    width: 280px;
+    height: calc(100vh - 56px);
+    background: #ffffff;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 24px 16px;
+    gap: 20px;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+
+  /* メニューが開いた時 */
+  header.header .header__nav--mobile.active {
+    right: 0;
+  }
+
+  /* メニュー項目のスタイル調整 */
+  .header__nav-link {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 6px;
   }
 
   .header__nav-link-text {
     font-size: 14px;
+    text-align: left;
   }
 
-  .header__button--register {
-    padding: 7px 16px;
-  }
-
+  .header__button--request,
+  .header__button--register,
   .header__button--login {
-    padding: 7px 16px;
+    width: 100%;
+    justify-content: center;
+    padding: 12px 16px;
+    margin: 0;
+  }
+  
+  .header__button--request {
+    margin-top: 8px;
+  }
+  
+  .header__button--register {
+    margin-top: 12px;
+  }
+  
+  .header__button--login {
+    margin-top: 8px;
+  }
+
+  .header__button-text {
+    font-size: 14px;
   }
 }
 
@@ -393,32 +501,15 @@ header.header .header__button--login .header__button-text {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 60px 120px 40px 120px;
+  padding: 60px 100px 40px 100px;
   position: relative;
   width: 100%;
-}
-
-.footer .grid-grid-cols-2-mdg {
-  align-items: flex-start;
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  gap: 60px;
-  justify-content: space-between;
-  position: relative;
-  width: 100%;
-}
-
-.footer .logo {
-  display: flex;
-  justify-content: center;
-  width: 227px;
 }
 
 /* Footer Responsive */
 @media (max-width: 767px) {
   .footer {
-    padding: 40px 20px 30px 20px;
+    padding: 40px 20px 150px 20px;
     gap: 20px;
   }
 
@@ -448,12 +539,31 @@ header.header .header__button--login .header__button-text {
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .footer {
-    padding: 50px 40px 35px 40px;
+    padding: 40px 20px 100px 20px;
     gap: 20px;
   }
 
+  .footer__grid {
+    flex-direction: column !important;
+    gap: 32px;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
   .footer__nav-group {
-    gap: 40px;
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .footer__contact-wrapper {
+    justify-content: center;
+  }
+
+  .footer__bottom {
+    margin-top: 12px;
+    padding-top: 16px;
+    text-align: center;
   }
 }
 
@@ -489,7 +599,8 @@ header.header .header__button--login .header__button-text {
   color: #ffffff;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
+  margin-bottom: 4px;
 }
 
 .footer__nav-links {
@@ -498,16 +609,26 @@ header.header .header__button--login .header__button-text {
   gap: 8px;
 }
 
+.footer__nav-links a {
+  text-decoration: none;
+  display: inline-block;
+}
+
 .footer__nav-link {
   color: #ffffff;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+  text-underline-offset: 4px;
+  cursor: pointer;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
-.footer__nav-link:hover {
-  color: #ffffff;
+.footer__nav-links a:hover .footer__nav-link {
+  color: #00AFCC;
+  text-decoration-color: #00AFCC;
 }
 
 .footer__external-icon {
@@ -571,7 +692,7 @@ section.cta {
   flex-direction: column;
   gap: 24px;
   justify-content: center;
-  padding: 80px 120px;
+  padding: 80px 100px;
   position: relative;
   width: 100%;
 }
@@ -616,7 +737,7 @@ section.cta {
   display: flex;
   flex-direction: column;
   gap: 48px;
-  padding: 80px 120px;
+  padding: 80px 100px;
   position: relative;
   width: 100%;
 }

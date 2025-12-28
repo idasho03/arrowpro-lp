@@ -1593,6 +1593,12 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
   margin: 0;
 }
 
+.usecase-card__description small {
+  font-size: 0.875em;
+  display: block;
+  margin-top: 8px;
+}
+
 /* Use Case Section Responsive */
 @media (min-width: 768px) and (max-width: 1023px) {
   .usecase-section {
@@ -1639,7 +1645,7 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
 
 .consultants-section {
   padding: 96px 80px;
-  background: #ffffff;
+  background: #f8fbff;
   display: flex;
   flex-direction: column;
   gap: 48px;

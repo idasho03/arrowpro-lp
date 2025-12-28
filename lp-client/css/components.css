@@ -30,11 +30,25 @@
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.6s ease-out;
+  /* JavaScriptが読み込まれない場合のフォールバック：0.6秒後に自動的に表示 */
+  animation: fadeInUpFallback 0.6s ease-out 0.6s forwards;
+}
+
+@keyframes fadeInUpFallback {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-on-scroll.animate-visible {
   opacity: 1;
   transform: translateY(0);
+  animation: none;
 }
 
 /* スケールアニメーション */
@@ -1579,6 +1593,12 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
   margin: 0;
 }
 
+.usecase-card__description small {
+  font-size: 0.875em;
+  display: block;
+  margin-top: 8px;
+}
+
 /* Use Case Section Responsive */
 @media (min-width: 768px) and (max-width: 1023px) {
   .usecase-section {
@@ -1625,7 +1645,7 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
 
 .consultants-section {
   padding: 96px 80px;
-  background: #ffffff;
+  background: #f8fbff;
   display: flex;
   flex-direction: column;
   gap: 48px;

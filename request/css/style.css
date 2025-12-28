@@ -224,9 +224,11 @@ body {
     display: block;
     margin: 0 auto 24px;
 }
-.complete-message p {
+.complete-message p,
+.complete-message__text {
     color: #6c757d;
     font-size: 14px;
+    margin-top: 24px;
 }
 /* フッター */
 .footer {

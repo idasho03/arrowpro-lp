@@ -501,7 +501,7 @@ header.header .header__button--login .header__button-text {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 60px 100px 40px 100px;
+  padding: 60px 100px 120px 100px;
   position: relative;
   width: 100%;
 }

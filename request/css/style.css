@@ -40,6 +40,16 @@ body {
     margin-bottom: 8px;
     color: #333333;
 }
+.document-image-container {
+    text-align: center;
+    margin-bottom: 24px;
+}
+.document-image {
+    width: 66.67%;
+    max-width: 66.67%;
+    height: auto;
+    object-fit: contain;
+}
 .form-description {
     text-align: center;
     color: #6c757d;
@@ -111,6 +121,9 @@ body {
 }
 /* 送信ボタン */
 .submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     padding: 12px 16px;
     background-color: #00AFCC;
@@ -132,8 +145,66 @@ body {
 }
 .submit-button:disabled {
     background-color: #00AFCC;
-    opacity: 0.25;
+    opacity: 0.5;
     cursor: not-allowed;
+}
+/* チェックボックスグループ */
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+.checkbox-input {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    flex-shrink: 0;
+    cursor: pointer;
+    accent-color: #00AFCC;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 2px solid #00AFCC;
+    border-radius: 4px;
+    background-color: #ffffff;
+    position: relative;
+}
+.checkbox-input:checked {
+    background-color: #00AFCC;
+    border-color: #00AFCC;
+}
+.checkbox-input:checked::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    font-size: 14px;
+    color: #333333;
+    line-height: 1.5;
+    cursor: pointer;
+    flex: 1;
+}
+.checkbox-label .link-text {
+    color: #00AFCC;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+.checkbox-label .link-text:hover {
+    color: #008C9E;
+}
+.checkbox-label .required {
+    color: #dc3545;
+    font-size: 12px;
+    margin-left: 4px;
 }
 /* 完了メッセージ */
 .complete-message {
@@ -145,9 +216,13 @@ body {
     display: block;
 }
 .complete-message h2 {
-    color: #22c55e;
-    margin-bottom: 16px;
+    color: #00AFCC;
+    margin-bottom: 24px;
     font-size: 20px;
+}
+.complete-icon {
+    display: block;
+    margin: 0 auto 24px;
 }
 .complete-message p {
     color: #6c757d;

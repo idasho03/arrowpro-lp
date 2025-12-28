@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('documentRequestForm');
     const submitButton = document.getElementById('submitButton');
+    const agreeTermsCheckbox = document.getElementById('agreeTerms');
+
+    // チェックボックスの状態でボタンの有効/無効を切り替え
+    agreeTermsCheckbox.addEventListener('change', function() {
+        submitButton.disabled = !this.checked;
+    });
 
     // URLからrefパラメータを取得
     const urlParams = new URLSearchParams(window.location.search);
@@ -43,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const representativeName = document.getElementById('representativeName').value.trim();
         const email = document.getElementById('email').value.trim();
         const phone = document.getElementById('phone').value.trim();
+        const agreeTerms = agreeTermsCheckbox.checked;
 
         if (!companyName) {
             errors.companyName = '会社名を入力してください';
@@ -85,6 +92,11 @@ document.addEventListener('DOMContentLoaded', function() {
             isValid = false;
         } else if (phone.length > 20) {
             errors.phone = '電話番号は20文字以内で入力してください';
+            isValid = false;
+        }
+
+        if (!agreeTerms) {
+            errors.agreeTerms = 'プライバシーポリシーに同意してください';
             isValid = false;
         }
 

@@ -1,0 +1,8 @@
+reword b6f03fd UI改善: タブレット対応とCTAボタンの修正
+reword bcdbc91 components.cssの不要なクラス削除
+pick d48bc09 Update UI elements: tablet responsive styles, button icons, text changes, and header button styling
+pick d2cf7cd Remove unused CSS classes, add consultant profile images, update text formatting with bullet points, and update image paths
+pick 2244a4b Merge branch 'main' of https://github.com/k-nunome/arrowpro-sub-contents into feature/pricing-section-improvements
+reword 6d0971b 資料ダウンロードページと完了ページの追加
+
+

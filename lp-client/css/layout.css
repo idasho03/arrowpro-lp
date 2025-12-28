@@ -530,6 +530,17 @@ header.header .header__button--login .header__button-text {
     justify-content: center;
   }
 
+  .footer__nav-link {
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.5);
+    text-underline-offset: 4px;
+  }
+
+  .footer__nav-links a:hover .footer__nav-link {
+    color: #00AFCC;
+    text-decoration-color: #00AFCC;
+  }
+
   .footer__bottom {
     margin-top: 12px;
     padding-top: 16px;

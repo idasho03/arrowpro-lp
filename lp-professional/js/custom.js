@@ -29,6 +29,12 @@ document.addEventListener('DOMContentLoaded', function() {
   } catch (error) {
   }
 
+  // Fixed CTA Barの初期化
+  try {
+    initFixedCtaBar();
+  } catch (error) {
+  }
+
   // 画像の遅延読み込み設定（一時的に無効化）
   // setupLazyLoading();
 
@@ -369,6 +375,42 @@ function animateElementsSequentially(elements, animationType, staggerDelay = 200
   elements.forEach(function(element, index) {
     animateElement(element, animationType, 600, index * staggerDelay);
   });
+}
+
+/**
+ * Fixed CTA Barの表示制御
+ * スクロール位置に応じて表示/非表示を切り替える
+ */
+function initFixedCtaBar() {
+  const fixedCtaBar = document.querySelector(".fixed-cta-bar");
+  if (!fixedCtaBar) return;
+
+  const scrollThreshold = 300; // 300pxスクロールしたら表示
+
+  function handleScroll() {
+    const scrollY = window.scrollY || window.pageYOffset;
+    
+    if (scrollY > scrollThreshold) {
+      fixedCtaBar.classList.add("fixed-cta-bar--visible");
+    } else {
+      fixedCtaBar.classList.remove("fixed-cta-bar--visible");
+    }
+  }
+
+  // スクロールイベントリスナーを追加（パフォーマンス向上のためrequestAnimationFrame使用）
+  let ticking = false;
+  window.addEventListener("scroll", function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        handleScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  // 初期状態をチェック
+  handleScroll();
 }
 
 /**

@@ -151,13 +151,13 @@
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main role="main">
       <!-- Hero Section -->
       <section class="hero" aria-labelledby="hero-heading">
         <!-- Main Headline -->
         <div class="hero__title-wrapper animate-on-scroll">
           <h1 id="hero-heading" class="hero__title">
-            クライアントから直接、"白羽の矢"が立つ。
+            クライアントから直接、<span class="hero__title-break">"白羽の矢"が立つ。</span>
           </h1>
         </div>
         
@@ -206,14 +206,17 @@
                 href="https://arrowpro.jp/professional/register"
                 class="hero__cta-button animate-pulse"
               >
-                いますぐ無料で使ってみる
+                いますぐ無料で登録する
+                <svg class="hero__cta-button-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 4L14 10L8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
               </a>
             </div>
           </div>
 
           <!-- Hero Visual -->
           <div class="hero__visual animate-on-scroll animate-delay-300">
-            <img class="hero__image animate-scale-in" src="img/01-hero/demo_p.svg" alt="ARROW pro デモ画面" loading="eager" />
+            <img class="hero__image animate-scale-in" src="img/01-hero/demo_p.webp" alt="ARROW pro デモ画面" loading="eager" />
           </div>
 
         </div>
@@ -418,7 +421,7 @@
             <div class="theme-category__card">
               <div class="theme-category__header">
                 <div class="theme-category__title">経営戦略・事業戦略</div>
-                <img class="theme-category__icon" src="img/04-themes/theme-strategy-icon.svg" alt="経営戦略アイコン" loading="lazy" />
+                <img class="theme-category__icon" src="../lp-client/img/06-consultants/strategy.svg" alt="経営戦略アイコン" loading="lazy" />
               </div>
               <div class="theme-category__tags">
               <article class="theme-tag">
@@ -456,16 +459,7 @@
                   <div class="theme-tag__text">事業再生</div>
                 </div>
               </article>
-              <article class="theme-tag">
-                <div class="theme-tag__wrapper">
-                  <div class="theme-tag__text">アライアンス・業務提携</div>
-                </div>
-              </article>
-              <article class="theme-tag">
-                <div class="theme-tag__wrapper">
-                  <div class="theme-tag__text">事業再編・カーブアウト</div>
-                </div>
-              </article>
+
               <article class="theme-tag">
                 <div class="theme-tag__wrapper">
                   <div class="theme-tag__text">グローバル展開戦略</div>
@@ -489,8 +483,8 @@
           <div class="theme-category animate-on-scroll animate-delay-300">
             <div class="theme-category__card">
               <div class="theme-category__header">
-                <div class="theme-category__title">営業・マーケティング・<br />オペレーション</div>
-                <img class="theme-category__icon" src="img/04-themes/theme-operation-icon.svg" alt="営業・マーケティング・オペレーションアイコン" loading="lazy" />
+                <div class="theme-category__title">オペレーション</div>
+                <img class="theme-category__icon" src="../lp-client/img/06-consultants/operation.svg" alt="営業・マーケティング・オペレーションアイコン" loading="lazy" />
               </div>
               <div class="theme-category__tags">
               <article class="theme-tag">
@@ -547,7 +541,7 @@
             <div class="theme-category__card">
               <div class="theme-category__header">
                 <div class="theme-category__title">人事・財務・リスク</div>
-                <img class="theme-category__icon" src="img/04-themes/theme-finance-icon.svg" alt="人事・財務・リスクアイコン" loading="lazy" />
+                <img class="theme-category__icon" src="../lp-client/img/06-consultants/finance.svg" alt="人事・財務・リスクアイコン" loading="lazy" />
               </div>
               <div class="theme-category__tags">
               <article class="theme-tag">
@@ -562,12 +556,22 @@
               </article>
               <article class="theme-tag">
                 <div class="theme-tag__wrapper">
-                  <div class="theme-tag__text">働き方改革・労務管理</div>
+                  <div class="theme-tag__text">働き方改革</div>
                 </div>
               </article>
               <article class="theme-tag">
                 <div class="theme-tag__wrapper">
-                  <div class="theme-tag__text">KPI設計・管理会計</div>
+                  <div class="theme-tag__text">労務管理</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">KPI設計</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">管理会計</div>
                 </div>
               </article>
               <article class="theme-tag">
@@ -594,7 +598,7 @@
             <div class="theme-category__card">
               <div class="theme-category__header">
                 <div class="theme-category__title">デジタル・IT</div>
-                <img class="theme-category__icon" src="img/04-themes/theme-digital-icon.svg" alt="デジタル・ITアイコン" loading="lazy" />
+                <img class="theme-category__icon" src="../lp-client/img/06-consultants/digital.svg" alt="デジタル・ITアイコン" loading="lazy" />
               </div>
               <div class="theme-category__tags">
               <article class="theme-tag">
@@ -619,7 +623,12 @@
               </article>
               <article class="theme-tag">
                 <div class="theme-tag__wrapper">
-                  <div class="theme-tag__text">IT基盤設計／インフラ整備</div>
+                  <div class="theme-tag__text">IT基盤設計</div>
+                </div>
+              </article>
+              <article class="theme-tag">
+                <div class="theme-tag__wrapper">
+                  <div class="theme-tag__text">インフラ整備</div>
                 </div>
               </article>
               <article class="theme-tag">
@@ -651,7 +660,7 @@
             <div class="theme-category__card">
               <div class="theme-category__header">
                 <div class="theme-category__title">新領域・先新テーマ</div>
-                <img class="theme-category__icon" src="img/04-themes/theme-innovation-icon.svg" alt="新領域・先新テーマアイコン" loading="lazy" />
+                <img class="theme-category__icon" src="../lp-client/img/06-consultants/inovation.svg" alt="新領域・先新テーマアイコン" loading="lazy" />
               </div>
               <div class="theme-category__tags">
               <article class="theme-tag">
@@ -874,14 +883,21 @@
         </div>
       </section>
 
-      <!-- CTA Section -->
-      <section class="cta-section" aria-label="コールトゥアクション">
-        <div class="cta-section__content">
-          <div class="cta-section__text animate-on-scroll">「人材紹介」ではなく、攻めのプロフェッショナル獲得へ。</div>
-          <a href="https://arrowpro.jp/professional/register" class="cta-section__button animate-on-scroll animate-delay-200 animate-pulse">今すぐ始める</a>
-        </div>
-      </section>
     </main>
+
+    <!-- Fixed CTA Bar -->
+    <div class="fixed-cta-bar">
+      <div class="fixed-cta-bar__container">
+        <div class="fixed-cta-bar__buttons">
+          <a href="https://arrowpro.jp/professional/register" class="fixed-cta-bar__button fixed-cta-bar__button--primary" id="fixed-register-cta-button">
+            いますぐ無料で登録する
+            <svg class="fixed-cta-bar__button-icon" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 4L14 10L8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
 
       <!-- Footer -->
       <footer class="footer">

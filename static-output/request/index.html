@@ -1,79 +1,94 @@
-<!DOCTYPE html><html lang=ja><meta charset=utf-8><title>資料をダウンロード | ARROW pro</title><meta name=description content="ARROW proの資料ダウンロードページです。サービス資料をダウンロードいただけます。"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon type=image/png href=/arrowpro-sub-contents/static-output/lp-client/favicon.b9605210.png><meta name=robots content="noindex, nofollow"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;family=Poppins:wght@700&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/arrowpro-sub-contents/static-output/request/request.f5bfed03.css><body>
-    <main class=container>
-        <div class=form-card>
-            <div class=logo-container>
-                <span class=logo-text>ARROW pro</span>
+<!DOCTYPE html><html lang="ja"><head>
+    <meta charset="utf-8">
+    <title>資料をダウンロード | ARROW pro</title>
+    <meta name="description" content="ARROW proの資料ダウンロードページです。サービス資料をダウンロードいただけます。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/arrowpro-sub-contents/static-output/lp-client/favicon.b9605210.png">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;family=Poppins:wght@700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/arrowpro-sub-contents/static-output/request/request.f5bfed03.css">
+</head>
+<body>
+    <main class="container">
+        <div class="form-card">
+            <div class="logo-container">
+                <span class="logo-text">ARROW pro</span>
             </div>
 
-            <h1 class=form-title>資料をダウンロード</h1>
+            <h1 class="form-title">資料をダウンロード</h1>
             
-            <div class=document-image-container>
-                <img src=/arrowpro-sub-contents/static-output/request/ARROW%20proご紹介資料_v1.0.pdf.570c8b82.webp alt=資料プレビュー class=document-image>
+            <div class="document-image-container">
+                <img src="/arrowpro-sub-contents/static-output/request/ARROW%20proご紹介資料_v1.0.pdf.570c8b82.webp" alt="資料プレビュー" class="document-image">
             </div>
             
-            <p class=form-description>以下のフォームに必要事項をご入力ください。ご入力いただいたメールアドレス宛に、自動で資料URLをお送りします。</p>
+            <p class="form-description">以下のフォームに必要事項をご入力ください。ご入力いただいたメールアドレス宛に、自動で資料URLをお送りします。</p>
 
-            <form id=documentRequestForm class=form-content>
-                <div class=form-group>
-                    <label class=form-label>
-                        会社名<span class=required>*</span>
+            <form id="documentRequestForm" class="form-content">
+                <div class="form-group">
+                    <label class="form-label">
+                        会社名<span class="required">*</span>
                     </label>
-                    <input id=companyName class=form-input placeholder="例: 株式会社○○">
-                    <p class=error-message id=companyNameError></p>
+                    <input type="text" id="companyName" class="form-input" placeholder="例: 株式会社○○">
+                    <p class="error-message" id="companyNameError"></p>
                 </div>
 
-                <div class=form-group>
-                    <label class=form-label>
-                        会社名（カナ）<span class=required>*</span>
+                <div class="form-group">
+                    <label class="form-label">
+                        会社名（カナ）<span class="required">*</span>
                     </label>
-                    <input id=companyNameKana class=form-input placeholder="例: カブシキガイシャマルマル">
-                    <p class=error-message id=companyNameKanaError></p>
+                    <input type="text" id="companyNameKana" class="form-input" placeholder="例: カブシキガイシャマルマル">
+                    <p class="error-message" id="companyNameKanaError"></p>
                 </div>
 
-                <div class=form-group>
-                    <label class=form-label>
-                        担当者名<span class=required>*</span>
+                <div class="form-group">
+                    <label class="form-label">
+                        担当者名<span class="required">*</span>
                     </label>
-                    <input id=representativeName class=form-input placeholder="例: 山田 太郎">
-                    <p class=error-message id=representativeNameError></p>
+                    <input type="text" id="representativeName" class="form-input" placeholder="例: 山田 太郎">
+                    <p class="error-message" id="representativeNameError"></p>
                 </div>
 
-                <div class=form-row>
-                    <div class=form-group>
-                        <label class=form-label>
-                            メールアドレス<span class=required>*</span>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">
+                            メールアドレス<span class="required">*</span>
                         </label>
-                        <input id=email class=form-input placeholder="例: client@example.com">
-                        <p class=error-message id=emailError></p>
+                        <input type="text" id="email" class="form-input" placeholder="例: client@example.com">
+                        <p class="error-message" id="emailError"></p>
                     </div>
 
-                    <div class=form-group>
-                        <label class=form-label>
-                            電話番号<span class=required>*</span>
+                    <div class="form-group">
+                        <label class="form-label">
+                            電話番号<span class="required">*</span>
                         </label>
-                        <input type=tel id=phone class=form-input placeholder="例: 0312345678（ハイフン無し）">
-                        <p class=error-message id=phoneError></p>
+                        <input type="tel" id="phone" class="form-input" placeholder="例: 0312345678（ハイフン無し）">
+                        <p class="error-message" id="phoneError"></p>
                     </div>
                 </div>
 
-                <div class=form-group>
-                    <div class=checkbox-group>
-                        <input type=checkbox id=agreeTerms class=checkbox-input>
-                        <label for=agreeTerms class=checkbox-label>
-                            <a href=/privacy target=_blank class=link-text>プライバシーポリシー</a>に同意する<span class=required>*</span>
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="agreeTerms" class="checkbox-input">
+                        <label for="agreeTerms" class="checkbox-label">
+                            <a href="/privacy" target="_blank" class="link-text">プライバシーポリシー</a>に同意する<span class="required">*</span>
                         </label>
                     </div>
-                    <p class=error-message id=agreeTermsError></p>
+                    <p class="error-message" id="agreeTermsError"></p>
                 </div>
 
-                <button class=submit-button id=submitButton disabled>
+                <button type="submit" class="submit-button" id="submitButton" disabled="">
                     資料をメールで受け取る
-                    <svg xmlns:xmlns=http://www.w3.org/2000/svg width=16 height=16 fill=none style=margin-left:8px viewBox="0 0 16 16"><path stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 d="m6 12 4-4-4-4"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left:8px">
+                        <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
                 </button>
             </form>
         </div>
     </main>
 
-    <script src=/arrowpro-sub-contents/static-output/request/request.0f068b65.js></script>
+    <script src="/arrowpro-sub-contents/static-output/request/request.0f068b65.js"></script>
 
 
+</body></html>

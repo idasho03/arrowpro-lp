@@ -580,6 +580,9 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
     font-size: 20px;
   }
 
+  .hero__subtitle-break {
+    display: block;
+  }
 
   .hero__title-break {
     display: block;

@@ -108,6 +108,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // 送信データを作成
         const requestData = {
             company_name: companyName,
+            // backend互換: API側でcompany_name_kanaが必須のため暫定的に会社名を送る
+            company_name_kana: companyName,
             representative_name: representativeName,
             email: email,
             phone: phone,
@@ -186,6 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (data.errors) {
                     const errorMessages = {};
                     if (data.errors.company_name) errorMessages.companyName = data.errors.company_name[0];
+                    if (data.errors.company_name_kana) errorMessages.companyName = data.errors.company_name_kana[0];
                     if (data.errors.representative_name) errorMessages.representativeName = data.errors.representative_name[0];
                     if (data.errors.email) errorMessages.email = data.errors.email[0];
                     if (data.errors.phone) errorMessages.phone = data.errors.phone[0];

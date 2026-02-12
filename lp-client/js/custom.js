@@ -3,6 +3,9 @@
  * FAQアコーディオン、アクセシビリティ、パフォーマンス最適化
  */
 
+// スクロールアニメ用：JS有効時はCSSフォールバックを無効化（フォールバックが全要素を0.6s後に表示してしまうため、上からスクロール時にアニメが見えなくなる問題を防ぐ）
+document.documentElement.classList.add('js-scroll-anim');
+
 document.addEventListener('DOMContentLoaded', function () {
   // refパラメータの引き継ぎ
   try {
@@ -237,10 +240,10 @@ function setupLazyLoading() {
  * スクロール連動アニメーションの初期化
  */
 function initScrollAnimations() {
-  // Intersection Observer の設定
+  // Intersection Observer の設定（スクロールで「そのセクションを見に来た」タイミングで発火。下の除外を小さくすると発火が早くなる）
   const observerOptions = {
-    threshold: 0.1, // 要素の10%が表示されたら発火
-    rootMargin: '0px 0px -50px 0px' // 下から50px手前で発火
+    threshold: 0.1, // 要素の10%が検知領域に入ったら発火
+    rootMargin: '0px 0px -10% 0px' // ビューポートの下10%を除外 → 画面上部90%の範囲に入った時点で発火（やや早め）
   };
 
   const observer = new IntersectionObserver(function (entries) {

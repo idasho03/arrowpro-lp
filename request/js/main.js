@@ -2,15 +2,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('documentRequestForm');
     const submitButton = document.getElementById('submitButton');
     const agreeTermsCheckbox = document.getElementById('agreeTerms');
+    const isLocalPreview = ['localhost', '127.0.0.1'].includes(window.location.hostname);
 
-    // チェックボックスの状態でボタンの有効/無効を切り替え
-    agreeTermsCheckbox.addEventListener('change', function() {
-        submitButton.disabled = !this.checked;
-    });
+    // 同意チェックはsubmit時にバリデーションで判定
 
     // URLからrefパラメータを取得
     const urlParams = new URLSearchParams(window.location.search);
     const refParam = urlParams.get('ref') || 'Untracked';
+
+    function saveRequestData(companyName, representativeName, email, phone) {
+        const storageData = {
+            company_name: companyName,
+            representative_name: representativeName,
+            email: email,
+            phone: phone,
+            saved_at: new Date().toISOString()
+        };
+        localStorage.setItem('arrowpro_document_request', JSON.stringify(storageData));
+    }
 
     // ブロック対象のメールドメインリストを取得
     let blockedEmailDomains = [];
@@ -105,6 +114,13 @@ document.addEventListener('DOMContentLoaded', function() {
             ref: refParam
         };
 
+        // ローカル静的確認時はAPI送信せず完了画面へ遷移
+        if (isLocalPreview) {
+            saveRequestData(companyName, representativeName, email, phone);
+            window.location.href = '/request/completed/';
+            return;
+        }
+
         // ボタンを無効化
         submitButton.disabled = true;
 
@@ -117,18 +133,18 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             body: JSON.stringify(requestData)
         })
-        .then(response => response.json())
+        .then(async response => {
+            const contentType = response.headers.get('content-type') || '';
+            if (!contentType.includes('application/json')) {
+                return { success: false, message: 'サーバー応答形式が不正です。' };
+            }
+
+            return response.json();
+        })
         .then(data => {
             if (data.success) {
                 // LocalStorageに保存（/client/registerで利用）
-                const storageData = {
-                    company_name: companyName,
-                    representative_name: representativeName,
-                    email: email,
-                    phone: phone,
-                    saved_at: new Date().toISOString()
-                };
-                localStorage.setItem('arrowpro_document_request', JSON.stringify(storageData));
+                saveRequestData(companyName, representativeName, email, phone);
 
                 // 完了ページへリダイレクト
                 window.location.href = '/request/completed/';

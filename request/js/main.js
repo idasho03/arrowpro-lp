@@ -2,24 +2,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('documentRequestForm');
     const submitButton = document.getElementById('submitButton');
     const agreeTermsCheckbox = document.getElementById('agreeTerms');
-    const isLocalPreview = ['localhost', '127.0.0.1'].includes(window.location.hostname);
 
-    // 同意チェックはsubmit時にバリデーションで判定
+    // チェックボックスの状態でボタンの有効/無効を切り替え
+    agreeTermsCheckbox.addEventListener('change', function() {
+        submitButton.disabled = !this.checked;
+    });
 
     // URLからrefパラメータを取得
     const urlParams = new URLSearchParams(window.location.search);
     const refParam = urlParams.get('ref') || 'Untracked';
-
-    function saveRequestData(companyName, representativeName, email, phone) {
-        const storageData = {
-            company_name: companyName,
-            representative_name: representativeName,
-            email: email,
-            phone: phone,
-            saved_at: new Date().toISOString()
-        };
-        localStorage.setItem('arrowpro_document_request', JSON.stringify(storageData));
-    }
 
     // ブロック対象のメールドメインリストを取得
     let blockedEmailDomains = [];
@@ -54,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const errors = {};
 
         const companyName = document.getElementById('companyName').value.trim();
+        const companyNameKana = document.getElementById('companyNameKana').value.trim();
         const representativeName = document.getElementById('representativeName').value.trim();
         const email = document.getElementById('email').value.trim();
         const phone = document.getElementById('phone').value.trim();
@@ -61,6 +53,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (!companyName) {
             errors.companyName = '会社名を入力してください';
+            isValid = false;
+        }
+
+        if (!companyNameKana) {
+            errors.companyNameKana = '会社名（カナ）を入力してください';
+            isValid = false;
+        } else if (!/^[ァ-ヾ]+$/.test(companyNameKana)) {
+            errors.companyNameKana = '会社名（カナ）は全角カタカナで入力してください';
             isValid = false;
         }
 
@@ -108,18 +108,12 @@ document.addEventListener('DOMContentLoaded', function() {
         // 送信データを作成
         const requestData = {
             company_name: companyName,
+            company_name_kana: companyNameKana,
             representative_name: representativeName,
             email: email,
             phone: phone,
             ref: refParam
         };
-
-        // ローカル静的確認時はAPI送信せず完了画面へ遷移
-        if (isLocalPreview) {
-            saveRequestData(companyName, representativeName, email, phone);
-            window.location.href = '/request/completed/';
-            return;
-        }
 
         // ボタンを無効化
         submitButton.disabled = true;
@@ -133,50 +127,19 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             body: JSON.stringify(requestData)
         })
-        .then(async response => {
-            const contentType = response.headers.get('content-type') || '';
-            const status = response.status;
-            const requestId = response.headers.get('x-request-id') || response.headers.get('x-amzn-requestid') || '';
-            const rawBody = await response.text();
-
-            // 本番障害の切り分け用に、失敗時の応答情報を残す
-            if (!response.ok) {
-                console.error('資料請求送信APIエラー', {
-                    status: status,
-                    contentType: contentType,
-                    requestId: requestId,
-                    rawBody: rawBody
-                });
-            }
-
-            if (!contentType.includes('application/json')) {
-                return {
-                    success: false,
-                    message: 'サーバー応答形式が不正です。',
-                    debug: { status: status, requestId: requestId }
-                };
-            }
-
-            try {
-                return JSON.parse(rawBody);
-            } catch (parseError) {
-                console.error('資料請求送信APIのJSON解析エラー', {
-                    status: status,
-                    requestId: requestId,
-                    rawBody: rawBody,
-                    error: parseError
-                });
-                return {
-                    success: false,
-                    message: 'サーバー応答の解析に失敗しました。',
-                    debug: { status: status, requestId: requestId }
-                };
-            }
-        })
+        .then(response => response.json())
         .then(data => {
             if (data.success) {
                 // LocalStorageに保存（/client/registerで利用）
-                saveRequestData(companyName, representativeName, email, phone);
+                const storageData = {
+                    company_name: companyName,
+                    company_name_kana: companyNameKana,
+                    representative_name: representativeName,
+                    email: email,
+                    phone: phone,
+                    saved_at: new Date().toISOString()
+                };
+                localStorage.setItem('arrowpro_document_request', JSON.stringify(storageData));
 
                 // 完了ページへリダイレクト
                 window.location.href = '/request/completed/';
@@ -186,6 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (data.errors) {
                     const errorMessages = {};
                     if (data.errors.company_name) errorMessages.companyName = data.errors.company_name[0];
+                    if (data.errors.company_name_kana) errorMessages.companyNameKana = data.errors.company_name_kana[0];
                     if (data.errors.representative_name) errorMessages.representativeName = data.errors.representative_name[0];
                     if (data.errors.email) errorMessages.email = data.errors.email[0];
                     if (data.errors.phone) errorMessages.phone = data.errors.phone[0];

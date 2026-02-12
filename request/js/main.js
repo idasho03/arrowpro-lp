@@ -135,11 +135,43 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(async response => {
             const contentType = response.headers.get('content-type') || '';
-            if (!contentType.includes('application/json')) {
-                return { success: false, message: 'サーバー応答形式が不正です。' };
+            const status = response.status;
+            const requestId = response.headers.get('x-request-id') || response.headers.get('x-amzn-requestid') || '';
+            const rawBody = await response.text();
+
+            // 本番障害の切り分け用に、失敗時の応答情報を残す
+            if (!response.ok) {
+                console.error('資料請求送信APIエラー', {
+                    status: status,
+                    contentType: contentType,
+                    requestId: requestId,
+                    rawBody: rawBody
+                });
             }
 
-            return response.json();
+            if (!contentType.includes('application/json')) {
+                return {
+                    success: false,
+                    message: 'サーバー応答形式が不正です。',
+                    debug: { status: status, requestId: requestId }
+                };
+            }
+
+            try {
+                return JSON.parse(rawBody);
+            } catch (parseError) {
+                console.error('資料請求送信APIのJSON解析エラー', {
+                    status: status,
+                    requestId: requestId,
+                    rawBody: rawBody,
+                    error: parseError
+                });
+                return {
+                    success: false,
+                    message: 'サーバー応答の解析に失敗しました。',
+                    debug: { status: status, requestId: requestId }
+                };
+            }
         })
         .then(data => {
             if (data.success) {

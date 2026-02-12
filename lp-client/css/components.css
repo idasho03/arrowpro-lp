@@ -580,6 +580,9 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
     font-size: 20px;
   }
 
+  .hero__subtitle-break {
+    display: block;
+  }
 
   .hero__title-break {
     display: block;
@@ -3238,6 +3241,15 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
   border-top: 2px solid #f0f0f0;
 }
 
+.pricing-plan__cta .pricing-plan__button + .pricing-plan__button {
+  margin-top: 12px;
+}
+
+.pricing-plan__button-icon {
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
 .pricing-plan__button {
   display: block;
   width: 100%;
@@ -3384,6 +3396,16 @@ a[href="https://arrowpro.jp/request"].pricing-plan__button--secondary:hover {
 
   .pricing-plan__feature-value--price {
     font-size: 28px;
+  }
+
+  .pricing-plan__cta {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .pricing-plan__cta .pricing-plan__button + .pricing-plan__button {
+    margin-top: 0;
   }
 }
 

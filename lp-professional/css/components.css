@@ -882,6 +882,19 @@
   line-height: 1.3;
 }
 
+.benefits-section__gaiyo {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefits-section__gaiyo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
 .benefits-section__description {
   color: #4b5563;
   font-family: "Noto Sans JP", sans-serif;
@@ -960,7 +973,7 @@
 .benefits-section__features .feature-card__content {
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  gap: 24px;
   align-items: stretch;
   min-width: 0;
 }
@@ -987,7 +1000,7 @@
   min-width: 0;
   height: auto;
   object-fit: contain;
-  max-width: 700px;
+  max-width: 800px;
   align-self: center;
 }
 
@@ -1032,6 +1045,10 @@
 
 .benefits-section__features .feature-card__heading {
   text-align: center;
+}
+
+.benefits-section__features .feature-card__body {
+  max-width: 800px;
 }
 
 .benefits-section__features .feature-card__text-wrapper {
@@ -1351,6 +1368,264 @@
 }
 
 /* =============================================================================
+   プロジェクト例（登録プロフェッショナル例デザインを流用）
+   ============================================================================= */
+
+.theme-section__projects .theme-projects__examples {
+  margin-bottom: 24px;
+}
+
+.theme-section__projects .theme-projects__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.theme-section__projects .theme-project-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.theme-section__projects .theme-project-card__info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.theme-section__projects .theme-project-card__title {
+  color: #1f2937;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.theme-section__projects .theme-project-card__text {
+  color: #4b5563;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.theme-section__projects .theme-project-card__text li {
+  position: relative;
+  padding-left: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.theme-section__projects .theme-project-card__text li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #4b5563;
+}
+
+.theme-section__projects .theme-project-card__meta-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 0;
+}
+
+.theme-section__projects .theme-project-card__meta-value {
+  color: #00AFCC;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  flex: 1;
+  margin: 0;
+  text-align: right;
+}
+
+.theme-section__projects .theme-project-card__tags-row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 16px 24px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.theme-section__projects .theme-project-card__meta-row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 16px 24px;
+  align-items: flex-start;
+}
+
+.theme-section__projects .theme-project-card__meta-row .theme-project-card__meta-group,
+.theme-section__projects .theme-project-card__meta-row .theme-project-card__themes-group {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.theme-section__projects .theme-project-card__tags-row .theme-project-card__themes-group,
+.theme-section__projects .theme-project-card__tags-row .theme-project-card__company-tags-group {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.theme-section__projects .theme-project-card__tags-group,
+.theme-section__projects .theme-project-card__company-tags-group,
+.theme-section__projects .theme-project-card__themes-group,
+.theme-section__projects .theme-project-card__industries-group {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 0;
+}
+
+.theme-section__projects .theme-project-card__tags-label {
+  color: #1f2937;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  min-width: 90px;
+  flex-shrink: 0;
+}
+
+.theme-section__projects .theme-project-card__tags,
+.theme-section__projects .theme-project-card__company-tags,
+.theme-section__projects .theme-project-card__themes,
+.theme-section__projects .theme-project-card__industries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex: 1;
+}
+
+.theme-section__projects .theme-project-card__company-tags,
+.theme-section__projects .theme-project-card__themes {
+  justify-content: flex-start;
+}
+
+.theme-section__projects .consultant-tag,
+.theme-section__projects .consultant-theme,
+.theme-section__projects .consultant-industry {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.theme-section__projects .consultant-tag {
+  background: #e0f2f8;
+  color: #00afcc;
+  border: 1px solid #00afcc;
+}
+
+.theme-section__projects .consultant-tag--company {
+  background: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #1e40af;
+}
+
+.theme-section__projects .consultant-theme {
+  background: #f0f8ff;
+  color: #00AFCC;
+  border: 1px solid #00AFCC;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.theme-section__projects .consultant-industry {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #92400e;
+}
+
+@media (max-width: 1023px) {
+  .theme-section__projects .theme-projects__examples {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .theme-section__projects .theme-projects__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 16px;
+    gap: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+  }
+
+  .theme-section__projects .theme-projects__list::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .theme-section__projects .theme-projects__list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 2px;
+  }
+
+  .theme-section__projects .theme-projects__list::-webkit-scrollbar-thumb {
+    background: #00AFCC;
+    border-radius: 2px;
+  }
+
+  .theme-section__projects .theme-project-card {
+    min-width: 280px;
+    max-width: 280px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 767px) {
+  .theme-section__projects .theme-projects__list {
+    gap: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .theme-section__projects .theme-project-card {
+    min-width: 280px;
+    max-width: 280px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    padding: 20px;
+  }
+
+  .theme-section__projects .theme-project-card__title {
+    font-size: 16px;
+  }
+
+  .theme-section__projects .theme-project-card__tags-group,
+  .theme-section__projects .theme-project-card__industries-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* =============================================================================
    Theme Section (BEM記法)
    ============================================================================= */
 
@@ -1491,6 +1766,38 @@
   width: 100%;
 }
 
+/* プロジェクト例 */
+.theme-section__projects {
+  margin-top: 48px;
+  width: 100%;
+  text-align: left;
+}
+
+.theme-section__subtitle {
+  background: #00AFCC;
+  color: #ffffff;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 4px 16px;
+  border-radius: 0;
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 32px;
+  line-height: 1.4;
+}
+
+.theme-section__disclaimer {
+  color: #6b7280;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 /* Theme Section Responsive */
 @media (min-width: 768px) and (max-width: 1023px) {
   .theme-section {
@@ -1554,6 +1861,14 @@
   .theme-category__tags {
     justify-content: center;
   }
+
+  .theme-section__projects {
+    margin-top: 32px;
+  }
+
+  .theme-section__disclaimer {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1609,6 +1924,20 @@
   .theme-category__icon {
     width: 60px;
     height: 60px;
+  }
+
+  .theme-section__projects {
+    margin-top: 28px;
+  }
+
+  .theme-section__subtitle {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .theme-section__disclaimer {
+    font-size: 10px;
+    padding: 0 8px;
   }
 }
 

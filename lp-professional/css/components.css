@@ -1718,6 +1718,24 @@
   gap: 16px;
 }
 
+.flow-step__title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0;
+}
+
+.flow-step__title-row .flow-step__title {
+  margin-bottom: 0;
+}
+
+.flow-step__title-icon {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  display: block;
+}
+
 .flow-step__icon {
   width: 80px;
   height: 80px;
@@ -1774,16 +1792,8 @@
 .flow-step__method-icon {
   width: 60px;
   height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-shrink: 0;
-}
-
-.flow-step__method-icon-svg {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
+  display: block;
 }
 
 .flow-step__method-content {
@@ -1958,6 +1968,13 @@
     gap: 12px;
   }
 
+  .flow-step__title-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+
   /* モバイル版の縦棒を削除 */
 
   /* モバイル版の通知バブル縦棒を削除 */
@@ -1974,6 +1991,11 @@
 
   .flow-step__title {
     font-size: 20px;
+  }
+
+  .flow-step__title-icon {
+    width: 60px;
+    height: 60px;
   }
 
   .flow-step__description {
@@ -1993,11 +2015,6 @@
   .flow-step__method-icon {
     width: 50px;
     height: 50px;
-  }
-
-  .flow-step__method-icon-svg {
-    width: 28px;
-    height: 28px;
   }
 
   .flow-step__method-title {

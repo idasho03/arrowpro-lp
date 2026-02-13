@@ -121,6 +121,11 @@
       
       <!-- Desktop Navigation Menu -->
       <nav class="header__nav header__nav--desktop">
+        <div class="header__nav-links">
+          <a href="#benefits" class="header__nav-link">特徴</a>
+          <a href="#flow" class="header__nav-link">利用の流れ</a>
+          <a href="#faq" class="header__nav-link">FAQ</a>
+        </div>
         <a href="https://arrowpro.jp" class="header__nav-link">
           <div class="header__nav-link-text">
             人材をお探しの<br />企業の方はこちら
@@ -136,6 +141,9 @@
       
       <!-- Mobile Navigation Menu -->
       <nav class="header__nav header__nav--mobile">
+        <a href="#benefits" class="header__nav-link">特徴</a>
+        <a href="#flow" class="header__nav-link">利用の流れ</a>
+        <a href="#faq" class="header__nav-link">FAQ</a>
         <a href="https://arrowpro.jp" class="header__nav-link">
           <div class="header__nav-link-text">
             企業の方はこちら
@@ -156,19 +164,23 @@
       <section class="hero" aria-labelledby="hero-heading">
         <!-- Main Headline -->
         <div class="hero__title-wrapper animate-on-scroll">
-          <h1 id="hero-heading" class="hero__title">
+          <p class="hero__title">
             クライアントから直接、<span class="hero__title-break">"白羽の矢"が立つ。</span>
-          </h1>
+          </p>
         </div>
         
         <div class="hero__container">
           <!-- Hero Content -->
           <div class="hero__content">
-            <!-- Subtitle -->
-            <p class="hero__subtitle animate-on-scroll animate-delay-200">
-              フリーランスコンサルタントに特化した、<br />
-              個人と企業が直接繋がるプラットフォーム
-            </p>
+            <!-- Subtitle（クライアント同様 h1、配置・デザインは変更なし） -->
+            <h1 id="hero-heading" class="hero__subtitle animate-on-scroll animate-delay-200">
+              大手ファーム出身のフリーコンサルタントに特化した、完全ダイレクト型の顧客・案件獲得プラットフォーム
+            </h1>
+
+            <!-- Hero Visual (Mobile: H1のすぐ下) -->
+            <div class="hero__visual hero__visual--mobile animate-on-scroll animate-delay-300">
+              <img class="hero__image animate-scale-in" src="img/01-hero/demo_p.webp" alt="ARROW pro デモ画面" loading="eager" />
+            </div>
             
             <!-- Key Features -->
             <div class="hero__features">
@@ -214,8 +226,8 @@
             </div>
           </div>
 
-          <!-- Hero Visual -->
-          <div class="hero__visual animate-on-scroll animate-delay-300">
+          <!-- Hero Visual (Desktop) -->
+          <div class="hero__visual hero__visual--desktop animate-on-scroll animate-delay-300">
             <img class="hero__image animate-scale-in" src="img/01-hero/demo_p.webp" alt="ARROW pro デモ画面" loading="eager" />
           </div>
 
@@ -226,10 +238,10 @@
       
 
       <!-- Problems Section -->
-      <section class="problems-section" aria-labelledby="problems-heading">
+      <section id="problems" class="problems-section" aria-labelledby="problems-heading">
         <div class="problems-section__container">
           <div class="problems-section__header animate-on-scroll">
-            <span class="section__label">PROBLEMS</span>
+            <div class="problems-section__label">PROBLEMS</div>
             <h2 id="problems-heading" class="problems-section__title">こんなお悩みありませんか？</h2>
           </div>
         <div class="problems-section__comparison-cards">
@@ -283,17 +295,16 @@
         </div>
       </section>
 
-      <!-- Benefits Section -->
-      <section class="benefits-section" aria-labelledby="benefits-heading">
+      <!-- Benefits Section（クライアントLPと同じ構造） -->
+      <section id="benefits" class="benefits-section" aria-labelledby="benefits-heading">
         <div class="benefits-section__header animate-on-scroll">
           <div class="benefits-section__label">FEATURE</div>
-          <h2 id="benefits-heading" class="benefits-section__title">サービスの特徴</h2>
+          <h2 id="benefits-heading" class="benefits-section__title">即戦力コンサルだからこそ、ダイレクトな案件構築を。</h2>
         </div>
         <div class="benefits-section__features">
           <article class="feature-card animate-on-scroll animate-delay-200">
             <div class="feature-card__header">
-              <img class="feature-card__badge-image" src="img/03-features/feature-badge-1.png" alt="特徴1" loading="lazy" />
-              <img class="feature-card__illustration" src="img/03-features/feature-scout-icon.svg" alt="スカウト機能" loading="lazy" />
+              <div class="feature-card__badge">FEATURE <span class="feature-card__badge-number"> 01</span></div>
             </div>
             <div class="feature-card__content">
               <div class="feature-card__visual">
@@ -305,22 +316,7 @@
                     <div class="feature-card__body">
                       <span>
                         <span class="feature-card__body-text">
-                          プロフィールを登録しておくだけで、あなたの経験やスキルを見た企業から
-                        </span>
-                        <span class="feature-card__body-text--bold">
-                          ダイレクトにアプローチ
-                        </span>
-                        <span class="feature-card__body-text">
-                          を受けられます。
-                        </span>
-                        <span class="feature-card__body-text--bold">
-                          稼働実績・評価*が積み上がるほど企業の信頼が高まり
-                        </span>
-                        <span class="feature-card__body-text">
-                          、参画機会がますます広がります。
-                        </span>
-                        <span class="feature-card__body-text--small">
-                          *評価機能は今後のアップデートで実装予定
+                          プロフィールを登録しておくだけで、あなたの経験やスキルを見た企業からダイレクトにアプローチを受けられます。稼働実績・評価*が積み上がるほど企業の信頼が高まり、参画機会がますます広がります。（*評価機能は今後のアップデートで実装予定）
                         </span>
                       </span>
                     </div>
@@ -331,13 +327,11 @@
             </div>
           </article>
 
-          <article class="feature-card feature-card--reverse animate-on-scroll animate-delay-400">
+          <article class="feature-card animate-on-scroll animate-delay-400">
             <div class="feature-card__header">
-              <img class="feature-card__badge-image" src="img/03-features/feature-badge-2.png" alt="特徴2" loading="lazy" />
-              <img class="feature-card__illustration" src="img/03-features/feature-apply-icon.svg" alt="応募機能" loading="lazy" />
+              <div class="feature-card__badge">FEATURE <span class="feature-card__badge-number"> 02</span></div>
             </div>
             <div class="feature-card__content">
-              <img class="feature-card__screenshot feature-card__screenshot--left" src="img/03-features/feature-case-screenshot.png" alt="案件画面" loading="lazy" />
               <div class="feature-card__visual">
                 <div class="feature-card__text-wrapper">
                   <div class="feature-card__description">
@@ -347,56 +341,32 @@
                     <div class="feature-card__body">
                       <span>
                         <span class="feature-card__body-text">
-                          プラットフォーム上の公開案件の中から、
-                        </span>
-                        <span class="feature-card__body-text--bold">
-                          ご自身の関心がある案件に自ら応募
-                        </span>
-                        <span class="feature-card__body-text">
-                          ができます。募集企業に対して、
-                        </span>
-                        <span class="feature-card__body-text--bold">
-                          能動的に意欲やアピールポイントを伝えられます
-                        </span>
-                        <span class="feature-card__body-text">
-                          。
+                          プラットフォーム上の公開案件の中から、ご自身の関心がある案件に自ら応募ができます。募集企業に対して、能動的に意欲やアピールポイントを伝えられます。
                         </span>
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
+              <img class="feature-card__screenshot" src="img/03-features/feature-case-screenshot.png" alt="案件画面" loading="lazy" />
             </div>
           </article>
 
           <article class="feature-card animate-on-scroll animate-delay-600">
             <div class="feature-card__header">
-              <img class="feature-card__badge-image" src="img/03-features/feature-badge-3.png" alt="特徴3" loading="lazy" />
-              <img class="feature-card__illustration" src="img/03-features/feature-direct-icon.svg" alt="直接契約機能" loading="lazy" />
+              <div class="feature-card__badge">FEATURE <span class="feature-card__badge-number"> 03</span></div>
             </div>
             <div class="feature-card__content">
               <div class="feature-card__visual">
                 <div class="feature-card__text-wrapper">
                   <div class="feature-card__description">
                     <div class="feature-card__heading">
-                      初回コンタクトから契約まで、<br />完全無料で企業と直接やり取りできる！
+                      初回コンタクトから契約まで、完全無料で企業と直接やり取りできる！
                     </div>
                     <div class="feature-card__body">
                       <span>
                         <span class="feature-card__body-text">
-                          マッチした企業と
-                        </span>
-                        <span class="feature-card__body-text--bold">
-                          直接契約できるため、仲介手数料がかからず報酬を最大化
-                        </span>
-                        <span class="feature-card__body-text">
-                          できます。<br />報酬面以外でも
-                        </span>
-                        <span class="feature-card__body-text--bold">
-                          第三者の介入なく直接対話できることで面談や手続きも迅速に
-                        </span>
-                        <span class="feature-card__body-text">
-                          進められます。
+                          マッチした企業と直接契約できるため、仲介手数料がかからず報酬を最大化できます。報酬面以外でも第三者の介入なく直接対話できることで面談や手続きも迅速に進められます。
                         </span>
                       </span>
                     </div>
@@ -410,7 +380,7 @@
       </section>
 
       <!-- Theme Section -->
-      <section class="theme-section" aria-labelledby="theme-heading">
+      <section id="theme" class="theme-section" aria-labelledby="theme-heading">
         <div class="theme-section__header animate-on-scroll">
           <div class="theme-section__label">THEME</div>
           <h2 id="theme-heading" class="theme-section__title">豊富なプロジェクトテーマ</h2>
@@ -421,7 +391,7 @@
             <div class="theme-category__card">
               <div class="theme-category__header">
                 <div class="theme-category__title">経営戦略・事業戦略</div>
-                <img class="theme-category__icon" src="../lp-client/img/06-consultants/strategy.svg" alt="経営戦略アイコン" loading="lazy" />
+                <img class="theme-category__icon" src="img/04-themes/theme-strategy-icon.svg" alt="経営戦略アイコン" loading="lazy" />
               </div>
               <div class="theme-category__tags">
               <article class="theme-tag">
@@ -484,7 +454,7 @@
             <div class="theme-category__card">
               <div class="theme-category__header">
                 <div class="theme-category__title">オペレーション</div>
-                <img class="theme-category__icon" src="../lp-client/img/06-consultants/operation.svg" alt="営業・マーケティング・オペレーションアイコン" loading="lazy" />
+                <img class="theme-category__icon" src="img/04-themes/theme-operation-icon.svg" alt="営業・マーケティング・オペレーションアイコン" loading="lazy" />
               </div>
               <div class="theme-category__tags">
               <article class="theme-tag">
@@ -541,7 +511,7 @@
             <div class="theme-category__card">
               <div class="theme-category__header">
                 <div class="theme-category__title">人事・財務・リスク</div>
-                <img class="theme-category__icon" src="../lp-client/img/06-consultants/finance.svg" alt="人事・財務・リスクアイコン" loading="lazy" />
+                <img class="theme-category__icon" src="img/04-themes/theme-finance-icon.svg" alt="人事・財務・リスクアイコン" loading="lazy" />
               </div>
               <div class="theme-category__tags">
               <article class="theme-tag">
@@ -598,7 +568,7 @@
             <div class="theme-category__card">
               <div class="theme-category__header">
                 <div class="theme-category__title">デジタル・IT</div>
-                <img class="theme-category__icon" src="../lp-client/img/06-consultants/digital.svg" alt="デジタル・ITアイコン" loading="lazy" />
+                <img class="theme-category__icon" src="img/04-themes/theme-digital-icon.svg" alt="デジタル・ITアイコン" loading="lazy" />
               </div>
               <div class="theme-category__tags">
               <article class="theme-tag">
@@ -660,7 +630,7 @@
             <div class="theme-category__card">
               <div class="theme-category__header">
                 <div class="theme-category__title">新領域・先新テーマ</div>
-                <img class="theme-category__icon" src="../lp-client/img/06-consultants/inovation.svg" alt="新領域・先新テーマアイコン" loading="lazy" />
+                <img class="theme-category__icon" src="img/04-themes/theme-innovation-icon.svg" alt="新領域・先新テーマアイコン" loading="lazy" />
               </div>
               <div class="theme-category__tags">
               <article class="theme-tag">
@@ -690,7 +660,7 @@
       </section>
 
       <!-- Flow Section -->
-      <section class="flow-section" aria-labelledby="flow-heading">
+      <section id="flow" class="flow-section" aria-labelledby="flow-heading">
         <div class="flow-section__header animate-on-scroll">
           <div class="flow-section__label">FLOW</div>
           <h2 id="flow-heading" class="flow-section__title">ご利用の流れ</h2>
@@ -819,7 +789,7 @@
       </section>
 
       <!-- FAQ Section -->
-      <section class="faq-section" aria-labelledby="faq-heading">
+      <section id="faq" class="faq-section" aria-labelledby="faq-heading">
         <div class="faq-section__header animate-on-scroll">
           <div class="faq-section__label">FAQ</div>
           <h2 id="faq-heading" class="faq-section__title">よくある質問</h2>

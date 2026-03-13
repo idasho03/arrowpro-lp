@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const errors = {};
 
         const companyName = document.getElementById('companyName').value.trim();
-        const companyNameKana = document.getElementById('companyNameKana').value.trim();
         const representativeName = document.getElementById('representativeName').value.trim();
         const email = document.getElementById('email').value.trim();
         const phone = document.getElementById('phone').value.trim();
@@ -53,14 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (!companyName) {
             errors.companyName = '会社名を入力してください';
-            isValid = false;
-        }
-
-        if (!companyNameKana) {
-            errors.companyNameKana = '会社名（カナ）を入力してください';
-            isValid = false;
-        } else if (!/^[ァ-ヾ]+$/.test(companyNameKana)) {
-            errors.companyNameKana = '会社名（カナ）は全角カタカナで入力してください';
             isValid = false;
         }
 
@@ -108,7 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // 送信データを作成
         const requestData = {
             company_name: companyName,
-            company_name_kana: companyNameKana,
             representative_name: representativeName,
             email: email,
             phone: phone,
@@ -133,7 +123,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 // LocalStorageに保存（/client/registerで利用）
                 const storageData = {
                     company_name: companyName,
-                    company_name_kana: companyNameKana,
                     representative_name: representativeName,
                     email: email,
                     phone: phone,
@@ -149,7 +138,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (data.errors) {
                     const errorMessages = {};
                     if (data.errors.company_name) errorMessages.companyName = data.errors.company_name[0];
-                    if (data.errors.company_name_kana) errorMessages.companyNameKana = data.errors.company_name_kana[0];
                     if (data.errors.representative_name) errorMessages.representativeName = data.errors.representative_name[0];
                     if (data.errors.email) errorMessages.email = data.errors.email[0];
                     if (data.errors.phone) errorMessages.phone = data.errors.phone[0];

@@ -253,14 +253,14 @@ function initScrollAnimations() {
         let delay = 0;
         const classList = entry.target.classList;
 
-        if (classList.contains('animate-delay-100')) delay = 100;
-        else if (classList.contains('animate-delay-200')) delay = 200;
-        else if (classList.contains('animate-delay-300')) delay = 300;
-        else if (classList.contains('animate-delay-400')) delay = 400;
-        else if (classList.contains('animate-delay-500')) delay = 500;
-        else if (classList.contains('animate-delay-600')) delay = 600;
-        else if (classList.contains('animate-delay-700')) delay = 700;
-        else if (classList.contains('animate-delay-800')) delay = 800;
+        if (classList.contains('animate-delay-100')) delay = 50;
+        else if (classList.contains('animate-delay-200')) delay = 100;
+        else if (classList.contains('animate-delay-300')) delay = 150;
+        else if (classList.contains('animate-delay-400')) delay = 200;
+        else if (classList.contains('animate-delay-500')) delay = 250;
+        else if (classList.contains('animate-delay-600')) delay = 300;
+        else if (classList.contains('animate-delay-700')) delay = 350;
+        else if (classList.contains('animate-delay-800')) delay = 400;
 
         // 遅延後にアニメーションを実行
         setTimeout(function () {

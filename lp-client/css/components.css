@@ -4258,7 +4258,7 @@ a[href="https://arrowpro.jp/request"].fixed-cta-bar__button--download:hover {
   flex-shrink: 0;
   background: #00AFCC;
   color: #ffffff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 20px;
   font-weight: 900;
   display: flex;
@@ -4325,7 +4325,7 @@ a[href="https://arrowpro.jp/request"].fixed-cta-bar__button--download:hover {
   flex-shrink: 0;
   background: #ff8c69;
   color: #ffffff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 20px;
   font-weight: 900;
   display: flex;
@@ -4669,11 +4669,9 @@ a[href="https://arrowpro.jp/request"].fixed-cta-bar__button--download:hover {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
-.footer__logo-text {
-  color: #ffffff;
-  font-family: var(--font-family-poppins);
-  font-size: 32px;
-  font-weight: 700;
+.footer__logo-text-img {
+  height: 38px;
+  width: auto;
 }
 
 @media (max-width: 767px) {

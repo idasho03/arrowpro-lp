@@ -74,7 +74,6 @@ main[role="main"] {
   width: 30px;
   height: 33px;
   position: relative;
-  overflow: visible;
   filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(188deg) brightness(118%) contrast(119%);
 }
 

@@ -79,15 +79,11 @@ main[role="main"] {
 }
 
 .header__logo-text {
-  color: #00AFCC;
-  text-align: left;
-  font-family: var(--font-family-poppins);
-  font-size: 32px;
-  font-weight: 700;
-  position: relative;
-  white-space: nowrap;
-  flex-shrink: 0;
-  flex-grow: 0;
+  display: none;
+}
+
+.header__logo-text-img {
+  height: 38px;
   width: auto;
   max-width: none;
 }
@@ -576,6 +572,14 @@ header.header .header__button--login .header__button-text {
 
 .footer__legal-link:hover {
   color: #ffffff;
+}
+
+.footer__license {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0 0 8px;
 }
 
 .footer__copyright {

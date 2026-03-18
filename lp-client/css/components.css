@@ -63,11 +63,15 @@
 }
 
 .plan-split-card--standard .plan-split-card__head {
-  background: #00AFCC;
+  background:
+    linear-gradient(135deg, rgba(0, 175, 204, 0.6) 0%, rgba(0, 155, 184, 0.55) 100%),
+    url("../img/05-usecase/self-service-bg.webp") center/cover no-repeat;
 }
 
 .plan-split-card--spot .plan-split-card__head {
-  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  background:
+    linear-gradient(135deg, rgba(139, 92, 246, 0.6) 0%, rgba(124, 58, 237, 0.55) 100%),
+    url("../img/05-usecase/concierge-bg.webp") center/cover no-repeat;
 }
 
 /* カードボディ */
@@ -356,24 +360,97 @@
 }
 
 /* =============================================================================
+   Concierge Lead Section
+   ============================================================================= */
+.concierge-lead {
+  padding: 72px 24px 48px;
+  text-align: center;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+}
+.concierge-lead__inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.concierge-lead__text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #4b5563;
+  line-height: 2;
+}
+.concierge-lead__connector {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
+}
+.concierge-lead__connector-line {
+  width: 2px;
+  height: 32px;
+  background: linear-gradient(180deg, #e5e7eb 0%, #7c3aed 100%);
+  border-radius: 1px;
+}
+.concierge-lead__accent {
+  font-size: 22px;
+  color: #7c3aed;
+  font-weight: 700;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+.concierge-lead__arrow {
+  margin-top: 24px;
+  animation: bounce-down 1.5s ease-in-out infinite;
+}
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+
+@media (max-width: 767px) {
+  .concierge-lead {
+    padding: 48px 16px 32px;
+  }
+  .concierge-lead__badge {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+  .concierge-lead__accent {
+    font-size: 18px;
+  }
+}
+
+/* =============================================================================
    Spot Campaign Section
    ============================================================================= */
 .spot-campaign-section {
-  background:
-    radial-gradient(circle at 15% 85%, rgba(124, 58, 237, 0.25) 0%, transparent 50%),
-    radial-gradient(circle at 85% 15%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
-    linear-gradient(135deg, #6d28d9 0%, #7c3aed 100%);
   padding: 80px 24px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.spot-campaign-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../img/05-usecase/concierge-bg.webp") center/cover no-repeat;
+  z-index: 0;
+}
+.spot-campaign-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(243, 244, 246, 0.5) 100%);
+  z-index: 0;
 }
 
 .spot-campaign-section__inner {
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .spot-campaign-section__label {
-  color: rgba(255, 255, 255, 0.75);
+  color: #7c3aed;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -382,11 +459,24 @@
   letter-spacing: 2px;
 }
 
+.spot-campaign-section__lead {
+  font-size: 15px;
+  color: #6b7280;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.12);
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
 .spot-campaign-section__title {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 32px;
   font-weight: 700;
-  color: #ffffff;
+  color: #1f2937;
   line-height: 1.4;
   margin-bottom: 20px;
 }
@@ -397,7 +487,7 @@
 
 .spot-campaign-section__description {
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.85);
+  color: #4b5563;
   line-height: 1.8;
   margin-bottom: 40px;
 }
@@ -438,7 +528,7 @@
 .spot-campaign-section__flow-text {
   font-size: 13px;
   font-weight: 600;
-  color: #ffffff;
+  color: #1f2937;
   text-align: center;
   line-height: 1.4;
 }
@@ -446,8 +536,9 @@
 .spot-campaign-section__flow-badge {
   font-size: 11px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
-  background: rgba(255, 255, 255, 0.15);
+  color: #6b7280;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
   border-radius: 20px;
   padding: 2px 10px;
 }
@@ -459,7 +550,7 @@
 
 .spot-campaign-section__flow-arrow {
   font-size: 20px;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.25);
   font-weight: 300;
   padding-bottom: 28px;
 }
@@ -470,8 +561,8 @@
   gap: 0;
   margin-bottom: 40px;
   flex-wrap: wrap;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 12px;
   padding: 20px 40px;
   backdrop-filter: blur(4px);
@@ -483,7 +574,7 @@
   align-items: center;
   gap: 6px;
   padding: 0 32px;
-  border-right: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .spot-campaign-section__feature:last-child {
@@ -492,21 +583,21 @@
 
 .spot-campaign-section__feature-label {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.75);
+  color: #6b7280;
   letter-spacing: 0.05em;
 }
 
 .spot-campaign-section__feature-value {
   font-size: 20px;
   font-weight: 700;
-  color: #ffffff;
+  color: #1f2937;
 }
 
 .spot-campaign-section__feature-note {
   display: block;
   font-size: 11px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.6);
+  color: #9ca3af;
   margin-top: 4px;
 }
 
@@ -538,6 +629,13 @@
 @media (max-width: 767px) {
   .spot-campaign-section {
     padding: 48px 16px;
+    background: #f3f4f6;
+  }
+  .spot-campaign-section::before {
+    display: none;
+  }
+  .spot-campaign-section::after {
+    display: none;
   }
 
   .spot-campaign-section__label {
@@ -598,7 +696,7 @@
     justify-content: space-between;
     padding: 8px 0;
     border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   }
 
   .spot-campaign-section__feature:last-child {
@@ -833,13 +931,16 @@
 .faq-section__label,
 .flow-section__label,
 .news-section__label {
-  color: #1f2937;
+  color: #00AFCC;
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  display: inline-block;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #00AFCC;
 }
 
 /* 共通セクションタイトルスタイル */
@@ -1248,7 +1349,7 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
 
 .problems-section {
   padding: 80px 100px;
-  background: #f5f5f5;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   gap: 48px;
@@ -1691,10 +1792,11 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
 
 .benefits-section {
   padding: 96px 100px;
-  background: #f8fbff;
+  background: linear-gradient(180deg, #eef6fb 0%, #f8fbff 100%);
   display: flex;
   flex-direction: column;
   gap: 48px;
+  border-top: 1px solid #e0e8f0;
 }
 
 .benefits-section__header {
@@ -2153,10 +2255,11 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
 
 .usecase-section {
   padding: 96px 100px;
-  background: #f8f9fa;
+  background: linear-gradient(180deg, #eef6fb 0%, #f8fbff 100%);
   display: flex;
   flex-direction: column;
   gap: 32px;
+  border-top: 1px solid #e0e8f0;
 }
 
 .usecase-section__header {
@@ -2283,7 +2386,7 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
 
 .consultants-section {
   padding: 96px 80px;
-  background: #f8fbff;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   gap: 48px;
@@ -3508,10 +3611,11 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
 
 .pricing-section {
   padding: 96px 80px;
-  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #eef6fb 0%, #f8fbff 100%);
   display: flex;
   flex-direction: column;
   gap: 64px;
+  border-top: 1px solid #e0e8f0;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -4177,7 +4281,7 @@ a[href="https://arrowpro.jp/request"].fixed-cta-bar__button--download:hover {
 
 .faq-section {
   padding: 96px 100px;
-  background: #f8f9fa;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   gap: 48px;
@@ -4371,13 +4475,28 @@ a[href="https://arrowpro.jp/request"].fixed-cta-bar__button--download:hover {
     max-width: 100%;
   }
 
-  .faq-item__question,
-  .faq-item__answer {
+  .faq-item__question {
     padding: 16px;
     gap: 12px;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+  }
+
+  .faq-item__question:hover {
+    padding-left: 16px;
+  }
+
+  .faq-item__answer {
+    padding: 0 16px;
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .faq-item.active .faq-item__answer {
+    padding: 16px;
   }
 
   .faq-item__q-icon,

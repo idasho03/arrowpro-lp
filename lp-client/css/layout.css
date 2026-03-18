@@ -675,6 +675,14 @@ header.header .header__button--login .header__button-text {
   color: #ffffff;
 }
 
+.footer__license {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0 0 8px;
+}
+
 .footer__copyright {
   color: #ffffff;
   font-family: "Noto Sans JP", sans-serif;

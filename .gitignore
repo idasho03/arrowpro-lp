@@ -18,6 +18,9 @@ yarn-error.log*
 
 # OS
 .DS_Store
+
+# Claude Code
+.claude/
 Thumbs.db
 desktop.ini
 

@@ -88,12 +88,35 @@
               }
             }
           ]
+        },
+        {
+          "@type": "Service",
+          "name": "ARROW pro プロフェッショナル",
+          "description": "大手ファーム出身フリーコンサルタント向け案件マッチングプラットフォーム。完全無料、企業と直接契約、仲介手数料なし。",
+          "provider": {
+            "@type": "Organization",
+            "name": "株式会社Swallo"
+          },
+          "serviceType": "フリーコンサルタント案件マッチング",
+          "areaServed": "JP",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "JPY",
+            "description": "プロフェッショナルは完全無料でご利用いただけます"
+          }
         }
       ]
     }
     </script>
     
+    <!-- Fonts preload -->
+    <link rel="preload" href="fonts/noto-sans-jp-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/noto-sans-jp-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/roboto-condensed-700.woff2" as="font" type="font/woff2" crossorigin />
+
     <!-- CSS -->
+    <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
@@ -108,8 +131,8 @@
     <!-- Global Header -->
     <header id="global-header" class="header">
       <div class="header__logo">
-        <img class="header__logo-icon" src="img/06-footer/logo-arrow-pro.svg" alt="ARROW pro ロゴ" />
-        <div class="header__logo-text">ARROW pro</div>
+        <img class="header__logo-icon" src="img/06-footer/logo-arrow-pro.svg" alt="ARROW pro ロゴ" width="30" height="33" />
+        <img class="header__logo-text-img" src="img/07-common/logo-text.svg" alt="ARROW pro" width="187" height="38" />
       </div>
       
       <!-- Hamburger Menu Button (Mobile only) -->
@@ -179,7 +202,7 @@
 
             <!-- Hero Visual (Mobile: H1のすぐ下) -->
             <div class="hero__visual hero__visual--mobile animate-on-scroll animate-delay-300">
-              <img class="hero__image animate-scale-in" src="img/01-hero/demo_p.webp" alt="ARROW pro デモ画面" loading="eager" />
+              <img class="hero__image animate-scale-in" src="img/01-hero/demo_p-750w.webp" srcset="img/01-hero/demo_p-750w.webp 750w, img/01-hero/demo_p.webp 1280w" sizes="(max-width: 768px) 100vw, 1280px" alt="ARROW pro デモ画面" loading="eager" width="1280" height="720" />
             </div>
             
             <!-- Key Features -->
@@ -228,7 +251,7 @@
 
           <!-- Hero Visual (Desktop) -->
           <div class="hero__visual hero__visual--desktop animate-on-scroll animate-delay-300">
-            <img class="hero__image animate-scale-in" src="img/01-hero/demo_p.webp" alt="ARROW pro デモ画面" loading="eager" />
+            <img class="hero__image animate-scale-in" src="img/01-hero/demo_p-750w.webp" srcset="img/01-hero/demo_p-750w.webp 750w, img/01-hero/demo_p.webp 1280w" sizes="(max-width: 768px) 100vw, 1280px" alt="ARROW pro デモ画面" loading="eager" width="1280" height="720" />
           </div>
 
         </div>
@@ -250,7 +273,7 @@
               <div class="problems-section__comparison-card-label">理想の顧客や案件に出会えない…</div>
               <h3 class="problems-section__comparison-card-title">"狭く受け身な営業ネットワーク"</h3>
               <div class="problems-section__comparison-card-image">
-                <img src="img/02-problems/p_problem_1.svg" alt="P課題①" loading="lazy" />
+                <img src="img/02-problems/p_problem_1.svg" alt="P課題①" loading="lazy" width="200" height="200" />
               </div>
               <div class="problems-section__comparison-card-text">
                 <ul class="text-span">
@@ -265,7 +288,7 @@
               <div class="problems-section__comparison-card-label">顧客と直接繋がりづらい…</div>
               <h3 class="problems-section__comparison-card-title">"多重下請け・中抜き構造"</h3>
               <div class="problems-section__comparison-card-image">
-                <img src="img/02-problems/p_problem_2.svg" alt="P課題②" loading="lazy" />
+                <img src="img/02-problems/p_problem_2.svg" alt="P課題②" loading="lazy" width="200" height="200" />
               </div>
               <div class="problems-section__comparison-card-text">
                 <ul class="text-span">
@@ -280,7 +303,7 @@
               <div class="problems-section__comparison-card-label">収入やキャリアが見通しづらい…</div>
               <h3 class="problems-section__comparison-card-title">"工数と経歴の切り売り"</h3>
               <div class="problems-section__comparison-card-image">
-                <img src="img/02-problems/p_problem_3.svg" alt="P課題③" loading="lazy" />
+                <img src="img/02-problems/p_problem_3.svg" alt="P課題③" loading="lazy" width="200" height="200" />
               </div>
               <div class="problems-section__comparison-card-text">
                 <ul class="text-span">
@@ -326,7 +349,7 @@
                   </div>
                 </div>
               </div>
-              <img class="feature-card__screenshot" src="img/03-features/feature-profile-screenshot.png" alt="プロフィール画面" loading="lazy" />
+              <img class="feature-card__screenshot" src="img/03-features/feature-profile-screenshot.webp" alt="プロフィール画面" loading="lazy" width="529" height="271" />
             </div>
           </article>
 
@@ -351,7 +374,7 @@
                   </div>
                 </div>
               </div>
-              <img class="feature-card__screenshot" src="img/03-features/feature-case-screenshot.png" alt="案件画面" loading="lazy" />
+              <img class="feature-card__screenshot" src="img/03-features/feature-case-screenshot.webp" alt="案件画面" loading="lazy" width="604" height="278" />
             </div>
           </article>
 
@@ -376,7 +399,7 @@
                   </div>
                 </div>
               </div>
-              <img class="feature-card__screenshot" src="img/03-features/chat.webp" alt="チャット画面" loading="lazy" />
+              <img class="feature-card__screenshot" src="img/03-features/chat.webp" alt="チャット画面" loading="lazy" width="1200" height="630" />
             </div>
           </article>
         </div>
@@ -763,8 +786,8 @@
           <div class="theme-category animate-on-scroll animate-delay-600">
             <div class="theme-category__card">
               <div class="theme-category__header">
-                <div class="theme-category__title">新領域・先新テーマ</div>
-                <img class="theme-category__icon" src="img/04-themes/theme-innovation-icon.svg" alt="新領域・先新テーマアイコン" loading="lazy" />
+                <div class="theme-category__title">新領域・先進テーマ</div>
+                <img class="theme-category__icon" src="img/04-themes/theme-innovation-icon.svg" alt="新領域・先進テーマアイコン" loading="lazy" />
               </div>
               <div class="theme-category__tags">
               <article class="theme-tag">
@@ -1093,8 +1116,8 @@
       <footer class="footer">
         <div class="footer__grid">
           <div class="footer__logo">
-            <img class="footer__logo-icon" src="img/06-footer/logo-arrow-pro.svg" alt="ARROW pro ロゴ" loading="lazy" />
-            <div class="footer__logo-text">ARROW pro</div>
+            <img class="footer__logo-icon" src="img/06-footer/logo-arrow-pro.svg" alt="ARROW pro ロゴ" loading="lazy" width="30" height="34" />
+            <img class="footer__logo-text-img" src="img/07-common/logo-text-white.svg" alt="ARROW pro" loading="lazy" width="187" height="38" />
           </div>
           <div class="footer__nav-group">
             <div class="footer__nav-section">
@@ -1130,6 +1153,7 @@
           </div>
         </div>
         <div class="footer__bottom">
+          <p class="footer__license">特定募集情報等提供事業 届出受理番号：51-募-001762</p>
           <p class="footer__copyright">
             © 2026 Swallo. All Rights Reserved.
           </p>

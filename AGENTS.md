@@ -158,6 +158,13 @@ ARROW pro は企業とフリーコンサルタント（プロフェッショナ�
 
 ## Git Workflow
 
+### デプロイフロー
+1. ブランチを切って修正 → mainにPR → マージ
+2. GitHub Actionsが自動ビルド（Parcel）→ `static-output/` にコミット
+3. 親リポジトリ `k-nunome/ds_replace` にdispatchイベント送信
+4. 親リポにサブモジュール更新PRが自動作成 → マージで本番反映
+
+### ブランチ命名・コミットメッセージ
 ```bash
 # ブランチ命名
 feature/機能名
@@ -169,6 +176,7 @@ feat: 新機能追加
 fix: バグ修正
 style: スタイル調整
 chore: ビルド・設定変更
+perf: パフォーマンス改善
 ```
 
 ## Boundaries

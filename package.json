@@ -1,7 +1,7 @@
 {
   "scripts": {
     "images:webp": "node scripts/convert-lp-client-to-webp.js",
-    "build": "parcel build",
+    "build": "parcel build && node scripts/inline-css.js",
     "build:cf": "parcel build lp-client/index.html --dist-dir ./dist --public-url / --no-source-maps",
     "deploy:cf": "npm run build:cf && wrangler pages deploy dist --project-name arrowpro-lp --commit-dirty=true",
     "dev:client": "parcel serve lp-client/index.html --port 1234 --host localhost --no-hmr",

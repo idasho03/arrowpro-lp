@@ -124,6 +124,41 @@ body {
 }
 .toc a:hover { color: #111; text-decoration: underline; }
 
+/* 関連記事 */
+.related-articles {
+  margin-bottom: 24px;
+}
+.related-articles-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.related-articles ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.related-articles li {
+  margin-bottom: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.related-articles a {
+  color: #1a6fa0;
+  text-decoration: none;
+}
+.related-articles a:hover {
+  color: #111;
+  text-decoration: underline;
+}
+.related-articles .current {
+  color: #333;
+  font-weight: 700;
+}
+
 /* サイドバーCTA */
 .sidebar-cta {
   background: #f0f8ff;

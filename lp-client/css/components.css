@@ -2467,17 +2467,24 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
 
 /* Attributes */
 .consultants-attributes__lead {
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 700;
   color: #1f2937;
   margin-bottom: 24px;
-  line-height: 1.8;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.consultants-attributes__lead strong {
+  font-size: 28px;
+  color: #00AFCC;
 }
 
 .consultants-attributes__stacked-bar {
   display: flex;
   height: 64px;
   border-radius: 0;
-  overflow: hidden;
+  overflow: visible;
   margin-bottom: 12px;
   border-left: 2px solid #1f2937;
 }
@@ -2488,7 +2495,9 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
   gap: 2px;
 }
 
@@ -2506,9 +2515,11 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
   white-space: nowrap;
 }
 
+br.sp-only { display: none; }
+
 .consultants-attributes__segment--strategy { background: #0d3b66; }
 .consultants-attributes__segment--general { background: #3a8fb7; }
-.consultants-attributes__segment--finance { background: #b0c4d8; }
+.consultants-attributes__segment--finance { background: #b0c4d8; z-index: 2; }
 .consultants-attributes__segment--corporate { background: #e5e7eb; }
 
 .consultants-attributes__segment--corporate .consultants-attributes__segment-name,
@@ -2559,23 +2570,62 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
   text-decoration: underline;
 }
 
+/* Column section */
+.column-section {
+  padding: 80px 80px;
+  background: #f8fafc;
+}
+
+.column-section__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.column-section__label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #00AFCC;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.column-section__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+@media (max-width: 768px) {
+  .column-section {
+    padding: 32px 16px;
+  }
+
+  .column-section__header {
+    margin-bottom: 20px;
+  }
+
+  .column-section__title {
+    font-size: 22px;
+  }
+}
+
 /* Column cards */
 .column-cards {
   display: flex;
-  gap: 16px;
+  gap: 24px;
 }
 
 .column-card {
   flex: 1;
   border: 1px solid #e5e7eb;
-  border-radius: 8px;
+  border-radius: 2px;
   overflow: hidden;
   text-decoration: none;
-  transition: border-color 0.2s;
+  background: #fff;
 }
 
-.column-card:hover {
-  border-color: #00AFCC;
+.column-card:hover .column-card__title {
+  color: #00AFCC;
 }
 
 .column-card__img {
@@ -2585,25 +2635,59 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
 }
 
 .column-card__body {
-  padding: 16px 20px;
+  padding: 14px 16px;
 }
 
 .column-card__title {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   color: #1f2937;
   margin-bottom: 8px;
+  line-height: 1.5;
+  transition: color 0.2s;
 }
 
 .column-card__desc {
-  font-size: 13px;
+  font-size: 14px;
   color: #6b7280;
   line-height: 1.6;
+}
+
+.column-card__point {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0d3b66;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #e5e7eb;
+  line-height: 1.5;
 }
 
 @media (max-width: 768px) {
   .column-cards {
     flex-direction: column;
+    gap: 12px;
+  }
+
+  .column-card {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .column-card__img {
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .column-card__body {
+    padding: 10px 12px;
+  }
+
+  .column-card__desc,
+  .column-card__point {
+    display: none;
   }
 }
 
@@ -2615,10 +2699,18 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
 .mobile-collapse__summary {
   list-style: none;
   cursor: default;
+  pointer-events: none;
 }
 
 .mobile-collapse__summary::-webkit-details-marker {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-collapse__summary {
+    pointer-events: auto;
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2634,13 +2726,17 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
 
   .mobile-collapse__summary .main-features-section__header,
   .mobile-collapse__summary .usecase-section__header {
-    position: relative;
-    padding-right: 32px;
     margin-bottom: 0;
   }
 
-  .mobile-collapse__summary .main-features-section__header::after,
-  .mobile-collapse__summary .usecase-section__header::after {
+  .mobile-collapse__summary .main-features-section__label,
+  .mobile-collapse__summary .usecase-section__label {
+    position: relative;
+    padding-right: 32px;
+  }
+
+  .mobile-collapse__summary .main-features-section__label::after,
+  .mobile-collapse__summary .usecase-section__label::after {
     content: "▼";
     position: absolute;
     right: 0;
@@ -2651,8 +2747,8 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
     transition: transform 0.2s;
   }
 
-  .mobile-collapse[open] .main-features-section__header::after,
-  .mobile-collapse[open] .usecase-section__header::after {
+  .mobile-collapse[open] .main-features-section__label::after,
+  .mobile-collapse[open] .usecase-section__label::after {
     transform: translateY(-50%) rotate(180deg);
   }
 
@@ -2708,15 +2804,13 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
 }
 
 @media (max-width: 768px) {
-  .consultants-attributes__stacked-bar {
-    height: 24px;
+  .consultants-attributes__segment-name {
+    font-size: 10px;
   }
 
-  .consultants-attributes__legend {
-    gap: 6px 16px;
-  }
+  br.sp-only { display: inline; }
 
-  .consultants-attributes__legend-label {
+  .consultants-attributes__segment-value {
     font-size: 13px;
   }
 }

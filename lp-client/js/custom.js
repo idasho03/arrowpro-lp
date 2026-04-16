@@ -13,21 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
   } catch (error) {
   }
 
-  // 背景画像の設定（CSSインライン化時のurl()パス崩れ回避）
-  try {
-    document.querySelectorAll('[data-bg]').forEach(function (el) {
-      var bg = el.getAttribute('data-bg');
-      var gradient = el.getAttribute('data-gradient') || '';
-      if (gradient) {
-        el.style.background = gradient + ', url(' + bg + ') center/cover no-repeat';
-      } else {
-        el.style.backgroundImage = 'url(' + bg + ')';
-      }
-    });
-    // 疑似要素用のCSS変数セット
-    document.documentElement.style.setProperty('--trouble-svg', 'url(img/02-problems/trouble.svg)');
-  } catch (error) {
-  }
 
   // ハンバーガーメニューの初期化
   try {

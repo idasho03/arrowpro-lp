@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
   } catch (error) {
   }
 
-  // カード背景画像の設定（Parcelのurl()書き換えを回避）
+  // 背景画像の設定（CSSインライン化時のurl()パス崩れ回避）
   try {
     document.querySelectorAll('[data-bg]').forEach(function (el) {
       var bg = el.getAttribute('data-bg');
@@ -21,9 +21,11 @@ document.addEventListener('DOMContentLoaded', function () {
       if (gradient) {
         el.style.background = gradient + ', url(' + bg + ') center/cover no-repeat';
       } else {
-        el.style.background = 'url(' + bg + ') center/cover no-repeat';
+        el.style.backgroundImage = 'url(' + bg + ')';
       }
     });
+    // 疑似要素用のCSS変数セット
+    document.documentElement.style.setProperty('--trouble-svg', 'url(img/02-problems/trouble.svg)');
   } catch (error) {
   }
 

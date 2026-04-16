@@ -13,6 +13,20 @@ document.addEventListener('DOMContentLoaded', function () {
   } catch (error) {
   }
 
+  // カード背景画像の設定（Parcelのurl()書き換えを回避）
+  try {
+    document.querySelectorAll('[data-bg]').forEach(function (el) {
+      var bg = el.getAttribute('data-bg');
+      var gradient = el.getAttribute('data-gradient') || '';
+      if (gradient) {
+        el.style.background = gradient + ', url(' + bg + ') center/cover no-repeat';
+      } else {
+        el.style.background = 'url(' + bg + ') center/cover no-repeat';
+      }
+    });
+  } catch (error) {
+  }
+
   // ハンバーガーメニューの初期化
   try {
     initHamburgerMenu();

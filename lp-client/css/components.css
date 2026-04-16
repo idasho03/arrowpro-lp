@@ -2465,6 +2465,162 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
   margin-bottom: 32px;
 }
 
+/* Attributes */
+.consultants-attributes__lead {
+  font-size: 16px;
+  color: #1f2937;
+  margin-bottom: 24px;
+  line-height: 1.8;
+}
+
+.consultants-attributes__stacked-bar {
+  display: flex;
+  height: 64px;
+  border-radius: 0;
+  overflow: hidden;
+  margin-bottom: 12px;
+  border-left: 2px solid #1f2937;
+}
+
+.consultants-attributes__segment {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  gap: 2px;
+}
+
+.consultants-attributes__segment-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.consultants-attributes__segment-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.consultants-attributes__segment--strategy { background: #0d3b66; }
+.consultants-attributes__segment--general { background: #3a8fb7; }
+.consultants-attributes__segment--finance { background: #b0c4d8; }
+.consultants-attributes__segment--corporate { background: #e5e7eb; }
+
+.consultants-attributes__segment--corporate .consultants-attributes__segment-name,
+.consultants-attributes__segment--corporate .consultants-attributes__segment-value {
+  color: #4b5563;
+}
+
+.consultants-attributes__segment--finance .consultants-attributes__segment-name,
+.consultants-attributes__segment--finance .consultants-attributes__segment-value {
+  color: #1f2937;
+}
+
+.consultants-attributes__legend-sub {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.consultants-attributes__legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.consultants-attributes__legend-dot--finance { background: #b0c4d8; }
+
+.consultants-attributes__legend-label {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.consultants-attributes__note {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-bottom: 12px;
+}
+
+.consultants-attributes__inline-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #00AFCC;
+  text-decoration: none;
+}
+
+.consultants-attributes__inline-link:hover {
+  text-decoration: underline;
+}
+
+/* Column cards */
+.column-cards {
+  display: flex;
+  gap: 16px;
+}
+
+.column-card {
+  flex: 1;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+
+.column-card:hover {
+  border-color: #00AFCC;
+}
+
+.column-card__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.column-card__body {
+  padding: 16px 20px;
+}
+
+.column-card__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.column-card__desc {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .column-cards {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .consultants-attributes__stacked-bar {
+    height: 24px;
+  }
+
+  .consultants-attributes__legend {
+    gap: 6px 16px;
+  }
+
+  .consultants-attributes__legend-label {
+    font-size: 13px;
+  }
+}
+
 .consultants-company-group {
   flex: 1 1 0;
   min-width: 0;
@@ -2480,8 +2636,17 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
   font-weight: 700;
   margin: 0 0 16px 0;
   text-align: left;
-  border-bottom: 1px solid #e5e7eb;
-  padding-bottom: 8px;
+  border-bottom: none;
+  border-left: 4px solid #e5e7eb;
+  padding: 4px 0 4px 12px;
+}
+
+.consultants-company-group__title--strategy {
+  border-left-color: #0d3b66;
+}
+
+.consultants-company-group__title--general {
+  border-left-color: #3a8fb7;
 }
 
 .consultants-company-group .theme-category__tags {

@@ -62,17 +62,7 @@
   text-align: center;
 }
 
-.plan-split-card--standard .plan-split-card__head {
-  background:
-    linear-gradient(135deg, rgba(0, 175, 204, 0.6) 0%, rgba(0, 155, 184, 0.55) 100%),
-    url("../img/05-usecase/self-service-bg.webp") center/cover no-repeat;
-}
-
-.plan-split-card--spot .plan-split-card__head {
-  background:
-    linear-gradient(135deg, rgba(139, 92, 246, 0.6) 0%, rgba(124, 58, 237, 0.55) 100%),
-    url("../img/05-usecase/concierge-bg.webp") center/cover no-repeat;
-}
+/* 背景画像はParcelビルドでパスが壊れるためHTMLインラインstyleで指定 */
 
 /* カードボディ */
 .plan-split-card__body {

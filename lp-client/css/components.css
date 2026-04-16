@@ -450,13 +450,16 @@
 }
 
 .spot-campaign-section__label {
-  color: #7c3aed;
+  color: #00AFCC;
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  display: inline-block;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #00AFCC;
 }
 
 .spot-campaign-section__lead {
@@ -2465,6 +2468,403 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
   margin-bottom: 32px;
 }
 
+/* Attributes */
+.consultants-attributes__lead {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 24px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.consultants-attributes__lead strong {
+  font-size: 28px;
+  color: #00AFCC;
+}
+
+
+.consultants-attributes__stacked-bar {
+  display: flex;
+  height: 64px;
+  border-radius: 0;
+  overflow: visible;
+  margin-bottom: 12px;
+  border-left: 2px solid #1f2937;
+}
+
+.consultants-attributes__segment {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+  gap: 2px;
+}
+
+.consultants-attributes__segment-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.consultants-attributes__segment-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+br.sp-only { display: none; }
+
+.consultants-attributes__segment--strategy { background: #0d3b66; }
+.consultants-attributes__segment--general { background: #3a8fb7; }
+.consultants-attributes__segment--finance { background: #b0c4d8; z-index: 2; }
+.consultants-attributes__segment--corporate { background: #e5e7eb; }
+
+.consultants-attributes__segment--strategy .consultants-attributes__segment-name,
+.consultants-attributes__segment--general .consultants-attributes__segment-name,
+.consultants-attributes__segment--finance .consultants-attributes__segment-name {
+  font-size: 15px;
+}
+
+.consultants-attributes__segment--strategy .consultants-attributes__segment-value,
+.consultants-attributes__segment--general .consultants-attributes__segment-value,
+.consultants-attributes__segment--finance .consultants-attributes__segment-value {
+  font-size: 22px;
+}
+
+.consultants-attributes__segment--corporate .consultants-attributes__segment-name,
+.consultants-attributes__segment--corporate .consultants-attributes__segment-value {
+  color: #4b5563;
+}
+
+.consultants-attributes__segment--finance .consultants-attributes__segment-name,
+.consultants-attributes__segment--finance .consultants-attributes__segment-value {
+  color: #1f2937;
+}
+
+.consultants-attributes__legend-sub {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.consultants-attributes__legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.consultants-attributes__legend-dot--finance { background: #b0c4d8; }
+
+.consultants-attributes__legend-label {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.consultants-attributes__note {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-bottom: 12px;
+}
+
+.consultants-attributes__inline-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #00AFCC;
+  text-decoration: none;
+}
+
+.consultants-attributes__inline-link:hover {
+  text-decoration: underline;
+}
+
+/* Column section */
+.column-section {
+  padding: 80px 80px;
+  background: #f8fafc;
+}
+
+.column-section__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.column-section__label {
+  color: #00AFCC;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: inline-block;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #00AFCC;
+  margin-bottom: 20px;
+}
+
+.column-section__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+@media (max-width: 768px) {
+  .column-section {
+    padding: 32px 16px;
+  }
+
+  .column-section__header {
+    margin-bottom: 20px;
+  }
+
+  .column-section__title {
+    font-size: 22px;
+  }
+}
+
+/* Column cards */
+.column-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.column-card {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 2px;
+  overflow: hidden;
+  text-decoration: none;
+  background: #fff;
+  padding: 12px 16px;
+}
+
+.column-card:hover .column-card__title {
+  color: #00AFCC;
+}
+
+.column-card__img {
+  width: 120px;
+  height: 63px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+
+.column-card__img-placeholder {
+  width: 120px !important;
+  height: 63px !important;
+  aspect-ratio: auto !important;
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+
+.column-card__body {
+  flex: 1;
+}
+
+.column-card__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 4px;
+  line-height: 1.5;
+  transition: color 0.2s;
+}
+
+.column-card__desc {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.column-card__point {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1f2937;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #e5e7eb;
+  line-height: 1.5;
+}
+
+.column-card__point-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #00AFCC;
+  letter-spacing: 1px;
+  margin-right: 6px;
+}
+
+@media (max-width: 768px) {
+  .column-card {
+    gap: 12px;
+    padding: 10px 12px;
+  }
+
+  .column-card__img {
+    width: 80px;
+    height: 42px;
+  }
+
+  .column-card__img-placeholder {
+    width: 80px !important;
+    height: 42px !important;
+  }
+
+  .column-card__title {
+    font-size: 13px;
+  }
+
+  .column-card__desc,
+  .column-card__point {
+    display: none;
+  }
+}
+
+/* Mobile collapse */
+.mobile-collapse {
+  border: none;
+}
+
+.mobile-collapse__summary {
+  list-style: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.mobile-collapse__summary::-webkit-details-marker {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-collapse__summary {
+    pointer-events: auto;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-collapse:not([open]) .mobile-collapse__summary {
+    position: relative;
+  }
+
+  .main-features-section:has(.mobile-collapse:not([open])),
+  .usecase-section:has(.mobile-collapse:not([open])) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .mobile-collapse__summary .main-features-section__header,
+  .mobile-collapse__summary .usecase-section__header {
+    margin-bottom: 0;
+  }
+
+  .mobile-collapse__summary .main-features-section__label,
+  .mobile-collapse__summary .usecase-section__label {
+    position: relative;
+    padding-right: 32px;
+  }
+
+  .mobile-collapse__summary .main-features-section__label::after,
+  .mobile-collapse__summary .usecase-section__label::after {
+    content: "▼";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #9ca3af;
+    transition: transform 0.2s;
+  }
+
+  .mobile-collapse[open] .main-features-section__label::after,
+  .mobile-collapse[open] .usecase-section__label::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .mobile-collapse:not([open]) .main-features-section__title,
+  .mobile-collapse:not([open]) .usecase-section__title {
+    display: none;
+  }
+
+  .mobile-collapse__summary .consultants-section__themes-title,
+  .mobile-collapse__summary .consultants-examples__title {
+    position: relative;
+    padding-right: 32px;
+    cursor: pointer;
+  }
+
+  .mobile-collapse__summary .consultants-section__themes-title::after,
+  .mobile-collapse__summary .consultants-examples__title::after {
+    content: "▼";
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    transition: transform 0.2s;
+  }
+
+  .mobile-collapse[open] .consultants-section__themes-title::after,
+  .mobile-collapse[open] .consultants-examples__title::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  /* モバイル全セクションpadding統一 */
+  .problems-section,
+  .plan-split-section,
+  .benefits-section,
+  .main-features-section,
+  .usecase-section,
+  .consultants-section,
+  .concierge-lead,
+  .spot-campaign-section {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+
+  .mobile-collapse__summary {
+    cursor: pointer;
+  }
+
+  .mobile-collapse {
+    /* JSで初期状態を閉じる */
+  }
+}
+
+@media (max-width: 768px) {
+  .consultants-attributes__segment-name,
+  .consultants-attributes__segment--strategy .consultants-attributes__segment-name,
+  .consultants-attributes__segment--general .consultants-attributes__segment-name,
+  .consultants-attributes__segment--finance .consultants-attributes__segment-name {
+    font-size: 9px;
+  }
+
+  br.sp-only { display: inline; }
+
+  .consultants-attributes__segment-value,
+  .consultants-attributes__segment--strategy .consultants-attributes__segment-value,
+  .consultants-attributes__segment--general .consultants-attributes__segment-value,
+  .consultants-attributes__segment--finance .consultants-attributes__segment-value {
+    font-size: 12px;
+  }
+}
+
 .consultants-company-group {
   flex: 1 1 0;
   min-width: 0;
@@ -2480,8 +2880,21 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
   font-weight: 700;
   margin: 0 0 16px 0;
   text-align: left;
-  border-bottom: 1px solid #e5e7eb;
-  padding-bottom: 8px;
+  border-bottom: none;
+  border-left: 4px solid #e5e7eb;
+  padding: 4px 0 4px 12px;
+}
+
+.consultants-company-group__title--strategy {
+  border-left-color: #0d3b66;
+}
+
+.consultants-company-group__title--general {
+  border-left-color: #3a8fb7;
+}
+
+.consultants-company-group__title--finance {
+  border-left-color: #b0c4d8;
 }
 
 .consultants-company-group .theme-category__tags {
@@ -4090,8 +4503,8 @@ a[href="https://arrowpro.jp/request"].pricing-plan__button--secondary:hover {
 
 @media (max-width: 767px) {
   .pricing-section {
-    padding: 48px 16px;
-    gap: 48px;
+    padding: 32px 16px;
+    gap: 24px;
   }
 
   .pricing-section__description {
@@ -4100,7 +4513,7 @@ a[href="https://arrowpro.jp/request"].pricing-plan__button--secondary:hover {
 
   .pricing-section__plans {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 16px;
   }
 
   .pricing-section__plans > .pricing-plan--spot {
@@ -4108,7 +4521,40 @@ a[href="https://arrowpro.jp/request"].pricing-plan__button--secondary:hover {
   }
 
   .pricing-plan {
-    padding: 32px 24px;
+    padding: 12px 12px;
+  }
+
+  .pricing-plan__header {
+    margin-bottom: 8px;
+    padding: 8px;
+  }
+
+  .pricing-plan__price {
+    margin-bottom: 8px;
+    padding: 8px;
+  }
+
+  .pricing-plan__features {
+    gap: 4px;
+  }
+
+  .pricing-plan__highlights {
+    gap: 6px;
+    padding: 8px 0;
+  }
+
+  .pricing-plan__feature-group {
+    min-height: auto;
+    gap: 4px;
+  }
+
+  .pricing-plan__note {
+    margin: 8px 0 0 0;
+    padding-top: 8px;
+  }
+
+  .pricing-plan__cta {
+    gap: 8px;
   }
 
   .pricing-plan__name {

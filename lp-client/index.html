@@ -562,6 +562,7 @@
             </a>
 
           </div>
+
         </div>
       </section>
 
@@ -656,10 +657,13 @@
 
       <!-- Main Features Section -->
       <section id="main-features" class="main-features-section" aria-labelledby="main-features-heading">
-        <div class="main-features-section__header animate-on-scroll">
+        <details class="mobile-collapse" open>
+        <summary class="mobile-collapse__summary">
+        <div class="main-features-section__header">
           <div class="main-features-section__label">FUNCTIONS</div>
           <h2 id="main-features-heading" class="main-features-section__title">コンサルタントと直接繋がるための各種機能</h2>
         </div>
+        </summary>
         <div class="main-features-section__features">
           <!-- 案件掲載 -->
           <article class="feature-card animate-on-scroll animate-delay-200">
@@ -737,14 +741,18 @@
             </div>
           </article>
         </div>
+        </details>
       </section>
 
       <!-- Use Case Section -->
       <section id="usecase" class="usecase-section" aria-labelledby="usecase-heading">
-        <div class="usecase-section__header animate-on-scroll">
+        <details class="mobile-collapse" open>
+        <summary class="mobile-collapse__summary">
+        <div class="usecase-section__header">
           <div class="usecase-section__label">USECASE</div>
           <h2 id="usecase-heading" class="usecase-section__title">特定プロジェクト参画から<span class="usecase-section__title-break">自社の課題解決まで、<br>多様なニーズに対応可能</span></h2>
         </div>
+        </summary>
         <div class="usecase-section__cases animate-on-scroll animate-delay-200">
           <div class="usecase-card animate-on-scroll animate-delay-300">
             <div class="usecase-card__icon">
@@ -770,7 +778,9 @@
                     <h3 class="usecase-card__title">正式採用前の<br>トライアル発注</h3>
             <p class="usecase-card__description">まずは業務委託でスキルや相性を確認後、双方の意向次第で直接雇用へ移行</p>
           </div>
+
         </div>
+        </details>
       </section>
 
       <!-- Registered Consultants Section -->
@@ -784,7 +794,7 @@
             <h3 class="consultants-section__companies-title">出身企業例</h3>
             <div class="consultants-section__companies">
             <div class="consultants-company-group">
-              <h3 class="consultants-company-group__title">戦略コンサルティングファーム</h3>
+              <h3 class="consultants-company-group__title consultants-company-group__title--strategy">戦略コンサルティングファーム</h3>
               <div class="theme-category__tags">
                 <article class="theme-tag">
                   <div class="theme-tag__wrapper">
@@ -803,7 +813,22 @@
                 </article>
                 <article class="theme-tag">
                   <div class="theme-tag__wrapper">
+                    <div class="theme-tag__text">アーサー・D・リトル</div>
+                  </div>
+                </article>
+                <article class="theme-tag">
+                  <div class="theme-tag__wrapper">
                     <div class="theme-tag__text">ドリームインキュベータ</div>
+                  </div>
+                </article>
+                <article class="theme-tag">
+                  <div class="theme-tag__wrapper">
+                    <div class="theme-tag__text">コーポレートディレクション</div>
+                  </div>
+                </article>
+                <article class="theme-tag">
+                  <div class="theme-tag__wrapper">
+                    <div class="theme-tag__text">経営共創基盤</div>
                   </div>
                 </article>
                 <article class="theme-tag">
@@ -816,11 +841,16 @@
                     <div class="theme-tag__text">EYパルテノン</div>
                   </div>
                 </article>
+                <article class="theme-tag">
+                  <div class="theme-tag__wrapper">
+                    <div class="theme-tag__text">モニター デロイト</div>
+                  </div>
+                </article>
                 <span class="consultants-company-group__others">他</span>
               </div>
             </div>
             <div class="consultants-company-group">
-              <h3 class="consultants-company-group__title">総合コンサルティングファーム</h3>
+              <h3 class="consultants-company-group__title consultants-company-group__title--general">総合コンサルティングファーム</h3>
               <div class="theme-category__tags">
                 <article class="theme-tag">
                   <div class="theme-tag__wrapper">
@@ -864,21 +894,67 @@
                 </article>
                 <article class="theme-tag">
                   <div class="theme-tag__wrapper">
-                    <div class="theme-tag__text">クニエ</div>
-                  </div>
-                </article>
-                <article class="theme-tag">
-                  <div class="theme-tag__wrapper">
                     <div class="theme-tag__text">野村総合研究所</div>
                   </div>
                 </article>
                 <span class="consultants-company-group__others">他</span>
               </div>
             </div>
+            <div class="consultants-company-group">
+              <h3 class="consultants-company-group__title consultants-company-group__title--finance">FAS・投資銀行等</h3>
+              <div class="theme-category__tags">
+                <article class="theme-tag">
+                  <div class="theme-tag__wrapper">
+                    <div class="theme-tag__text">デロイトトーマツファイナンシャルアドバイザリー</div>
+                  </div>
+                </article>
+                <article class="theme-tag">
+                  <div class="theme-tag__wrapper">
+                    <div class="theme-tag__text">PwCアドバイザリー</div>
+                  </div>
+                </article>
+                <article class="theme-tag">
+                  <div class="theme-tag__wrapper">
+                    <div class="theme-tag__text">KPMG FAS</div>
+                  </div>
+                </article>
+                <article class="theme-tag">
+                  <div class="theme-tag__wrapper">
+                    <div class="theme-tag__text">モルガンスタンレーMUFG証券</div>
+                  </div>
+                </article>
+                <span class="consultants-company-group__others">他</span>
+              </div>
+            </div>
           </div>
+
+            <p class="consultants-attributes__lead">登録プロフェッショナルの約<strong>6割</strong>が大手プロフェッショナルファーム出身</p>
+            <div class="consultants-attributes__stacked-bar">
+              <div class="consultants-attributes__segment consultants-attributes__segment--strategy" style="width: 21%;">
+                <span class="consultants-attributes__segment-name">戦略コンサル</span>
+                <span class="consultants-attributes__segment-value">21%</span>
+              </div>
+              <div class="consultants-attributes__segment consultants-attributes__segment--general" style="width: 33%;">
+                <span class="consultants-attributes__segment-name">総合コンサル</span>
+                <span class="consultants-attributes__segment-value">33%</span>
+              </div>
+              <div class="consultants-attributes__segment consultants-attributes__segment--finance" style="width: 10%;">
+                <span class="consultants-attributes__segment-name">FAS・<br class="sp-only">投資銀行等</span>
+                <span class="consultants-attributes__segment-value">10%</span>
+              </div>
+              <div class="consultants-attributes__segment consultants-attributes__segment--corporate" style="width: 36%;">
+                <span class="consultants-attributes__segment-name">その他事業会社</span>
+                <span class="consultants-attributes__segment-value">36%</span>
+              </div>
+            </div>
+            <p class="consultants-attributes__note">※ 出身企業カテゴリ登録済みの登録者ベース（2026年4月時点）</p>
+
           </div>
           <div class="consultants-section__group">
+            <details class="mobile-collapse" open>
+            <summary class="mobile-collapse__summary">
             <h3 class="consultants-section__themes-title">プロジェクトテーマ例</h3>
+            </summary>
             <div class="consultants-section__themes">
             <div class="theme-section__categories">
               <!-- Strategy Category -->
@@ -1153,9 +1229,13 @@
               </div>
             </div>
           </div>
+          </details>
           </div>
           <div class="consultants-section__group">
+            <details class="mobile-collapse" open>
+            <summary class="mobile-collapse__summary">
             <h3 class="consultants-examples__title">登録プロフェッショナル例</h3>
+            </summary>
             <div class="consultants-section__examples">
             <div class="consultants-profiles">
               <div class="consultant-profile">
@@ -1290,6 +1370,7 @@
                 </div>
               </div>
             </div>
+          </details>
           </div>
         </div>
       </section>
@@ -1677,6 +1758,40 @@
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M8 4L14 10L8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
             </svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- Column Section -->
+      <section class="column-section">
+        <div class="column-section__header animate-on-scroll">
+          <div class="column-section__label">COLUMN</div>
+          <h2 class="column-section__title">関連コラム</h2>
+        </div>
+        <div class="column-cards animate-on-scroll animate-delay-200">
+          <a href="/column/what-is-freelance-consultant/" class="column-card">
+            <img class="column-card__img" src="/column/what-is-freelance-consultant/hero.png" alt="フリーランスコンサルタントとは" loading="lazy" width="600" height="315" />
+            <div class="column-card__body">
+              <div class="column-card__title">フリーランスコンサルタントとは</div>
+              <div class="column-card__desc">報酬相場・依頼できる業務・探し方を企業向けに整理</div>
+
+            </div>
+          </a>
+          <a href="/column/direct-consulting/" class="column-card">
+            <img class="column-card__img" src="/column/direct-consulting/hero.png" alt="フリーランスコンサルタントの探し方" loading="lazy" width="600" height="315" />
+            <div class="column-card__body">
+              <div class="column-card__title">フリーランスコンサルタントの探し方</div>
+              <div class="column-card__desc">エージェント型と直接契約型の費用構造・進め方を比較</div>
+
+            </div>
+          </a>
+          <a href="/column/how-to-evaluate-consultants/" class="column-card">
+            <img class="column-card__img" src="/column/how-to-evaluate-consultants/hero.png" alt="フリーランスコンサルタントの選び方" loading="lazy" width="600" height="315" />
+            <div class="column-card__body">
+              <div class="column-card__title">フリーランスコンサルタントの選び方</div>
+              <div class="column-card__desc">プロフィールの読み方と面談での見極め方を解説</div>
+
+            </div>
           </a>
         </div>
       </section>

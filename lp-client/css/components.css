@@ -2607,6 +2607,106 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
   }
 }
 
+/* Mobile collapse */
+.mobile-collapse {
+  border: none;
+}
+
+.mobile-collapse__summary {
+  list-style: none;
+  cursor: default;
+}
+
+.mobile-collapse__summary::-webkit-details-marker {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-collapse:not([open]) .mobile-collapse__summary {
+    position: relative;
+  }
+
+  .main-features-section:has(.mobile-collapse:not([open])),
+  .usecase-section:has(.mobile-collapse:not([open])) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .mobile-collapse__summary .main-features-section__header,
+  .mobile-collapse__summary .usecase-section__header {
+    position: relative;
+    padding-right: 32px;
+    margin-bottom: 0;
+  }
+
+  .mobile-collapse__summary .main-features-section__header::after,
+  .mobile-collapse__summary .usecase-section__header::after {
+    content: "▼";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #9ca3af;
+    transition: transform 0.2s;
+  }
+
+  .mobile-collapse[open] .main-features-section__header::after,
+  .mobile-collapse[open] .usecase-section__header::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .mobile-collapse:not([open]) .main-features-section__title,
+  .mobile-collapse:not([open]) .usecase-section__title {
+    display: none;
+  }
+
+  .mobile-collapse__summary .consultants-section__themes-title,
+  .mobile-collapse__summary .consultants-examples__title {
+    position: relative;
+    padding-right: 32px;
+    cursor: pointer;
+  }
+
+  .mobile-collapse__summary .consultants-section__themes-title::after,
+  .mobile-collapse__summary .consultants-examples__title::after {
+    content: "▼";
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    transition: transform 0.2s;
+  }
+
+  .mobile-collapse[open] .consultants-section__themes-title::after,
+  .mobile-collapse[open] .consultants-examples__title::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  /* モバイル全セクションpadding統一 */
+  .problems-section,
+  .plan-split-section,
+  .benefits-section,
+  .main-features-section,
+  .usecase-section,
+  .consultants-section,
+  .concierge-lead,
+  .spot-campaign-section {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+
+  .mobile-collapse__summary {
+    cursor: pointer;
+  }
+
+  .mobile-collapse {
+    /* JSで初期状態を閉じる */
+  }
+}
+
 @media (max-width: 768px) {
   .consultants-attributes__stacked-bar {
     height: 24px;
@@ -4255,8 +4355,8 @@ a[href="https://arrowpro.jp/request"].pricing-plan__button--secondary:hover {
 
 @media (max-width: 767px) {
   .pricing-section {
-    padding: 48px 16px;
-    gap: 48px;
+    padding: 32px 16px;
+    gap: 24px;
   }
 
   .pricing-section__description {
@@ -4265,7 +4365,7 @@ a[href="https://arrowpro.jp/request"].pricing-plan__button--secondary:hover {
 
   .pricing-section__plans {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 16px;
   }
 
   .pricing-section__plans > .pricing-plan--spot {
@@ -4273,7 +4373,40 @@ a[href="https://arrowpro.jp/request"].pricing-plan__button--secondary:hover {
   }
 
   .pricing-plan {
-    padding: 32px 24px;
+    padding: 12px 12px;
+  }
+
+  .pricing-plan__header {
+    margin-bottom: 8px;
+    padding: 8px;
+  }
+
+  .pricing-plan__price {
+    margin-bottom: 8px;
+    padding: 8px;
+  }
+
+  .pricing-plan__features {
+    gap: 4px;
+  }
+
+  .pricing-plan__highlights {
+    gap: 6px;
+    padding: 8px 0;
+  }
+
+  .pricing-plan__feature-group {
+    min-height: auto;
+    gap: 4px;
+  }
+
+  .pricing-plan__note {
+    margin: 8px 0 0 0;
+    padding-top: 8px;
+  }
+
+  .pricing-plan__cta {
+    gap: 8px;
   }
 
   .pricing-plan__name {

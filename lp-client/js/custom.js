@@ -38,6 +38,16 @@ document.addEventListener('DOMContentLoaded', function () {
   } catch (error) {
   }
 
+  // モバイルでFUNCTIONS/USECASEを閉じる
+  try {
+    if (window.innerWidth <= 768) {
+      document.querySelectorAll('.mobile-collapse').forEach(function (el) {
+        el.removeAttribute('open');
+      });
+    }
+  } catch (error) {
+  }
+
   // 画像の遅延読み込み設定（一時的に無効化）
   // setupLazyLoading();
 

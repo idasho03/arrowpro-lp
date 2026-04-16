@@ -1378,13 +1378,7 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
   background-clip: padding-box;
 }
 
-.problems-section__column--consulting {
-  background-image: url('../img/02-problems/firm.webp');
-}
-
-.problems-section__column--business {
-  background-image: url('../img/02-problems/business.webp');
-}
+/* 背景画像はインライン化時にurl()が壊れるためHTMLのdata-bg + JSで設定 */
 
 .problems-section__column::before {
   content: '';
@@ -1632,7 +1626,7 @@ a[href="https://arrowpro.jp/request"].hero__cta-button--secondary:hover {
   transform: translate(-50%, -50%);
   width: 80px;
   height: 80px;
-  background-image: url('../img/02-problems/trouble.svg');
+  background-image: var(--trouble-svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

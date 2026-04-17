@@ -41,7 +41,21 @@ for (const dir of targets) {
       continue;
     }
 
-    const cssContent = fs.readFileSync(cssPath, 'utf-8');
+    let cssContent = fs.readFileSync(cssPath, 'utf-8');
+
+    // CSSインライン化時、相対url()はHTML基準で解決されるため
+    // CSSファイルと同ディレクトリの相対パスを絶対パスに書き換える
+    // 例: url(firm.e3733851.webp) → url(/arrowpro-sub-contents/static-output/lp-client/firm.e3733851.webp)
+    const baseUrl = cssHref.substring(0, cssHref.lastIndexOf('/') + 1);
+    cssContent = cssContent.replace(
+      /url\((?!data:|https?:\/\/|\/\/)([^)]+)\)/g,
+      (match, relPath) => {
+        // クォート除去
+        const cleanPath = relPath.replace(/^['"]|['"]$/g, '');
+        return `url(${baseUrl}${cleanPath})`;
+      }
+    );
+
     const styleTag = `<style>/* ${path.basename(cssHref)} */${cssContent}</style>`;
 
     html = html.replace(match[0], styleTag);

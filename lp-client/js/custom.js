@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
   } catch (error) {
   }
 
-
   // ハンバーガーメニューの初期化
   try {
     initHamburgerMenu();

@@ -1,6 +1,5 @@
 /* ARROW pro コラム 共通スタイル */
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@700&display=swap');
+/* Google Fonts は各記事HTMLの <head> で <link> 読み込み（@import 直列ロードによる初期描画ブロックを回避） */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 

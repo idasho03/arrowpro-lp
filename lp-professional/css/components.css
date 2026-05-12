@@ -3198,6 +3198,10 @@
 }
 
 br.sp-only { display: none; }
+br.pc-only { display: inline; }
+@media (max-width: 900px) {
+  br.pc-only { display: none; }
+}
 
 .consultants-attributes__segment--strategy { background: #0d3b66; }
 .consultants-attributes__segment--general { background: #3a8fb7; }

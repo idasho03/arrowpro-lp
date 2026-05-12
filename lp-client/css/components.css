@@ -921,7 +921,9 @@
 .pricing-section__label,
 .faq-section__label,
 .flow-section__label,
-.news-section__label {
+.news-section__label,
+.spot-campaign-section__label,
+.concierge-lead__label {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 12px;
   font-weight: 700;
@@ -2760,27 +2762,28 @@ br.sp-only { display: none; }
     margin-bottom: 0;
   }
 
-  .mobile-collapse__summary .main-features-section__label,
-  .mobile-collapse__summary .usecase-section__label {
+  /* アコーディオンマーカーは summary の右上（ラベルの高さに合わせ固定）に配置 */
+  .main-features-section .mobile-collapse__summary,
+  .usecase-section .mobile-collapse__summary {
     position: relative;
-    padding-right: 32px;
+    padding-right: 40px;
   }
 
-  .mobile-collapse__summary .main-features-section__label::after,
-  .mobile-collapse__summary .usecase-section__label::after {
+  .main-features-section .mobile-collapse__summary::after,
+  .usecase-section .mobile-collapse__summary::after {
     content: "▼";
     position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 12px;
+    right: 4px;
+    top: 16px;              /* ラベル中央高に固定して開閉で位置不変 */
+    font-size: 14px;
     color: #9ca3af;
     transition: transform 0.2s;
+    line-height: 1;
   }
 
-  .mobile-collapse[open] .main-features-section__label::after,
-  .mobile-collapse[open] .usecase-section__label::after {
-    transform: translateY(-50%) rotate(180deg);
+  .main-features-section .mobile-collapse[open] .mobile-collapse__summary::after,
+  .usecase-section .mobile-collapse[open] .mobile-collapse__summary::after {
+    transform: rotate(180deg);
   }
 
   .mobile-collapse:not([open]) .main-features-section__title,

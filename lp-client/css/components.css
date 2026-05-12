@@ -449,19 +449,6 @@
   z-index: 1;
 }
 
-.spot-campaign-section__label {
-  color: #00AFCC;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  display: inline-block;
-  padding-bottom: 8px;
-  border-bottom: 2px solid #00AFCC;
-}
-
 .spot-campaign-section__lead {
   font-size: 15px;
   color: #6b7280;
@@ -921,7 +908,7 @@
   margin-bottom: 20px;
 }
 
-/* 共通セクションラベルスタイル */
+/* 共通セクションラベルスタイル（チップ型） */
 .section__label,
 .problems-section__label,
 .benefits-section__label,
@@ -929,11 +916,35 @@
 .plan-split-section__label,
 .usecase-section__label,
 .consultants-section__label,
+.column-section__label,
 .theme-section__label,
 .pricing-section__label,
 .faq-section__label,
 .flow-section__label,
-.news-section__label {
+.news-section__label,
+.spot-campaign-section__label,
+.concierge-lead__label {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: #00AFCC;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+/* PROBLEMSのみマゼンタ */
+.problems-section__label {
+  background: #d63384;
+}
+
+/* 旧スタイル無効化 */
+.legacy-label-disabled {
   color: #00AFCC;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 14px;
@@ -2597,23 +2608,10 @@ br.sp-only { display: none; }
   margin-bottom: 40px;
 }
 
-.column-section__label {
-  color: #00AFCC;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  display: inline-block;
-  padding-bottom: 8px;
-  border-bottom: 2px solid #00AFCC;
-  margin-bottom: 20px;
-}
-
 .column-section__title {
   font-size: 28px;
   font-weight: 700;
-  color: #1f2937;
+  color: #00AFCC;
 }
 
 @media (max-width: 768px) {
@@ -2632,24 +2630,27 @@ br.sp-only { display: none; }
 
 /* Column cards */
 .column-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 720px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .column-card {
   display: flex;
-  flex-direction: row;
-  gap: 16px;
-  align-items: center;
+  flex-direction: column;
   border: 1px solid #e5e7eb;
-  border-radius: 2px;
+  border-radius: 6px;
   overflow: hidden;
   text-decoration: none;
   background: #fff;
-  padding: 12px 16px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.column-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
 }
 
 .column-card:hover .column-card__title {
@@ -2657,22 +2658,22 @@ br.sp-only { display: none; }
 }
 
 .column-card__img {
-  width: 120px;
-  height: 63px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1200 / 630;
   object-fit: cover;
-  flex-shrink: 0;
-  border-radius: 2px;
+  display: block;
+  background: #f8fafc;
 }
 
 .column-card__img-placeholder {
-  width: 120px !important;
-  height: 63px !important;
-  aspect-ratio: auto !important;
-  flex-shrink: 0;
-  border-radius: 2px;
+  width: 100% !important;
+  aspect-ratio: 1200 / 630 !important;
+  height: auto !important;
 }
 
 .column-card__body {
+  padding: 16px 20px 20px;
   flex: 1;
 }
 
@@ -2680,7 +2681,7 @@ br.sp-only { display: none; }
   font-size: 16px;
   font-weight: 700;
   color: #1f2937;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
   line-height: 1.5;
   transition: color 0.2s;
 }
@@ -2688,7 +2689,7 @@ br.sp-only { display: none; }
 .column-card__desc {
   font-size: 13px;
   color: #6b7280;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .column-card__point {
@@ -2709,29 +2710,17 @@ br.sp-only { display: none; }
   margin-right: 6px;
 }
 
+@media (max-width: 900px) {
+  .column-cards {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    gap: 16px;
+  }
+}
+
 @media (max-width: 768px) {
-  .column-card {
-    gap: 12px;
-    padding: 10px 12px;
-  }
-
-  .column-card__img {
-    width: 80px;
-    height: 42px;
-  }
-
-  .column-card__img-placeholder {
-    width: 80px !important;
-    height: 42px !important;
-  }
-
   .column-card__title {
-    font-size: 13px;
-  }
-
-  .column-card__desc,
-  .column-card__point {
-    display: none;
+    font-size: 15px;
   }
 }
 
@@ -2773,27 +2762,28 @@ br.sp-only { display: none; }
     margin-bottom: 0;
   }
 
-  .mobile-collapse__summary .main-features-section__label,
-  .mobile-collapse__summary .usecase-section__label {
+  /* アコーディオンマーカーは summary の右上（ラベルの高さに合わせ固定）に配置 */
+  .main-features-section .mobile-collapse__summary,
+  .usecase-section .mobile-collapse__summary {
     position: relative;
-    padding-right: 32px;
+    padding-right: 40px;
   }
 
-  .mobile-collapse__summary .main-features-section__label::after,
-  .mobile-collapse__summary .usecase-section__label::after {
+  .main-features-section .mobile-collapse__summary::after,
+  .usecase-section .mobile-collapse__summary::after {
     content: "▼";
     position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 12px;
+    right: 4px;
+    top: 16px;              /* ラベル中央高に固定して開閉で位置不変 */
+    font-size: 14px;
     color: #9ca3af;
     transition: transform 0.2s;
+    line-height: 1;
   }
 
-  .mobile-collapse[open] .main-features-section__label::after,
-  .mobile-collapse[open] .usecase-section__label::after {
-    transform: translateY(-50%) rotate(180deg);
+  .main-features-section .mobile-collapse[open] .mobile-collapse__summary::after,
+  .usecase-section .mobile-collapse[open] .mobile-collapse__summary::after {
+    transform: rotate(180deg);
   }
 
   .mobile-collapse:not([open]) .main-features-section__title,
@@ -5244,4 +5234,18 @@ a[href="https://arrowpro.jp/request"].fixed-cta-bar__button--download:hover {
   .footer__logo-text {
     font-size: 28px;
   }
+}
+
+/* Benefits gaiyo (synced from lp-professional) */
+.benefits-section__gaiyo {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefits-section__gaiyo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }

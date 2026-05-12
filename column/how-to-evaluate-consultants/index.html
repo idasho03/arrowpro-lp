@@ -57,26 +57,26 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "フリーランスコンサルタントのプロフィールで何を見るべき？",
+        "name": "面談は何人くらいの候補者と行うべき？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "出身ファーム・在籍年数・最終ランク・昇格有無・直近案件の5項目です。特に昇格有無は重要で、中途入社でランクが上がっていない場合、肩書きだけで実力が伴っていないリスクがあります。"
+          "text": "案件規模にもよりますが、最終的にアサインする1名に対して2〜3名と面談するのが一般的な目安です。スクリーニングが甘いと候補数が増えて意思決定が遅れますし、逆に1名だけだと比較対象がなく適性を判断しにくくなります。"
         }
       },
       {
         "@type": "Question",
-        "name": "面談で何を確認すべき？",
+        "name": "ダイレクトプラットフォームで選定する場合、社内工数はどれくらいかかる？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "案件の背景を伝えたうえで、候補者がどう進めるか仮説ベースで話せるかを見ます。「入ってから調べます」ではなく、限られた情報から仮説を立てて検証方法まで提案できる人が、実務でも自走できる人材です。"
+          "text": "プロフィール確認・スカウト送信・面談日程調整・面談実施を含めて、1案件あたり合計5〜10時間程度が目安です。エージェント型と比べると工数は増えますが、マージン20〜40%相当のコスト削減と引き換えと考えれば、十分に投資対効果は見合います。"
         }
       },
       {
         "@type": "Question",
-        "name": "採用で注意すべきサインは？",
+        "name": "面談時間はどれくらいが適切？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "質問に直接答えず周辺情報に逸れる、仮説を出せず「調べてから」を繰り返す、案件やロールについて候補者から質問がない、の3つが代表的な注意サインです。いずれもプロジェクトでの自走力に疑問が残ります。"
+          "text": "1回あたり45〜60分が目安です。経歴の確認と案件の説明だけで30分は必要で、そこから候補者の思考プロセスを見る対話に十分な時間を取ろうとすると60分前後が現実的です。30分の面談だと経歴確認で終わってしまい、適性の見極めが浅くなる傾向があります。"
         }
       }
     ]
@@ -93,6 +93,9 @@
   <style>
     .num-accent { color: #ff7a52; font-weight: 700; }
     .item-heading { font-size: 15px; font-weight: 700; color: #1f2937; background: #f5f5f5; padding: 8px 12px; border-radius: 4px; margin: 24px 0 8px; display: inline-block; }
+
+    .marker { background: linear-gradient(transparent 65%, rgba(0,175,204,0.28) 65%); padding: 0 1px; font-weight: 700; }
+    .marker-warn { background: linear-gradient(transparent 65%, rgba(255,122,82,0.28) 65%); padding: 0 1px; font-weight: 700; }
   </style>
 </head>
 <body>
@@ -151,7 +154,7 @@
       <p>経歴だけでコンサルタントの実力を完全に測ることはできません。ただし、以下の3点は<strong>地力の目安</strong>として有効です。</p>
 
       <p><span class="item-heading">出身ファーム</span>（どこで鍛えられたか）</p>
-      <p>出身ファームは<strong>採用の選抜基準と社内で求められる水準の代理変数</strong>です。選抜が厳しく、社内の要求水準が高いファームで生き残ってきた人は、それだけで一定の地力があると判断できます。ファームのブランドそのものではなく、「どれだけ厳しい環境で鍛えられたか」という観点で見てください。</p>
+      <p>出身ファームは<span class="marker">採用の選抜基準と社内で求められる水準の代理変数</span>です。選抜が厳しく、社内の要求水準が高いファームで生き残ってきた人は、それだけで一定の地力があると判断できます。ファームのブランドそのものではなく、「どれだけ厳しい環境で鍛えられたか」という観点で見てください。</p>
       <p>なお、出身ファームからわかるのはあくまで環境の水準です。その人が実際にどんな業務を担当していたかは、所属部門やプロジェクト経験（適合性側）で確認します。</p>
 
       <p><span class="item-heading">在籍期間</span>（業界での経験値の目安）</p>
@@ -170,8 +173,8 @@
         </tbody>
       </table>
       <p>「プロジェクト全体を任せたい」ならマネージャー以上、「手を動かす実務者が欲しい」ならコンサルタント〜シニアコンサルタントクラスが適しています。</p>
-      <p>ランクに加えて、<strong>ファーム内で昇格しているかどうか</strong>を必ず確認してください。コンサルティングファームは成果主義が基本で、一定のパフォーマンスがなければ昇格しません。入社時と退職時のランクを比較すれば、地力を見極める上で最も信頼性の高い指標になります。</p>
-      <p>特に注意すべきなのは、近年のコンサル市場の拡大に伴い、ファームが中途採用を急増させている背景です。マネージャーやシニアコンサルタントとして入社したものの、<strong>ファーム内で昇格しないまま退職している</strong>ケースも少なくありません。肩書き上は高ランクでも、ファームの評価プロセスを経て昇進した人とは地力が異なる場合があります。</p>
+      <p>ランクに加えて、<span class="marker">ファーム内で昇格しているかどうか</span>を必ず確認してください。コンサルティングファームは成果主義が基本で、一定のパフォーマンスがなければ昇格しません。入社時と退職時のランクを比較すれば、地力を見極める上で最も信頼性の高い指標になります。</p>
+      <p>特に注意すべきなのは、近年のコンサル市場の拡大に伴い、ファームが中途採用を急増させている背景です。マネージャーやシニアコンサルタントとして入社したものの、<span class="marker-warn">ファーム内で昇格しないまま退職している</span>ケースも少なくありません。肩書き上は高ランクでも、ファームの評価プロセスを経て昇進した人とは地力が異なる場合があります。</p>
 
       <h3>案件との適合性</h3>
       <p>地力が高くても、今回の案件に合っていなければ意味がありません。適合性は<strong>出身ファームではなく、所属部門やプロジェクト経験</strong>で判断します。</p>
@@ -189,7 +192,7 @@
 
       <h2 id="interview">面談で確認すべきポイント</h2>
       <img src="interview.png" alt="面談でのコミュニケーションイメージ" style="width:100%;border-radius:6px;margin-bottom:24px;">
-      <p>面談では、<strong>経歴の解像度を上げる</strong>ことと、<strong>この案件で本当に機能するかを見極める</strong>ことの両方を行います。ただし忘れてはいけないのは、優秀なコンサルタントほど案件を選ぶ立場にあるということです。面談は一方的に審査する場ではなく、<strong>お互いにフィットを確認する場</strong>です。自社の案件の魅力や背景を率直に伝え、候補者にも「この案件をやりたい」と思ってもらうことが重要です。</p>
+      <p>面談では、<strong>経歴の解像度を上げる</strong>ことと、<strong>この案件で本当に機能するかを見極める</strong>ことの両方を行います。ただし忘れてはいけないのは、優秀なコンサルタントほど案件を選ぶ立場にあるということです。面談は一方的に審査する場ではなく、<span class="marker">お互いにフィットを確認する場</span>です。自社の案件の魅力や背景を率直に伝え、候補者にも「この案件をやりたい」と思ってもらうことが重要です。</p>
 
       <h3>経歴の解像度を上げる</h3>
       <p>プロフィールに書かれた経歴の行間を、面談で掘り下げます。過去のプロジェクト経験について、以下のような観点で聞いてください。</p>
@@ -207,8 +210,8 @@
         <li>「<strong>どこが課題</strong>になりそうですか？」</li>
         <li>「ご自身の経験と照らして、<strong>どんな進め方</strong>が考えられそうですか？」</li>
       </ul>
-      <p>正解を求めているのではありません。限られた情報から<strong>論点を整理し、自分なりの仮説やアプローチを提示できるか</strong>を見ています。この思考の動かし方に、コンサルタントとしての適性がリアルに表れます。</p>
-      <p>優秀なコンサルタントは「おそらく仮説はAとBに分かれる。Aについてはこう進める。Bは情報が足りないが、仮にXだとすればこういうアプローチになる」のように、<strong>わかる範囲で仮説を立て、わからない部分も仮置きして先に進められます</strong>。一方、「詳しくヒアリングしてから考えます」としか言えない候補者は、プロジェクトに入っても自ら仮説を立てられないリスクがあります。</p>
+      <p>正解を求めているのではありません。限られた情報から<span class="marker">論点を整理し、自分なりの仮説やアプローチを提示できるか</span>を見ています。この思考の動かし方に、コンサルタントとしての適性がリアルに表れます。</p>
+      <p>優秀なコンサルタントは「おそらく仮説はAとBに分かれる。Aについてはこう進める。Bは情報が足りないが、仮にXだとすればこういうアプローチになる」のように、<span class="marker">わかる範囲で仮説を立て、わからない部分も仮置きして先に進められます</span>。一方、「詳しくヒアリングしてから考えます」としか言えない候補者は、プロジェクトに入っても自ら仮説を立てられないリスクがあります。</p>
       <h3>候補者からの質問を観察する</h3>
       <p>面談はこちらが質問する場であると同時に、<strong>候補者の問いの質を観察する場</strong>でもあります。こちらの状況や要望を聞きながら、的確で建設的な質問を投げかけてくる候補者は、高い確率でプロジェクトで機能します。</p>
       <p>良い質問とは、汎用的なオープンクエスチョンではなく、<strong>こちらが話した内容を踏まえて具体的に掘り下げてくる質問</strong>です。</p>
@@ -239,12 +242,41 @@
         <li><strong>候補者から質問が出てこない</strong>：案件への関心が薄いか、課題を自ら掘り下げる力が弱い</li>
       </ul>
 
-      <h2 id="summary">まとめ</h2>
-      <ul>
-        <li>プロフィールでは<strong>地力</strong>（出身ファーム・在籍期間・ランク＆昇格）と<strong>案件との適合性</strong>（所属部門・プロジェクト領域・稼働条件）を確認します</li>
-        <li>面談では<strong>経歴の解像度・フィット度合い</strong>の確認と、<strong>募集案件に対する考え方・進め方</strong>を聞くことで適性を見極めます</li>
-        <li>質問にストレートに答えない、仮説が出てこない、質問が出てこない候補者には注意が必要です</li>
-      </ul>
+      <h2 id="faq">よくある質問</h2>
+
+      <h3 style="border-left: 4px solid #00AFCC; padding-left: 12px;">面談は何人くらいの候補者と行うべきですか？</h3>
+      <p>案件規模にもよりますが、最終的にアサインする1名に対して<strong>2〜3名と面談する</strong>のが一般的な目安です。プロフィールで一定の絞り込みができていれば、それ以上の母数は意思決定を遅らせるだけのことも多いです。逆に1名だけだと比較対象がなく適性を判断しにくく、ミスマッチのリスクが上がります。</p>
+
+      <h3 style="border-left: 4px solid #00AFCC; padding-left: 12px;">ダイレクトプラットフォームで選定する場合、社内工数はどれくらいかかりますか？</h3>
+      <p>プロフィール確認・スカウト送信・面談日程調整・面談実施を含めて、<strong>1案件あたり合計5〜10時間程度</strong>が目安です。エージェント型と比べると工数は増えますが、マージン20〜40%相当のコスト削減（月100万円規模の案件なら毎月数十万円）と引き換えと考えれば、十分に投資対効果は見合います。</p>
+
+      <h3 style="border-left: 4px solid #00AFCC; padding-left: 12px;">面談時間はどれくらいが適切ですか？</h3>
+      <p>1回あたり<strong>45〜60分</strong>が目安です。経歴の確認と案件の説明だけで30分は必要で、そこから候補者の思考プロセスを見る対話に十分な時間を取ろうとすると60分前後が現実的です。30分の面談だと経歴確認で終わってしまい、適性の見極めが浅くなる傾向があります。</p>
+
+      <h2 id="summary">まとめ：選定チェックリスト</h2>
+      <p>プロフィール確認・面談・最終判断の3フェーズで確認すべき項目を整理します。実務で使えるチェックリストとして手元に置いて使ってください。</p>
+
+      <div style="background:#f0f8ff;border:1px solid #e0f2f8;border-radius:6px;padding:20px 24px;margin:24px 0;">
+        <div style="font-size:14px;font-weight:700;color:#1f2937;border-left:4px solid #00AFCC;padding-left:10px;margin-bottom:12px;">Step 1：プロフィールで見る（地力 × 適合性）</div>
+        <ul style="margin:0 0 16px;padding-left:20px;font-size:14px;line-height:1.9;">
+          <li>出身ファームと在籍期間は確認したか</li>
+          <li>最終ランクと<strong>昇格の有無</strong>を確認したか</li>
+          <li>所属部門・担当プロジェクト領域は今回の案件と重なるか</li>
+          <li>稼働率・開始時期・リモート可否は条件と合うか</li>
+        </ul>
+        <div style="font-size:14px;font-weight:700;color:#1f2937;border-left:4px solid #00AFCC;padding-left:10px;margin-bottom:12px;">Step 2：面談で見る（解像度 × 適性）</div>
+        <ul style="margin:0 0 16px;padding-left:20px;font-size:14px;line-height:1.9;">
+          <li>過去PJの役割・アウトプット・苦労点を具体的に聞けたか</li>
+          <li>「この案件をどう進めるか」に対して<strong>仮説ベースで答えられた</strong>か</li>
+          <li>候補者から<strong>具体的で建設的な質問</strong>が出たか</li>
+          <li>自社の案件の魅力を率直に伝え、相互フィットを確認したか</li>
+        </ul>
+        <div style="font-size:14px;font-weight:700;color:#1f2937;border-left:4px solid #ff7a52;padding-left:10px;margin-bottom:12px;">Step 3：注意サインの確認</div>
+        <ul style="margin:0;padding-left:20px;font-size:14px;line-height:1.9;">
+          <li>在籍1〜2年で離脱／高ランクのまま昇格なし／経歴が抽象的、ではないか</li>
+          <li>面談で質問を回避する／仮説が出ない／質問してこない、ではないか</li>
+        </ul>
+      </div>
 
       <div class="author-box">
         <div class="author-avatar"><img src="../assets/logo.svg" alt="ARROW pro" width="28" height="32"></div>
@@ -263,15 +295,23 @@
           <li><a href="#screening">プロフィールで見るべきポイント</a></li>
           <li><a href="#interview">面談で確認すべきポイント</a></li>
           <li><a href="#red-flags">注意すべきサイン</a></li>
+          <li><a href="#faq">よくある質問</a></li>
           <li><a href="#summary">まとめ</a></li>
         </ol>
       </nav>
       <div class="related-articles">
         <div class="related-articles-title">関連記事</div>
+        <div style="font-size:12px;color:#666;font-weight:700;margin-top:8px;">企業向け</div>
         <ul>
-          <li><a href="/column/what-is-freelance-consultant/">フリーランスコンサルタントとは</a></li>
-          <li><a href="/column/direct-consulting/">探し方｜エージェント型と直接契約型を比較</a></li>
-          <li><span class="current">選び方｜スクリーニングと面談のポイント</span></li>
+          <li><a href="/column/what-is-freelance-consultant/">フリーコンサルとは</a></li>
+          <li><a href="/column/direct-consulting/">探し方｜エージェント経由とダイレクトプラットフォーム</a></li>
+          <li><span class="current">選び方｜スクリーニングと面談</span></li>
+        </ul>
+        <div style="font-size:12px;color:#666;font-weight:700;margin-top:12px;">フリーコンサルタント向け</div>
+        <ul>
+          <li><a href="/column/how-to-become-freelance-consultant/">独立準備と案件獲得</a></li>
+          <li><a href="/column/freelance-consultant-rate/">単価相場｜ランク別・テーマ別の月額目安</a></li>
+          <li><a href="/column/direct-contract/">直接契約とは｜エージェント経由との違い</a></li>
         </ul>
       </div>
       <div class="sidebar-cta">
@@ -284,10 +324,17 @@
 
     <div class="related-bottom">
       <div class="related-bottom-title">関連記事</div>
+      <div style="font-size:13px;color:#666;font-weight:700;margin-top:8px;">企業向け</div>
       <ul>
         <li><a href="/column/what-is-freelance-consultant/">フリーランスコンサルタントとは｜報酬の相場から探し方まで</a></li>
-        <li><a href="/column/direct-consulting/">探し方｜エージェント型と直接契約型を比較する</a></li>
-        <li><span class="current">選び方｜失敗しないためのスクリーニングと面談</span></li>
+        <li><a href="/column/direct-consulting/">フリーランスコンサルタントの探し方｜エージェント経由とダイレクトプラットフォームを比較</a></li>
+        <li><span class="current">フリーランスコンサルタントの選び方｜失敗しないためのスクリーニングと面談</span></li>
+      </ul>
+      <div style="font-size:13px;color:#666;font-weight:700;margin-top:12px;">フリーコンサルタント向け</div>
+      <ul>
+        <li><a href="/column/how-to-become-freelance-consultant/">フリーランスコンサルタントになるには｜独立の準備から案件獲得まで</a></li>
+        <li><a href="/column/freelance-consultant-rate/">フリーランスコンサルタントのリアルな単価相場｜ランク別・テーマ別の月額目安</a></li>
+        <li><a href="/column/direct-contract/">フリーランスコンサルタントの直接契約とは｜エージェント経由との違いとプラットフォームの仕組み</a></li>
       </ul>
     </div>
 

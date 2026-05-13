@@ -1,10 +1,10 @@
 /* ARROW pro コラム 共通スタイル */
-/* Google Fonts は各記事HTMLの <head> で <link> 読み込み（@import 直列ロードによる初期描画ブロックを回避） */
+/* フォントはシステムフォント / SVGロゴで完結（外部Google Fonts依存なし） */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Segoe UI", "Yu Gothic UI", sans-serif;
   font-size: 16px;
   line-height: 1.8;
   color: #333;
@@ -28,17 +28,15 @@ body {
   color: #00AFCC;
 }
 
-.col-header__logo img {
+.col-header__logo-icon {
   width: 22px;
   height: auto;
   filter: invert(55%) sepia(80%) saturate(500%) hue-rotate(150deg) brightness(95%);
 }
 
-.col-header__logo-text {
-  font-family: 'Poppins', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+.col-header__logo-text-img {
+  height: 20px;
+  width: auto;
 }
 
 .col-header__divider {
